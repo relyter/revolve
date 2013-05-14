@@ -1,0 +1,118 @@
+﻿<!-- Foundation -->
+<window id="100">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>GlobalOverlay</include>
+
+		<control type="group">
+			<include>Dimensions_Fullscreen</include>
+			
+			<control type="grouplist">
+				<posy>320</posy>
+				<width>1920</width>
+				<height>1080</height>
+				<itemgap>35</itemgap>
+				
+				<control type="label" id="1">
+					<description>Heading</description>
+					<label>-</label>
+					<width>1920</width>
+					<font>DialogTitle</font>
+					<textcolor>TextFocus</textcolor>
+					<align>center</align>
+				</control>
+
+				<control type="label" id="2">
+					<description>Line 1</description>
+					<label>-</label>
+					<width>1920</width>
+					<height>auto</height>
+					<font>DialogText</font>
+					<textcolor>TextFocus</textcolor>
+					<scroll>true</scroll>
+					<align>center</align>
+				</control>
+
+				<control type="label" id="3">
+					<description>Line 2</description>
+					<label>-</label>
+					<width>1920</width>
+					<height>auto</height>
+					<font>DialogText</font>
+					<textcolor>TextFocus</textcolor>
+					<scroll>true</scroll>
+					<align>center</align>
+				</control>
+
+				<control type="label" id="4">
+					<description>Line 3</description>
+					<label>-</label>
+					<width>1920</width>
+					<height>auto</height>
+					<font>DialogText</font>
+					<textcolor>TextFocus</textcolor>
+					<scroll>true</scroll>
+					<align>center</align>
+				</control>
+				
+				<control type="group">
+					<height>266</height>
+					
+					<control type="image">
+						<posx>827</posx>
+						<width>266</width>
+						<height>266</height>
+						<texture border="22">circlemask.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="button" id="10">
+						<animation effect="slide" start="0,0" end="-250,0" time="200" condition="Control.HasFocus(11)">Conditional</animation>
+						<description>No</description>
+						<posx>827</posx>
+						<posy>100</posy>
+						<width>266</width>
+						<label>106</label>
+						<font>DialogButton</font>
+						<onleft>11</onleft>
+						<onright>11</onright>
+						<onup>10</onup>
+						<ondown>10</ondown>
+						<textcolor>TextFocus</textcolor>
+						<focusedcolor>White</focusedcolor>
+						<disabledcolor>Text</disabledcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+					</control>
+						
+					<control type="button" id="11">
+						<animation effect="slide" start="0,0" end="-250,0" time="200" condition="Control.HasFocus(11)">Conditional</animation>
+						<description>Yes</description>
+						<posx>1077</posx>
+						<posy>100</posy>
+						<width>266</width>
+						<label>107</label>
+						<font>DialogButton</font>
+						<onleft>10</onleft>
+						<onright>10</onright>
+						<onup>11</onup>
+						<ondown>11</ondown>
+						<textcolor>TextFocus</textcolor>
+						<focusedcolor>White</focusedcolor>
+						<disabledcolor>Text</disabledcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+					</control>
+					
+				</control>
+				
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

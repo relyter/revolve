@@ -1,0 +1,31 @@
+﻿[B]0.0.5[/B]
+
+- Movies Landscape view transition finally smooth
+
+[B]0.0.4[/B]
+
+- Recently added views on home screen updated
+- DialogYesNo.xml done.
+- Clock support for both 12 and 24 hour versions.
+
+[B]0.0.3[/B]
+
+-Default font color changet to black. (White on white was pretty hard to read)
+
+[B]0.0.2[/B]
+
+-updated/added graphics
+-pressing right when over tv-shows at home menu opens recently added list-
+-started working on video osd
+-fixin the jagged edges. Your link helped but i'm still not satisfied.
+-messing around with the animations to find a good way to make them smooth 
+
+-Default font color changet to black. (White on white was pretty hard to read)
+
+[B]0.0.2[/B]
+
+-updated/added graphics
+-pressing right when over tv-shows at home menu opens recently added list-
+-started working on video osd
+-fixin the jagged edges. Your link helped but i'm still not satisfied.
+-messing around with the animations to find a good way to make them smooth 

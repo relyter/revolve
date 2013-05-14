@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+	id="skin.revolve"
+	version="0.0.5"
+	name="Revolve"
+	provider-name="mKo">
+	<requires>
+		<import addon="xbmc.gui" version="3.00"/>
+	</requires>
+	<extension
+    point="xbmc.gui.skin"
+    defaultthemename="textures.xbt"
+    debugging="false"
+    effectslowdown="0.75">
+		<!--<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />-->
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary>Concept/graphics by ransomed / skin by mKo</summary>
+		<description>Revolving skin revolution.</description>
+	</extension>
+</addon>

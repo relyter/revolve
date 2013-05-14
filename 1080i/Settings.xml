@@ -1,0 +1,154 @@
+<window id="4">
+	<defaultcontrol always="true">300</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>GlobalBackground</include>
+
+		<control type="image">
+			<description>settings bg</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<visible>true</visible>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			<texture backgroud="true">special://skin/backgrounds/settings.jpg</texture>
+			<aspectratio>keep</aspectratio>
+		</control>				
+				
+		<control type="group">
+			<description>Ring</description>
+			<animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" delay="500" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="500" reversible="false">WindowClose</animation>
+			<visible>!Control.IsVisible(300)</visible>
+		
+		<include>LeftRing</include>
+		
+		<control type="image">
+				<posx>-100</posx>
+				<posy>330</posy>
+				<width>662</width>
+				<height>662</height>
+				<texture backgroud="true">$INFO[Container(300).ListItem.Property(inCircle)]</texture>
+				<fadetime>500</fadetime>
+				<colordiffuse>55000000</colordiffuse>
+			</control>
+		</control>
+		
+		<include>Revolve_Home</include>
+
+		<control type="wraplist" id="300">
+			<visible allowhiddenfocus="true">false</visible>
+			<defaultcontrol>2</defaultcontrol>
+			<description>settings Wraplist</description>
+			<posx>1200</posx>
+			<posy>270</posy>
+			<width>810</width>
+			<height>846</height>
+			<onup>300</onup>
+			<ondown>300</ondown>
+			<onleft>600</onleft>
+			<onright>300</onright>
+			<focusposition>5</focusposition>
+
+			<itemlayout width="540" height="75">
+
+				<control type="label">
+					<posx>405</posx>
+					<height>75</height>
+					<width>375</width>
+					<font>Medium</font>
+					<textcolor>Text</textcolor>
+					<info>ListItem.Label</info>
+					<align>center</align>
+				</control>
+
+			</itemlayout>
+
+			<focusedlayout width="540" height="75">
+
+				<control type="label">
+					<posx>405</posx>
+					<width>540</width>
+					<height>75</height>
+					<info>ListItem.Label</info>
+					<font>Medium</font>
+					<textcolor>Red</textcolor>
+					<align>center</align>
+				</control>
+
+			</focusedlayout>
+
+			<content>
+				<item id="1">
+					<description>Appearance</description>
+					<label>480</label>
+					<label2>$LOCALIZE[31047]</label2>
+					<onclick>activatewindow(AppearanceSettings)</onclick>
+					<property name="inCircle">circle/appearance.png</property>
+					<property name="Label3">$LOCALIZE[31046]</property>
+				</item>
+				<item id="2">
+					<description>Videos</description>
+					<label>3</label>
+					<onclick>activatewindow(VideosSettings)</onclick>
+					<property name="inCircle">circle/videos.png</property>
+				</item>
+				<item id="3">
+					<description>Music</description>
+					<label>2</label>
+					<onclick>activatewindow(MusicSettings)</onclick>
+					<property name="inCircle">circle/music.png</property>
+				</item>
+				<item id="4">
+					<description>Pictures</description>
+					<label>1</label>
+					<onclick>activatewindow(PicturesSettings)</onclick>
+					<property name="inCircle">circle/pictures.png</property>
+				</item>
+				<item id="5">
+					<description>Weather</description>
+					<label>8</label>
+					<onclick>activatewindow(WeatherSettings)</onclick>
+					<property name="inCircle">circle/weather.png</property>
+				</item>
+				<item id="6">
+					<description>Addons</description>
+					<label>24001</label>
+					<onclick>activatewindow(AddonBrowser)</onclick>
+					<property name="inCircle">circle/plugins.png</property>
+				</item>
+				<item id="7">
+					<description>Services</description>
+					<label>14036</label>
+					<onclick>activatewindow(NetworkSettings)</onclick>
+					<property name="inCircle">circle/services.png</property>
+				</item>
+				<item id="8">
+					<description>System</description>
+					<label>13000</label>
+					<onclick>activatewindow(SystemSettings)</onclick>
+					<property name="inCircle">circle/settings.png</property>				
+				</item>
+				<item id="9">
+					<description>Profiles</description>
+					<label>13200</label>
+					<onclick>activatewindow(Profiles)</onclick>
+				<property name="inCircle">circle/profiles.png</property>
+				</item>
+				<item id="10">
+					<description>System Info</description>
+					<label>130</label>
+					<onclick>activatewindow(7)</onclick>
+				</item>
+				<item id="11">
+					<description>Skin Settings</description>
+					<label>166</label>
+					<onclick>activatewindow(56)</onclick>
+				</item>
+			</content>
+		</control>
+
+	</controls>
+
+</window>

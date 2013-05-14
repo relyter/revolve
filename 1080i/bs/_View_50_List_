@@ -1,0 +1,611 @@
+<includes>
+
+	<include name="View_50_List">
+	
+		<description>List View (id=50)</description>
+		
+		<control type="group">
+			<description>left ring</description>
+			<animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" delay="500" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="500" reversible="false">WindowClose</animation>
+			<visible>Control.IsVisible(50)</visible>
+				
+				<include>LeftRing</include>
+						
+		</control>
+		
+		<control type="group">
+			<description>poster+border in left ring</description>
+			<visible>Control.IsVisible(50)+!Container.Content(Episodes)</visible>
+			<animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" delay="500" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="500" reversible="false">WindowClose</animation>
+			<control type="largeimage">
+					<posx>56</posx>
+					<posy>144</posy>
+					<width>300</width>
+					<height>452</height>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+			</control>
+			<control type="largeimage">
+					<posx>50</posx>
+					<posy>140</posy>
+					<width>312</width>
+					<height>462</height>
+					<texture>posterbordersmall.png</texture>
+			</control>
+		</control>
+		
+		<control type="group">
+				<description>thumb+border in left ring</description>
+				<visible>Container.Content(episodes)+Control.IsVisible(50)</visible>
+			<control type="largeimage">
+					<posx>56</posx>
+					<posy>315</posy>
+					<width>500</width>
+					<height>285</height>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+			</control>
+			<control type="largeimage">
+					<posx>50</posx>
+					<posy>309</posy>
+					<width>512</width>
+					<height>297</height>
+					<texture>posterbordersmall1.png</texture>
+			</control>
+		</control>	
+
+		<control type="textbox">
+			<description>item genre</description>
+			<animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" delay="500" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="500" reversible="false">WindowClose</animation>
+			<posx>50</posx>
+			<posy>630</posy>
+			<align>left</align>
+			<aligny>top</aligny>
+			<width>640</width>
+			<height>50</height>
+			<font>Plot</font>
+			<textcolor>Text</textcolor>
+			<label>$INFO[ListItem.genre]</label>
+			<wrapmultiline>true</wrapmultiline>
+			<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
+		
+		<control type="textbox">
+			<description>item plot</description>
+			<animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="500" reversible="false">WindowOpen</animation>
+			<animation effect="slide" delay="500" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="500" reversible="false">WindowClose</animation>
+			<posx>50</posx>
+			<posy>700</posy>
+			<align>left</align>
+			<aligny>top</aligny>
+			<width>640</width>
+			<height>330</height>
+			<font>Plot</font>
+			<textcolor>Text</textcolor>
+			<label>$INFO[ListItem.Plot]</label>
+			<wrapmultiline>true</wrapmultiline>
+			<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
+
+		<control type="group">
+			<animation effect="rotate" tween="quadratic" easing="out" center="0,773" start="180" end="360" time="1000" reversible="false">WindowOpen</animation>
+			<animation effect="rotate" tween="quadratic" easing="in" center="0,773" start="360" end="180" time="1000" reversible="false">WindowClose</animation>
+			<visible>Control.IsVisible(50)</visible>
+		<control type="label">
+					<description>top label on current item</description>
+					<visible>Container.Content(tvshows)|Container.Content(Movies)</visible>
+					<posx>865</posx>
+					<posy>645</posy>
+					<height>100</height>
+					<width>1000</width>
+					<font>HomeSmall</font>
+					<textcolor>TextFocus</textcolor>
+					<label>$INFO[Container(50).ListItem.year] $INFO[Container(50).ListItem.Rating] $INFO[Container(50).ListItem.VideoResolution] </label>
+					<align>left</align>
+				</control>
+				<control type="label">
+					<description>top label on current item</description>
+					<visible>Container.Content(episodes)</visible>
+					<posx>865</posx>
+					<posy>645</posy>
+					<height>100</height>
+					<width>1000</width>
+					<font>HomeSmall</font>
+					<textcolor>TextFocus</textcolor>
+					<label>$INFO[Container(50).ListItem.Premiered] $INFO[Container(50).ListItem.Rating] $INFO[Container(50).ListItem.VideoResolution] </label>
+					<align>left</align>
+				</control>
+				<control type="label">
+					<description>bottom label on current item</description>
+					<visible>Container.Content(Seasons)|Container.Content(tvshows)</visible>
+					<posx>865</posx>
+					<posy>755</posy>
+					<height>100</height>
+					<width>800</width>
+					<font>HomeSmall</font>
+					<textcolor>TextFocus</textcolor>
+					<label>$LOCALIZE[31048] $INFO[Container(50).ListItem.Property(TotalEpisodes)] / $INFO[Container(50).ListItem.Property(UnWatchedEpisodes)]</label>
+					<align>left</align>
+				</control>
+				<control type="label">
+					<description>bottom label on current item</description>
+					<visible>Container.Content(episodes)</visible>
+					<posx>865</posx>
+					<posy>755</posy>
+					<height>100</height>
+					<width>800</width>
+					<font>HomeSmall</font>
+					<textcolor>TextFocus</textcolor>
+					<label>to be defined</label>
+					<align>left</align>
+				</control>
+				<control type="label">
+					<description>bottom label on current item</description>
+					<visible>Container.Content(Movies)</visible>
+					<posx>865</posx>
+					<posy>755</posy>
+					<height>100</height>
+					<width>800</width>
+					<font>HomeSmall</font>
+					<textcolor>TextFocus</textcolor>
+					<label>$INFO[Container(50).ListItem.Duration] min</label>
+					<align>left</align>
+				</control>				
+			</control>
+		
+		<control type="group">
+			<animation effect="rotate" tween="quadratic" easing="out" center="0,773" start="180" end="360" time="1000" reversible="false">WindowOpen</animation>
+			<animation effect="rotate" tween="quadratic" easing="in" center="0,773" start="360" end="180" time="1000" reversible="false">WindowClose</animation>
+			<animation effect="fade" start="100" end="30" time="500" condition="!Control.HasFocus(50)">Conditional</animation>
+			<control type="group" id="301">
+				<visible>Container(50).OnNext</visible>
+				<animation type="Hidden" reversible="false">
+					<effect type="rotate" center="0,773" start="0" end="13" time="250"/>
+				</animation>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="52" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(-5).Label</info>
+						<align>Left</align>
+						<animation effect="zoom" center="860,750" end="20">Visible</animation>
+						<animation effect="zoom" center="860,750" start="20" end="0" time="250" reversible="false">Hidden</animation>
+						<visible>Container(50).OnNext</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="39" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(-4).Label</info>
+						<align>Left</align>
+						<animation effect="zoom" center="860,750" end="34">Visible</animation>
+						<animation effect="zoom" center="860,750" start="34" end="20" time="250" reversible="false">Hidden</animation>
+						<visible>Container(50).OnNext</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="26" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(-3).Label</info>
+						<align>Left</align>
+						<animation effect="zoom" center="860,750" end="52">Visible</animation>
+						<animation effect="zoom" center="860,750" start="52" end="34" time="250" reversible="false">Hidden</animation>
+						<visible>Container(50).OnNext</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="13" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(-2).Label</info>
+						<align>Left</align>
+						<animation effect="zoom" center="860,750" end="80">Visible</animation>
+						<animation effect="zoom" center="860,750" start="80" end="52" time="250" reversible="false">Hidden</animation>
+						<visible>Container(50).OnNext</visible>
+					</control>
+				</control>
+				<control type="group">
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(-1).Label</info>
+						<align>Left</align>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="100"/>
+							<effect type="fade" end="0"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="100" end="80" time="250"/>
+							<effect type="fade" start="0" end="100" time="250"/>
+						</animation>
+						<visible>Container(50).OnNext</visible>
+					</control>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>TextFocus</textcolor>
+						<scroll>true</scroll>
+						<info>Container(50).ListItem(-1).Label</info>
+						<align>Left</align>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="100"/>
+							<effect type="fade" end="100"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="100" end="80" time="250"/>
+							<effect type="fade" start="100" end="0" time="250"/>
+						</animation>
+						<visible>Container(50).OnNext</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="-13" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(0).Label</info>
+						<align>Left</align>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="80"/>
+							<effect type="fade" end="100"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="80" end="100" time="250"/>
+							<effect type="fade" start="100" end="0" time="250"/>
+						</animation>
+						<visible>Container(50).OnNext</visible>
+					</control>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>TextFocus</textcolor>
+						<scroll>true</scroll>
+						<info>Container(50).ListItem(0).Label</info>
+						<align>Left</align>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="80"/>
+							<effect type="fade" end="0"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="80" end="100" time="250"/>
+							<effect type="fade" start="0" end="100" time="250"/>
+						</animation>
+						<visible>Container(50).OnNext</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="-26" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(1).Label</info>
+						<align>Left</align>
+						<animation effect="zoom" center="860,750" end="52">Visible</animation>
+						<animation effect="zoom" center="860,750" start="52" end="80" time="250" reversible="false">Hidden</animation>
+						<visible>Container(50).OnNext</visible>
+					</control>
+				</control>
+			</control>
+			<control type="group" id="302">
+				<visible>Container(50).OnPrevious</visible>
+				<animation type="Hidden" reversible="false">
+					<effect type="rotate" center="0,773" start="0" end="-13" time="250"/>
+				</animation>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="65" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(-4).Label</info>
+						<align>Left</align>
+						<animation effect="zoom" center="860,750" end="0">Visible</animation>
+						<animation effect="zoom" center="860,750" start="0" end="20" time="250" reversible="false">Hidden</animation>
+						<visible>Container(50).OnPrevious</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="52" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(-3).Label</info>
+						<align>Left</align>
+						<animation effect="zoom" center="860,750" end="20">Visible</animation>
+						<animation effect="zoom" center="860,750" start="20" end="34" time="250" reversible="false">Hidden</animation>
+						<visible>Container(50).OnPrevious</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="39" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(-2).Label</info>
+						<align>Left</align>
+						<animation effect="zoom" center="860,750" end="34">Visible</animation>
+						<animation effect="zoom" center="860,750" start="34" end="52" time="250" reversible="false">Hidden</animation>
+						<visible>Container(50).OnPrevious</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="26" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(-1).Label</info>
+						<align>Left</align>
+						<animation effect="zoom" center="860,750" end="52">Visible</animation>
+						<animation effect="zoom" center="860,750" start="52" end="80" time="250" reversible="false">Hidden</animation>
+						<visible>Container(50).OnPrevious</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="13" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(0).Label</info>
+						<align>Left</align>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="80"/>
+							<effect type="fade" end="100"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="80" end="100" time="250"/>
+							<effect type="fade" start="100" end="0" time="250"/>
+						</animation>
+						<visible>Container(50).OnPrevious</visible>
+					</control>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>TextFocus</textcolor>
+						<scroll>true</scroll>
+						<info>Container(50).ListItem(0).Label</info>
+						<align>Left</align>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="80"/>
+							<effect type="fade" end="0"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="80" end="100" time="250"/>
+							<effect type="fade" start="0" end="100" time="250"/>
+						</animation>
+						<visible>Container(50).OnPrevious</visible>
+					</control>
+				</control>
+				<control type="group">
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>TextFocus</textcolor>
+						<scroll>true</scroll>
+						<info>Container(50).ListItem(1).Label</info>
+						<align>Left</align>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="100"/>
+							<effect type="fade" end="100"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="100" end="80" time="250"/>
+							<effect type="fade" start="100" end="0" time="250"/>
+						</animation>
+						<visible>Container(50).OnPrevious</visible>
+					</control>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(1).Label</info>
+						<align>Left</align>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="100"/>
+							<effect type="fade" end="0"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="100" end="80" time="250"/>
+							<effect type="fade" start="0" end="100" time="250"/>
+						</animation>
+						<visible>Container(50).OnPrevious</visible>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="-13" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(2).Label</info>
+						<align>Left</align>
+						<animation effect="zoom" center="860,750" end="80">Visible</animation>
+						<animation effect="zoom" center="860,750" start="80" end="60" time="250" reversible="false">Hidden</animation>
+						<visible>Container(50).OnPrevious</visible>
+					</control>
+				</control>
+			</control>
+			<control type="group" id="303">
+				<visible>!Control.IsVisible(301) + !Control.IsVisible(302)</visible>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="52" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(-4).Label</info>
+						<align>Left</align>
+						<animation effect="zoom" center="860,750" end="20" condition="true">Conditional</animation>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="39" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(-3).Label</info>
+						<align>Left</align>
+						<animation effect="zoom" center="860,750" end="34" condition="true">Conditional</animation>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="26" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(-2).Label</info>
+						<align>Left</align>
+						<animation effect="zoom" center="860,750" end="52" condition="true">Conditional</animation>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="13" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(-1).Label</info>
+						<align>Left</align>
+						<animation effect="zoom" center="860,750" end="80" condition="true">Conditional</animation>
+					</control>
+				</control>
+				<control type="group">
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>TextFocus</textcolor>
+						<scroll>true</scroll>
+						<info>Container(50).ListItem(0).Label</info>
+						<align>Left</align>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="-13" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>Title</font>
+						<textcolor>Text</textcolor>
+						<info>Container(50).ListItem(1).Label</info>
+						<align>Left</align>
+						<animation effect="zoom" center="860,750" end="80" condition="true">Conditional</animation>
+					</control>
+				</control>
+			</control>
+		</control>
+		
+		<control type="list" id="50">
+			<posx>330</posx>
+			<posy>57</posy>
+			<width>960</width>
+			<height>966</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<pagecontrol>60</pagecontrol>
+			<viewtype label="535">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<animation type="Conditional" condition="ControlGroup(9000).HasFocus()">
+				<effect type="fade" start="100" end="50" time="200" />
+				<effect type="zoom" center="1290,540" start="100" end="90" time="200" />
+			</animation>
+
+		</control>
+		
+	</include>
+</includes>

@@ -1,0 +1,215 @@
+﻿<!-- Foundation -->
+<window id="115">
+	<defaultcontrol always="true">901</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<visible>!Window.IsVisible(fullscreeninfo) + [VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
+	
+
+	<controls>
+		
+		<control type="group">
+			<posy>920</posy>
+			<width>1920</width>
+			<height>1080</height>
+			<animation effect="fade" start="0" end="100" time="250" reversible="false">WindowOpen</animation>
+			<animation effect="fade" delay="1000" start="100" end="0" time="250" reversible="false">WindowClose</animation>
+			
+			<control type="group">
+				<animation effect="fade" start="0" end="50" reversible="false" condition="true">Conditional</animation>
+			
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>160</height>
+				<font>OSDStatus</font>
+				<textcolor>DefaultColor</textcolor>
+				<align>center</align>
+				<label>112</label>
+				<visible>player.paused</visible>
+			</control>
+			
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>160</height>
+				<font>OSDStatus</font>
+				<textcolor>DefaultColor</textcolor>
+				<align>center</align>
+				<label>FFx2</label>
+				<visible>player.forwarding2x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>160</height>
+				<font>OSDStatus</font>
+				<textcolor>DefaultColor</textcolor>
+				<align>center</align>
+				<label>FFx4</label>
+				<visible>player.forwarding4x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>160</height>
+				<font>OSDStatus</font>
+				<textcolor>DefaultColor</textcolor>
+				<align>center</align>
+				<label>FFx8</label>
+				<visible>player.forwarding8x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>160</height>
+				<font>OSDStatus</font>
+				<textcolor>DefaultColor</textcolor>
+				<align>center</align>
+				<label>FFx16</label>
+				<visible>player.forwarding16x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>160</height>
+				<font>OSDStatus</font>
+				<textcolor>DefaultColor</textcolor>
+				<align>center</align>
+				<label>FFx32</label>
+				<visible>player.forwarding32x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>160</height>
+				<font>OSDStatus</font>
+				<textcolor>DefaultColor</textcolor>
+				<align>center</align>
+				<label>RWx2</label>
+				<visible>player.rewinding2x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>160</height>
+				<font>OSDStatus</font>
+				<textcolor>DefaultColor</textcolor>
+				<align>center</align>
+				<label>RWx7</label>
+				<visible>player.rewinding4x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>160</height>
+				<font>OSDStatus</font>
+				<textcolor>DefaultColor</textcolor>
+				<align>center</align>
+				<label>RWx8</label>
+				<visible>player.rewinding8x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>160</height>
+				<font>OSDStatus</font>
+				<textcolor>DefaultColor</textcolor>
+				<align>center</align>
+				<label>RWx16</label>
+				<visible>player.rewinding16x</visible>
+			</control>
+
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>160</height>
+				<font>OSDStatus</font>
+				<textcolor>DefaultColor</textcolor>
+				<align>center</align>
+				<label>RWx32</label>
+				<visible>player.rewinding32x</visible>
+			</control>
+			
+			</control>
+			
+			<!------------------------------------------------------------->
+			
+			<control type="image">
+				<posx>300</posx>
+				<posy>84</posy>
+				<width>1320</width>
+				<height>24</height>
+				<texture border="6">scroll/back.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			
+			<control type="progress" id="23">
+				<description>Progress Bar</description>
+				<posx>300</posx>
+				<posy>72</posy>
+				<width>1320</width>
+				<height>24</height>
+				<info>Player.Progress</info>
+				<reveal>false</reveal>
+				<texturebg border="6">-</texturebg>
+				<midtexture border="6">scroll/middle.png</midtexture>
+				<colordiffuse>DefaultColor</colordiffuse>
+			</control>
+			
+			<control type="label">
+				<posx>250</posx>
+				<posy>65</posy>
+				<width>300</width>
+				<height>50</height>
+				<font>OSDTime</font>
+				<textcolor>White</textcolor>
+				<label>$INFO[Player.Time]</label>
+				<align>right</align>
+			</control>
+			
+			<control type="label">
+				<posx>1670</posx>
+				<posy>65</posy>
+				<width>300</width>
+				<height>50</height>
+				<font>OSDTime</font>
+				<textcolor>White</textcolor>
+				<label>$INFO[Player.Duration]</label>
+				<align>left</align>
+			</control>
+			
+		</control>
+		
+		<control type="group">
+			<description>Clock</description>
+			<visible>player.paused</visible>
+			<animation effect="fade" start="0" end="100" time="250" reversible="false">WindowOpen</animation>
+			<animation effect="fade" delay="1000" start="100" end="0" time="250" reversible="false">WindowClose</animation>
+			
+			<include>Clock</include>
+			
+		</control>
+		
+
+	</controls>
+
+</window>

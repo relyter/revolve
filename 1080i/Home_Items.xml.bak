@@ -1,0 +1,128 @@
+<includes>
+
+	<include name="Home_Items">
+		
+		<item id="20">
+			<description>reload skin</description>
+			<label>RELOAD</label>
+			<onclick>XBMC.ReloadSkin()</onclick>
+			<icon>special://skin/backgrounds/weather.jpg</icon>
+			<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
+		</item>
+		
+		<item id="2">
+			<description>Videos</description>
+			<label>31003</label>
+			<property name="Circle">circle/Videos.png</property>
+			<onclick>ActivateWindow(Videos,Files)</onclick>
+			<icon>special://skin/backgrounds/videos.jpg</icon>
+			<thumb>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</thumb>
+			<visible>!Skin.HasSetting(homepageShowVideos)</visible>
+		</item>
+
+		<item id="5">
+			<description>Movies</description>
+			<label>31006</label>
+			<label2>$INFO[Window(Home).Property(Movies.Count)] $LOCALIZE[20342] | $INFO[Window(Home).Property(Movies.UnWatched)] $LOCALIZE[16101]</label2>
+			<property name="Label3">$LOCALIZE[31043]</property>
+			<property name="Circle">circle/Movies2.png</property>
+			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+			<visible>Library.HasContent(Movies)</visible>
+			<icon>special://skin/backgrounds/movies.jpg</icon>
+			<thumb>$INFO[Skin.String(Home_Custom_Back_Meather_Folder)]</thumb>
+			<visible>!Skin.HasSetting(homepageShowMovies) + Library.HasContent(Movies)</visible>
+		</item>
+
+		<item id="6">
+			<description>TV Shows</description>
+			<label>31007</label>
+			<label2>$INFO[Window(Home).Property(TVShows.Count)] $LOCALIZE[31042] | $INFO[Window(Home).Property(Episodes.Count)] $LOCALIZE[20360] | $INFO[Window(Home).Property(Episodes.UnWatched)] $LOCALIZE[16101]</label2>
+			<property name="Label3">$LOCALIZE[31043]</property>
+			<property name="Circle">circle/TVShows.png</property>
+			<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+			<visible>Library.HasContent(TVShows)</visible>
+			<icon>special://skin/backgrounds/series.jpg</icon>
+			<thumb>$INFO[Skin.String(Home_Custom_Back_Series_Folder)]</thumb>
+			<visible>!Skin.HasSetting(homepageShowTvSeries) + Library.HasContent(TVShows)</visible>
+		</item>
+					
+		<item id="15">
+			<description>LiveTV</description>
+			<label>LiveTV</label>
+			<onclick>RunAddon(plugin.video.LiveTV)</onclick>
+			<icon>special://skin/backgrounds/videos.jpg</icon>
+			<thumb>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</thumb>
+			<visible>System.HasAddon(plugin.video.LiveTV)+!Skin.HasSetting(homepageShowLiveTV)</visible>
+		</item>
+				
+		<item id="3">
+			<description>Music</description>
+			<label>31004</label>
+			<property name="Label3">$LOCALIZE[31044]</property>
+			<property name="Circle">circle/Music.png</property>
+			<onclick>ActivateWindow(Music)</onclick>
+			<icon>special://skin/backgrounds/music.jpg</icon>
+			<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
+			<visible>!Skin.HasSetting(homepageShowMusic)</visible>
+		</item>
+	
+		<item id="4">
+			<description>Pictures</description>
+			<label>31005</label>
+			<property name="Circle">circle/Pictures.png</property>
+			<onclick>ActivateWindow(Pictures)</onclick>
+			<icon>special://skin/backgrounds/pictures.jpg</icon>
+			<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
+			<visible>!Skin.HasSetting(homepageShowPictures)</visible>
+		</item>
+
+		<item id="9">
+			<description>Weather</description>
+			<label>31010</label>
+			<property name="Circle">circle/Weather.png</property>
+			<icon>special://skin/backgrounds/weather.jpg</icon>
+			<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
+			<onclick>ActivateWindow(Weather)</onclick>
+			<visible>!Skin.HasSetting(homepageShowWeather)</visible>
+		</item>
+				
+		<item id="14">
+			<description>Add-ons</description>
+			<label>ADD-ONS</label>
+			<property name="Circle">circle/Plugins.png</property>
+			<icon>special://skin/backgrounds/addons.jpg</icon>
+			<thumb>$INFO[Skin.String(Home_Custom_Back_Addons_Folder)]</thumb>
+			<onclick>activatewindow(AddonBrowser)</onclick>
+			<visible>!Skin.HasSetting(homepageShowAddons)</visible>
+		</item>
+			
+		<item id="1">
+			<description>Programs</description>
+			<label>31002</label>
+			<property name="Circle">circle/Programs.png</property>
+			<icon>special://skin/backgrounds/programs.jpg</icon>
+			<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
+			<onclick>ActivateWindow(Programs,Addons)</onclick>
+			<visible>!Skin.HasSetting(homepageShowPrograms)</visible>
+		</item>
+
+		<item id="11">
+			<description>Settings</description>
+			<label>31012</label>
+			<property name="Circle">circle/Settings.png</property>
+			<icon>special://skin/backgrounds/settings.jpg</icon>
+			<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
+			<onclick>ActivateWindow(settings)</onclick>
+			<visible>!Skin.HasSetting(homepageShowSettings)</visible>
+		</item>
+		
+		<item id="13">
+			<description>Play Disc</description>
+			<label>31014</label>
+			<onclick>PlayDVD</onclick>
+			<visible>System.HasMediadvd</visible>
+		</item>
+
+	</include>
+
+</includes>

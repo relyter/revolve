@@ -1,0 +1,155 @@
+<includes>
+
+	<include name="View_53_Landscape">
+	
+		<description>List View (id=53)</description>
+		
+		<control type="group">
+			<visible>Control.IsVisible(53)</visible>
+			<animation effect="slide" start="0,1080" end="0,0" time="1000">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,1080" time="1000">WindowClose</animation>
+			
+			<description>Ring and labels</description>
+				
+			<control type="image">
+				<posy>680</posy>
+				<width>1920</width>
+				<height>400</height>
+				<texture backgroud="true">maskbottom.png</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<colordiffuse>DefaultColor</colordiffuse>
+			</control>
+			<control type="image">
+				<posy>680</posy>
+				<width>1920</width>
+				<height>400</height>
+				<texture>ringsbottom.png</texture>
+			</control>
+			<control type="label">
+				<description>item label</description>
+				<posy>1000</posy>
+				<width>1920</width>
+				<height>50</height>
+				<align>center</align>
+				<font>Homemedium</font>
+				<textcolor>White</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<description>item year</description>
+				<visible>Container.Content(Movies)|Container.Content(TVshows)</visible>
+				<posy>930</posy>
+				<posx>840</posx>
+				<width>100</width>
+				<height>50</height>
+				<align>left</align>
+				<font>Homemediumsmaller</font>
+				<textcolor>White</textcolor>
+				<label>$INFO[Container(53).ListItem.year]</label>
+			</control>
+			<control type="label">
+				<description>movie duration</description>
+				<visible>Container.Content(Movies)</visible>
+				<posy>930</posy>
+				<posx>960</posx>
+				<width>200</width>
+				<height>50</height>
+				<align>left</align>
+				<font>Homemediumsmaller</font>
+				<textcolor>White</textcolor>
+				<label>$INFO[Container(53).ListItem.Duration] min</label>
+			</control>
+			<control type="label">
+				<description>episodes amount</description>
+				<visible>Container.Content(TVshows)</visible>
+				<posy>930</posy>
+				<posx>960</posx>
+				<width>350</width>
+				<height>50</height>
+				<align>left</align>
+				<font>Homemediumsmaller</font>
+				<textcolor>White</textcolor>
+				<label>$LOCALIZE[31048]$INFO[Container(53).ListItem.Property(TotalEpisodes)] / $INFO[Container(53).ListItem.Property(UnWatchedEpisodes)]</label>
+			</control>
+			<control type="label">
+				<description>episodes amount</description>
+				<visible>Container.Content(seasons)</visible>
+				<posy>930</posy>
+				<posx>830</posx>
+				<width>350</width>
+				<height>50</height>
+				<align>left</align>
+				<font>Homemediumsmaller</font>
+				<textcolor>White</textcolor>
+				<label>$LOCALIZE[31048]$INFO[Container(53).ListItem.Property(TotalEpisodes)] / $INFO[Container(53).ListItem.Property(UnWatchedEpisodes)]</label>
+			</control>
+			<control type="label">
+				<description>item mpaa</description>
+				<visible>Container.Content(Movies)|Container.Content(TVshows)</visible>
+				<posy>880</posy>
+				<posx>920</posx>
+				<width>200</width>
+				<height>50</height>
+				<align>right</align>
+				<font>Homemediumsmaller</font>
+				<textcolor>White</textcolor>
+				<label>$INFO[Container(53).ListItem.Mpaa]</label>
+			</control>
+			<control type="label">
+				<description>item rating</description>
+				<visible>Container.Content(Movies)|Container.Content(TVshows)</visible>
+				<posy>880</posy>
+				<posx>960</posx>
+				<width>200</width>
+				<height>50</height>
+				<align>left</align>
+				<font>Homemediumsmaller</font>
+				<textcolor>White</textcolor>
+				<label>IMDB: $INFO[Container(53).ListItem.Rating]</label>
+			</control>
+			<control type="label">
+				<description>item rating</description>
+				<visible>Container.Content(episodes)</visible>
+				<posy>930</posy>
+				<posx>980</posx>
+				<width>200</width>
+				<height>50</height>
+				<align>left</align>
+				<font>Homemediumsmaller</font>
+				<textcolor>White</textcolor>
+				<label>IMDB: $INFO[Container(53).ListItem.Rating]</label>
+			</control>
+			<control type="label">
+				<description>item rating</description>
+				<visible>Container.Content(episodes)</visible>
+				<posy>930</posy>
+				<posx>940</posx>
+				<width>250</width>
+				<height>50</height>
+				<align>right</align>
+				<font>Homemediumsmaller</font>
+				<textcolor>White</textcolor>
+				<label>$INFO[Container(53).ListItem.premiered]</label>
+			</control>
+		</control>	
+		
+				<include>Revolve_Landscape</include>
+				
+		<control type="wraplist" id="53">
+			<posx>1920</posx>
+			<posy>57</posy>
+			<width>1920</width>
+			<height>400</height>
+			<onleft>53</onleft>
+			<onright>53</onright>
+			<onup>9000</onup>
+			<ondown>53</ondown>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+			<focusposition>0</focusposition>
+			<viewtype label="LandScape">list</viewtype>
+		</control>
+
+	</include>
+
+</includes>

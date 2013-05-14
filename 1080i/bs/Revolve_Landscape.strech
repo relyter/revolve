@@ -1,0 +1,965 @@
+<includes>
+
+	<include name="Revolve_Landscape">
+		
+			<!--<include>Revolve_Landscape_Items</include>-->
+		<control type="group">
+		
+			<control type="group" id="303">
+				<visible>Control.IsVisible(53)</visible>
+				<animation effect="fade" start="0" end="100" delay ="195" time="5" reversible="false" condition="Control.IsVisible(301) | Control.IsVisible(302)">Conditional</animation>
+				<include>Revolve_Landscape_Items</include>
+			</control>
+			
+			<control type="group" id="301">
+				<visible>Control.IsVisible(53) + Container(53).OnNext</visible>
+				<animation type="Hidden" reversible="false">
+					<effect type="rotate" center="960,4500" start="0" end="5" time="200" />
+				</animation>
+				<include>Revolve_Landscape_Items_Next</include>
+			</control>
+			
+			<control type="group" id="302">
+				<visible>Control.IsVisible(53) + Container(53).OnPrevious</visible>
+				<animation type="Hidden" reversible="false">
+					<effect type="rotate" center="960,4500" start="0" end="-5" time="200" />
+				</animation>
+				<include>Revolve_Landscape_Items_Previous</include>
+			</control>
+		
+		</control>
+			
+	</include>
+			
+			<!------------------------------------------------------------------------------------------------>
+				
+	<include name="Revolve_Landscape_Items_Previous">
+			
+			<!-- 
+			
+			ITEM -3
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="15" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-2).Icon]</texture>
+					</control>
+				
+				</control>
+			
+			</control>
+			
+			<!-- 
+			
+			ITEM -2
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="10" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-1).Icon]</texture>
+					</control>
+				
+				</control>
+			
+			</control>
+			
+			<!-- 
+			
+			ITEM -1
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="5" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<visible>Container.OnPrevious</visible>
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<animation effect="zoom" center="960,724" start="100" end="125" time="200" reversible="false">Hidden</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+				
+					<control type="image">
+						<visible>Container.OnPrevious</visible>
+						<animation effect="fade" start="0" end="100" time="200" reversible="false">Hidden</animation>
+						<width>330</width>
+						<height>464</height>
+						<fadetime>100</fadetime>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true">AAApostershadow.png</texture>
+					</control>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(0).Icon]</texture>
+					</control>
+				
+				</control>
+			
+			</control>
+			
+			<!-- 
+			
+			ITEM 0
+			
+			-->
+	
+			<control type="group">
+								
+				<control type="group">
+					<visible>Container.OnPrevious</visible>
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="100" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<animation effect="zoom" center="960,724" start="100" end="80" time="200" reversible="false">Hidden</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+				
+					<control type="image">
+						<visible>Container.OnPrevious</visible>
+						<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+						<width>330</width>
+						<height>464</height>
+						<fadetime>100</fadetime>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true">AAApostershadow.png</texture>
+					</control>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture>poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>200</fadetime>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(1).Icon]</texture>
+					</control>
+				
+				</control>
+				
+			</control>
+			
+			<!-- 
+			
+			ITEM 1
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="-5" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(2).Icon]</texture>
+					</control>
+				
+				</control>
+			
+			</control>
+			
+			<!-- 
+			
+			ITEM 2
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="-10" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(3).Icon]</texture>
+					</control>
+				
+				</control>
+				
+			</control>
+			
+			<!-- 
+			
+			ITEM 3
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="-15" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(4).Icon]</texture>
+					</control>
+				
+				</control>
+				
+			</control>
+			
+	</include>
+				
+	<include name="Revolve_Landscape_Items">
+			
+			<!-- 
+			
+			ITEM -3
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="15" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-3).Icon]</texture>
+					</control>
+				
+				</control>
+			
+			</control>
+			
+			<!-- 
+			
+			ITEM -2
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="10" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-2).Icon]</texture>
+					</control>
+				
+				</control>
+			
+			</control>
+			
+			<!-- 
+			
+			ITEM -1
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="5" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-1).Icon]</texture>
+					</control>
+				
+				</control>
+			
+			</control>
+			
+			<!-- 
+			
+			ITEM 0
+			
+			-->
+	
+			<control type="group">
+								
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="100" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+				
+					<control type="image">
+						<width>330</width>
+						<height>464</height>
+						<fadetime>100</fadetime>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true">AAApostershadow.png</texture>
+					</control>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture>poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>200</fadetime>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(0).Icon]</texture>
+					</control>
+				
+				</control>
+				
+			</control>
+			
+			<!-- 
+			
+			ITEM 1
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="-5" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(1).Icon]</texture>
+					</control>
+				
+				</control>
+			
+			</control>
+			
+			<!-- 
+			
+			ITEM 2
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="-10" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(2).Icon]</texture>
+					</control>
+				
+				</control>
+				
+			</control>
+			
+			<!-- 
+			
+			ITEM 3
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="-15" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(3).Icon]</texture>
+					</control>
+				
+				</control>
+				
+			</control>
+			
+	</include>
+	
+	<include name="Revolve_Landscape_Items_Next">
+			
+			<!-- 
+			
+			ITEM -3
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="15" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-4).Icon]</texture>
+					</control>
+				
+				</control>
+			
+			</control>
+			
+			<!-- 
+			
+			ITEM -2
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="10" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-3).Icon]</texture>
+					</control>
+				
+				</control>
+			
+			</control>
+			
+			<!-- 
+			
+			ITEM -1
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="5" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-2).Icon]</texture>
+					</control>
+				
+				</control>
+			
+			</control>
+			
+			<!-- 
+			
+			ITEM 0
+			
+			-->
+	
+			<control type="group">
+								
+				<control type="group">
+					<visible>Container.OnNext</visible>
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="100" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<animation effect="zoom" center="960,724" start="100" end="80" time="200" reversible="false">Hidden</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+				
+					<control type="image">
+						<visible>Container.OnNext</visible>
+						<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
+						<width>330</width>
+						<height>464</height>
+						<fadetime>100</fadetime>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true">AAApostershadow.png</texture>
+					</control>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture>poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>200</fadetime>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-1).Icon]</texture>
+					</control>
+				
+				</control>
+				
+			</control>
+			
+			<!-- 
+			
+			ITEM 1
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="-5" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<visible>Container.OnNext</visible>
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<animation effect="zoom" center="960,724" start="100" end="125" time="200" reversible="false">Hidden</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+				
+					<control type="image">
+						<visible>Container.OnNext</visible>
+						<animation effect="fade" start="0" end="100" time="200" reversible="false">Hidden</animation>
+						<width>330</width>
+						<height>464</height>
+						<fadetime>100</fadetime>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true">AAApostershadow.png</texture>
+					</control>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(0).Icon]</texture>
+					</control>
+				
+				</control>
+			
+			</control>
+			
+			<!-- 
+			
+			ITEM 2
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="-10" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(1).Icon]</texture>
+					</control>
+				
+				</control>
+				
+			</control>
+			
+			<!-- 
+			
+			ITEM 3
+			
+			-->
+	
+			<control type="group">
+				<animation effect="rotate" center="960,4500" end="-15" condition="true">Conditional</animation>
+				
+				<control type="group">
+					<animation type="Conditional" condition="true">
+						<effect type="zoom" center="960,724" end="80" />
+						<effect type="rotate" center="auto" end="0" />
+					</animation>
+					<posx>795</posx>
+					<posy>280</posy>
+					<width>330</width>
+					<height>646</height>
+					
+					<control type="largeimage">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>290</width>
+						<height>424</height>
+						<texture diffuse="postermaskbig.png">poster.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="largeimage">
+						<posx>26</posx>
+						<posy>26</posy>
+						<width>278</width>
+						<height>412</height>
+						<aspectratio>stretch</aspectratio>
+						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(2).Icon]</texture>
+					</control>
+				
+				</control>
+				
+			</control>
+			
+	</include>
+
+</includes>
