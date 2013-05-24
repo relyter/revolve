@@ -8,14 +8,61 @@
 	<include file="View_52_Icons.xml" />
 	<include file="View_53_Landscape.xml" />
 	<include file="View_54_Banners.xml" />
-	<include file="View_55_Gallery.xml" />
+	<include file="View_55_Panel.xml" />
+	<include file="View_56_Gallery.xml" />
 	
 	<include file="Revolve_Home.xml" />
 	<include file="Home_Items.xml" />
 	<include file="Revolve_Landscape.xml" />
 	<include file="Recently_Added.xml" />
+	
+	<include name="Fanart1">	
+		<control type="image">
+			<description>color overlay</description>
+			<animation effect="fade" end="75" condition="true">Conditional</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>450</width>
+			<height>450</height>
+			<texture border="5" background="true">circlemask.png</texture>
+			<colordiffuse>CircleDiffuse</colordiffuse>
+		</control>
+		<control type="image">
+			<description>border</description>
+			<posx>-2</posx>
+			<posy>-2</posy>
+			<width>454</width>
+			<height>454</height>
+			<texture background="true" border="10">circleborder.png</texture>
+			<colordiffuse>CircleDiffuse</colordiffuse>
+			<aspectratio>stretch</aspectratio>
+		</control>
+	</include>	
+	<include name="fanart2">
+		<control type="image">
+			<description>color overlay</description>
+			<animation effect="fade" end="75" condition="true">Conditional</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>300</width>
+			<height>300</height>
+			<texture border="5" background="true">circlemask.png</texture>
+			<colordiffuse>CircleDiffuse</colordiffuse>
+		</control>
 		
-		<include name="LeftRing">
+		<control type="image">
+			<description>border</description>
+			<posx>-2</posx>
+			<posy>-2</posy>
+			<width>304</width>
+			<height>304</height>
+			<texture background="true">circleborder.png</texture>
+			<colordiffuse>CircleDiffuse</colordiffuse>
+			<aspectratio>stretch</aspectratio>
+		</control>	
+	</include>
+		
+	<include name="LeftRing">
 			<control type="image">
 				<width>900</width>
 				<height>1080</height>
@@ -30,8 +77,8 @@
 			</control>
 		</include>
 	
-		<include name="bannerborder">
-			<control type="image">
+	<include name="bannerborder">
+		<control type="image">
 				<posx>854</posx>
 				<posy>694</posy>
 				<height>197</height>
@@ -49,7 +96,7 @@
 				<colordiffuse>DefaultColor</colordiffuse>
 				<visible>Container(54).OnNext</visible>
 			</control>
-		</include>
+	</include>
 		
 		<include name="HiddenButton">
 		<posx>-20</posx>

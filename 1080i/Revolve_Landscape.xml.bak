@@ -68,7 +68,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-2).Icon]</texture>
 					</control>
 				
@@ -109,7 +109,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-1).Icon]</texture>
 					</control>
 				
@@ -144,7 +144,7 @@
 						<width>330</width>
 						<height>464</height>
 						<fadetime>100</fadetime>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture background="true">AAApostershadow.png</texture>
 					</control>
 					
@@ -162,7 +162,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(0).Icon]</texture>
 					</control>
 				
@@ -196,7 +196,7 @@
 						<width>330</width>
 						<height>464</height>
 						<fadetime>100</fadetime>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture background="true">AAApostershadow.png</texture>
 					</control>
 					
@@ -214,7 +214,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<fadetime>200</fadetime>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(1).Icon]</texture>
 					</control>
@@ -256,7 +256,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(2).Icon]</texture>
 					</control>
 				
@@ -297,7 +297,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(3).Icon]</texture>
 					</control>
 				
@@ -338,7 +338,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(4).Icon]</texture>
 					</control>
 				
@@ -383,7 +383,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-3).Icon]</texture>
 					</control>
 				
@@ -424,7 +424,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-2).Icon]</texture>
 					</control>
 				
@@ -465,7 +465,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-1).Icon]</texture>
 					</control>
 				
@@ -495,7 +495,7 @@
 						<width>330</width>
 						<height>464</height>
 						<fadetime>100</fadetime>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture background="true">AAApostershadow.png</texture>
 					</control>
 					
@@ -513,7 +513,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<fadetime>200</fadetime>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(0).Icon]</texture>
 					</control>
@@ -555,7 +555,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(1).Icon]</texture>
 					</control>
 				
@@ -596,7 +596,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(2).Icon]</texture>
 					</control>
 				
@@ -637,7 +637,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(3).Icon]</texture>
 					</control>
 				
@@ -682,7 +682,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-4).Icon]</texture>
 					</control>
 				
@@ -723,7 +723,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-3).Icon]</texture>
 					</control>
 				
@@ -764,7 +764,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-2).Icon]</texture>
 					</control>
 				
@@ -798,7 +798,7 @@
 						<width>330</width>
 						<height>464</height>
 						<fadetime>100</fadetime>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture background="true">AAApostershadow.png</texture>
 					</control>
 					
@@ -816,7 +816,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<fadetime>200</fadetime>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-1).Icon]</texture>
 					</control>
@@ -852,7 +852,7 @@
 						<width>330</width>
 						<height>464</height>
 						<fadetime>100</fadetime>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture background="true">AAApostershadow.png</texture>
 					</control>
 					
@@ -870,7 +870,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(0).Icon]</texture>
 					</control>
 				
@@ -911,7 +911,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(1).Icon]</texture>
 					</control>
 				
@@ -952,7 +952,7 @@
 						<posy>26</posy>
 						<width>278</width>
 						<height>412</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(2).Icon]</texture>
 					</control>
 				

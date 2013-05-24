@@ -1,0 +1,416 @@
+<includes>
+	<include name="View_56_Gallery">
+	<description>Gallery View (id=56)</description>
+	<control type="list" id="56">
+		<posx>110</posx>
+		<posy>1060</posy>
+		<width>1700</width>
+		<height>20</height>
+		<onup>9000</onup>
+		<ondown>60</ondown>
+		<onleft>56</onleft>
+		<onright>56</onright>
+		<orientation>horizontal</orientation>
+		<pagecontrol>60</pagecontrol>
+		<viewtype label="Gallery">list</viewtype>
+		<scrolltime>200</scrolltime>
+	</control>
+	<control type="group">
+		<animation effect="slide" start="0,-1000" time="500" acceleration="1.5">WindowOpen</animation>
+		<animation effect="slide" end="0,-1000" time="500" acceleration="1.5">WindowClose</animation>
+		<control type="group">
+			<visible>Control.IsVisible(56)</visible>
+			<description>item (-2) art</description>
+			<posx>0</posx>
+			<posy>650</posy>
+			<width>300</width>
+			<height>300</height>
+			<control type="image">
+				<description>shadow</description>
+				<posx>-30</posx>
+				<posy>-30</posy>
+				<width>360</width>
+				<height>360</height>
+				<texture background="true">circleshadow.png</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			</control>
+			<control type="image">
+				<description>thumb</description>
+				<visible>!Container.Content(tvshows) + !Container.Content(movies)</visible> 
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>300</height>
+				<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem(-2).Art(thumb)]</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			</control>
+			<control type="image">
+				<description>item fanart for shows and movies</description>
+				<visible>Container.Content(tvshows) | Container.Content(movies)</visible> 
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>300</height>
+				<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem(-2).Art(fanart)]</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			</control>
+			<control type="image">
+				<description>watched overlay</description>
+				<posx>150</posx>
+				<posy>130</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem(-2).Overlay]</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<colordiffuse>ffffffff</colordiffuse>
+			</control>
+			<include>fanart2</include>	
+		</control>	
+			
+		<control type="group">
+			<visible>Control.IsVisible(56)</visible>
+			<description>item (2) art</description>
+			<posx>1620</posx>
+			<posy>650</posy>
+			<width>300</width>
+			<height>300</height>
+			<control type="image">
+				<description>shadow</description>
+				<posx>-30</posx>
+				<posy>-30</posy>
+				<width>360</width>
+				<height>360</height>
+				<texture background="true">circleshadow.png</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			</control>
+			<control type="image">
+				<description>thumb</description>
+				<visible>!Container.Content(tvshows) + !Container.Content(movies)</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>300</height>
+				<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem(2).Art(thumb)]</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			</control>			
+			<control type="image">
+				<description>item fanart for shows and movies</description>
+				<visible>Container.Content(tvshows) | Container.Content(movies)</visible> 
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>300</height>
+				<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem(2).Art(fanart)]</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			</control>
+			<control type="image">
+				<description>watched overlay</description>
+				<posx>150</posx>
+				<posy>130</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem(2).Overlay]</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<colordiffuse>ffffffff</colordiffuse>
+			</control>
+			<include>fanart2</include>	
+		</control>
+			
+		<control type="group">
+			<visible>Control.IsVisible(56)</visible>
+			<description>item (-1) fanart</description>
+			<posx>220</posx>
+			<posy>504</posy>
+			<width>450</width>
+			<height>450</height>
+			<control type="image">
+				<description>shadow</description>
+				<posx>-45</posx>
+				<posy>-45</posy>
+				<width>540</width>
+				<height>540</height>
+				<texture background="true">circleshadow.png</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			</control>
+			<control type="image">
+				<description>thumb</description>
+				<visible>!Container.Content(tvshows) + !Container.Content(movies)</visible>
+				<posx>3</posx>
+				<posy>3</posy>
+				<width>444</width>
+				<height>444</height>
+				<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem(-1).Art(thumb)]</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			</control>
+			<control type="image">
+				<description>item fanart for shows and movies</description>
+				<visible>Container.Content(tvshows) | Container.Content(movies)</visible> 
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>450</width>
+				<height>450</height>
+				<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem(-1).Art(fanart)]</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			</control>
+			<control type="image">
+				<description>watched overlay</description>
+				<posx>200</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem(-1).Overlay]</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<colordiffuse>ffFFFFFF</colordiffuse>
+			</control>
+			<include>Fanart1</include>
+		</control>
+				
+		<control type="group">
+			<visible>Control.IsVisible(56)</visible>
+			<description>item (1) fanart</description>
+			<posx>1250</posx>
+			<posy>504</posy>
+			<width>450</width>
+			<height>450</height>
+			<texture background="true">circleshadow.png</texture>
+			<control type="image">
+				<description>shadow</description>
+				<posx>-45</posx>
+				<posy>-45</posy>
+				<width>540</width>
+				<height>540</height>
+				<texture background="true">circleshadow.png</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			</control>
+			<control type="image">
+				<description>thumb</description>
+				<visible>!Container.Content(tvshows) + !Container.Content(movies)</visible>
+				<posx>3</posx>
+				<posy>3</posy>
+				<width>444</width>
+				<height>444</height>
+				<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem(1).Art(thumb)]</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			</control>
+			<control type="image">
+				<description>item fanart for shows and movies</description>
+				<visible>Container.Content(tvshows) | Container.Content(movies)</visible> 
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>450</width>
+				<height>450</height>
+				<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem(1).Art(fanart)]</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			</control>
+			<control type="image">
+				<description>watched overlay</description>
+				<posx>200</posx>
+				<posy>200</posy>
+				<width>200</width>
+				<height>200</height>
+				<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem(1).Overlay]</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<colordiffuse>ffFFFFFF</colordiffuse>
+			</control>
+			<include>Fanart1</include>
+		</control>
+			
+		<control type="group">
+			<visible>Control.IsVisible(56)</visible>
+			<description>current item fanart</description>
+			<posx>510</posx>
+			<posy>0</posy>
+			<width>900</width>
+			<height>900</height>
+			<control type="image">
+				<description>current item shadow</description>
+				<posx>-96</posx>
+				<posy>-38</posy>
+				<width>1100</width>
+				<height>1100</height>
+				<texture background="true">circleshadow.png</texture>
+			</control>
+			<control type="image">
+				<description>current item thumb</description>
+				<visible>!Container.Content(tvshows) + !Container.Content(movies)</visible>
+				<posx>0</posx>
+				<posy>50</posy>
+				<width>900</width>
+				<height>900</height>
+				<texture background="true" diffuse="circlemask.png">$INFO[ListItem.Art(thumb)]</texture>
+				<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
+			</control>
+			<control type="image">
+				<description>item fanart for shows and movies</description>
+				<visible>Container.Content(tvshows) | Container.Content(movies)</visible> 
+				<posx>0</posx>
+				<posy>50</posy>
+				<width>900</width>
+				<height>900</height>
+				<texture background="true" diffuse="circlemask.png">$INFO[ListItem.Art(fanart)]</texture>
+				<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
+			</control>
+			<control type="image">
+				<description>current item watched overlay</description>
+				<posx>550</posx>
+				<posy>700</posy>
+				<width>200</width>
+				<height>200</height>
+				<texture background="true" diffuse="circlemask.png">$INFO[ListItem.Overlay]</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<colordiffuse>aaFFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<description>border</description>
+				<posx>-3</posx>
+				<posy>47</posy>
+				<width>906</width>
+				<height>906</height>
+				<texture background="true">circleborder.png</texture>
+				<colordiffuse>CircleDiffuse</colordiffuse>
+				<aspectratio>strech</aspectratio>
+			</control>
+			
+		</control>
+	</control>		
+	<control type="group">
+		<visible>Control.IsVisible(56)</visible>
+		<description>gallery bottom and labels</description>
+		<animation effect="slide" start="0,300" time="500">WindowOpen</animation>
+		<animation effect="slide" end="0,300" time="500">WindowClose</animation>
+		<control type="image">
+			<posx>0</posx>
+			<posy>910</posy>
+			<width>1920</width>
+			<height>170</height>
+			<texture>gallerybottom.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>900</posy>
+			<width>1920</width>
+			<height>10</height>
+			<texture>gallerymask.png</texture>
+			<colordiffuse>CircleDiffuse</colordiffuse>
+			<aspectratio scalediffuse="false" aligny="top">keep</aspectratio>
+		</control>
+		<control type="label">
+			<description>item title</description>
+			<visible>!Container(56).Content(episodes) + !Container(56).Content(seasons)</visible>
+			<posx>60</posx>
+			<posy>940</posy>
+			<width>1800</width>
+			<height>60</height>
+			<align>center</align>
+			<aligny>top</aligny>
+			<font>Title</font>
+			<textcolor>TextFocus</textcolor>
+			<info>ListItem.Label</info>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<description>item title in seasons</description>
+			<visible>Container.Content(seasons)</visible>
+			<posx>60</posx>
+			<posy>940</posy>
+			<width>1800</width>
+			<height>60</height>
+			<align>center</align>
+			<aligny>top</aligny>
+			<font>Title</font>
+			<textcolor>TextFocus</textcolor>
+			<label>$INFO[Container(56).ListItem.Label,, •] $LOCALIZE[31048]$INFO[Container(56).ListItem.Property(TotalEpisodes)] / $INFO[Container(56).ListItem.Property(UnWatchedEpisodes)]</label>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<description>item title in episodes</description>
+			<visible>Container.Content(episodes)</visible>
+			<posx>60</posx>
+			<posy>940</posy>
+			<width>1800</width>
+			<height>60</height>
+			<align>center</align>
+			<aligny>top</aligny>
+			<font>Title</font>
+			<textcolor>TextFocus</textcolor>
+			<label>$LOCALIZE[31050] $INFO[Container(56).ListItem.Season,, •] $INFO[Container(56).ListItem.Label]</label>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<description>show name in seasons</description>
+			<visible>Container.Content(seasons)</visible>
+			<posx>260</posx>
+			<posy>1000</posy>
+			<width>1400</width>
+			<height>60</height>
+			<align>center</align>
+			<aligny>top</aligny>
+			<font>HomeMedium</font>
+			<textcolor>Text</textcolor>
+			<label>$INFO[ListItem.TVShowTitle]</label>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<description>episode infolabels</description>
+			<visible>Container.Content(episodes)</visible> 
+			<posx>260</posx>
+			<posy>1000</posy>
+			<width>1400</width>
+			<height>60</height>
+			<align>center</align>
+			<aligny>top</aligny>
+			<font>HomeMediumSmaller</font>
+			<textcolor>TextFocus</textcolor>
+			<label>$INFO[Container(56).ListItem.premiered,, • ] IMDB: $INFO[Container(56).ListItem.Rating,, • ] $INFO[Container(56).ListItem.Duration]$LOCALIZE[31045]  •  $INFO[Container(56).ListItem.VideoResolution,,  • ]  $INFO[Container(56).ListItem.VideoCodec,,  • ]  $INFO[Container(56).ListItem.VideoAspect,,  • ]   $INFO[Container(56).ListItem.AudioCodec,,  • ]  Ch: $INFO[Container(56).ListItem.AudioChannels] </label>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<description>tvshow infolabels</description>
+			<visible>Container.Content(tvshows)</visible>
+			<posx>260</posx>
+			<posy>1000</posy>
+			<width>1400</width>
+			<height>60</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>HomeMediumSmaller</font>
+			<textcolor>TextFocus</textcolor>
+			<label>$INFO[Container(56).ListItem.Year,, • ] $LOCALIZE[31048]$INFO[Container(56).ListItem.Property(TotalEpisodes)] / $INFO[Container(56).ListItem.Property(UnWatchedEpisodes),, • ] $INFO[Container(56).ListItem.genre,, • ] $INFO[Container(56).ListItem.Rating,, • ] $INFO[Container(56).ListItem.MPAA]</label>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<description>movie infolabels</description>
+			<visible>Container.Content(Movies)</visible>
+			<posx>60</posx>
+			<posy>1000</posy>
+			<width>1800</width>
+			<height>60</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>HomeMediumSmaller</font>
+			<textcolor>TextFocus</textcolor>
+			<label>$INFO[Container(56).ListItem.year,,  •  ]$INFO[Container(56).ListItem.Duration] min  •  $INFO[Container(56).ListItem.genre,,  •  ]$INFO[Container(56).ListItem.Rating,,  •  ]$INFO[Container(56).ListItem.MPAA,,  •  ]$INFO[Container(56).ListItem.VideoResolution,,  •  ]$INFO[Container(56).ListItem.VideoCodec,,  •  ]$INFO[Container(56).ListItem.VideoAspect,,  •  ]$INFO[Container(56).ListItem.AudioCodec,,  •  ]Ch: $INFO[Container(56).ListItem.AudioChannels] </label>
+			<scroll>true</scroll>
+		</control>
+	</control>
+	<control type="scrollbar" id="60">
+		<animation effect="slide" start="0,0" end="-8,0" time="150">Focus</animation>
+		<animation effect="slide" start="-8,0" end="0,0" time="300">UnFocus</animation>
+		<visible>Control.IsVisible(56)</visible>
+		<posx>110</posx>
+		<posy>1060</posy>
+		<width>1700</width>
+		<height>20</height>
+		<texturesliderbackground>-</texturesliderbackground>
+		<texturesliderbar>-</texturesliderbar>
+		<texturesliderbarfocus>-</texturesliderbarfocus>
+		<textureslidernib>-</textureslidernib>
+		<textureslidernibfocus>scrollbarmark.png</textureslidernibfocus>
+		<showonepage>false</showonepage>
+		<orientation>horizontal</orientation> 
+		<onup>56</onup>
+		<ondown>-</ondown>
+	</control>
+	</include>
+</includes>

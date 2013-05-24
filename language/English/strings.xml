@@ -47,10 +47,11 @@
   <string id="31042">Shows</string>
   <string id="31043">Watch your</string>
   <string id="31044">Listen your</string>
-  <string id="31045">MIN</string>
+  <string id="31045">min</string>
   <string id="31046">CONFIGURE APPEARANCE SETTINGS</string>
   <string id="31047">Change the skin, language, region, file listing and screensaver</string>
   <string id="31048">Episodes: </string>
-  <string id="31049">Unwatched: </string>
+  <string id="31049">Episode </string>
+  <string id="31050">Season </string>
 
 </strings>

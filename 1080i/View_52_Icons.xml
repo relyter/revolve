@@ -1,7 +1,7 @@
 <includes>
 	<include name="View_52_Icons">
 		<control type="panel" id="52">
-			<description>Panel View (id=52)</description>
+			<description>Icon View (id=52)</description>
 			<posx>60</posx>
 			<posy>30</posy>
 			<width>1920</width>
@@ -15,7 +15,7 @@
 			<pagecontrol>60</pagecontrol>
 			<itemlayout height="300" width="300">
 				<control type="image">
-					<description>current item shadow</description>
+					<description>item shadow</description>
 					<posx>-15</posx>
 					<posy>-15</posy>
 					<width>330</width>
@@ -25,22 +25,12 @@
 					<animation effect="fade" center="auto" start="100" end="0" time="200" reversible="false">UnFocus</animation>
 				</control>
 				<control type="image">
-					<description>item poster</description>
+					<description>item thumb</description>
 					<posx>22</posx>
 					<posy>22</posy>
 					<width>256</width>
 					<height>256</height>
-					<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem.Art(poster)]</texture>
-					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				</control>
-				<control type="image">
-					<description>item thumb if episodes</description>
-					<visible>Container.Content(episodes)</visible>
-					<posx>22</posx>
-					<posy>22</posy>
-					<width>256</width>
-					<height>256</height>
-					<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem.Art(thumb)]</texture>
+					<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem.thumb]</texture>
 					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -51,7 +41,7 @@
 					<width>256</width>
 					<height>256</height>
 					<texture border="5" background="true">circlemask.png</texture>
-					<colordiffuse>DefaultColor</colordiffuse>
+					<colordiffuse>CircleDiffuse</colordiffuse>
 				</control>
 				<control type="image">
 					<description>watched overlay</description>
@@ -61,7 +51,7 @@
 					<height>260</height>
 					<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem.Overlay]</texture>
 					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-					<colordiffuse>77000000</colordiffuse>
+					<colordiffuse>99000000</colordiffuse>
 				</control>
 				<control type="image">
 					<description>border</description>
@@ -91,24 +81,13 @@
 					<animation effect="fade" center="auto" start="100" end="0" time="200" reversible="false">UnFocus</animation>
 				</control>
 				<control type="image">
-					<description>current item poster</description>
+					<description>current item thumb</description>
 					<posx>12</posx>
 					<posy>12</posy>
 					<width>278</width>
 					<height>278</height>
-					<texture background="true" diffuse="circlemask.png">$INFO[ListItem.Art(poster)]</texture>
+					<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem.thumb]</texture>
 					<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
-					<!-- <aspectratio scalediffuse="false" aligny="center">strech</aspectratio> -->
-				</control>
-				<control type="image">
-					<description>item thumb if episodes</description>
-					<visible>Container.Content(episodes)</visible>
-					<posx>12</posx>
-					<posy>12</posy>
-					<width>278</width>
-					<height>278</height>
-					<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem.Art(thumb)]</texture>
-					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				</control>
 				<control type="image">
 					<description>smooth move</description>
@@ -129,10 +108,10 @@
 					<height>280</height>
 					<texture background="true" diffuse="circlemask.png">$INFO[ListItem.Overlay]</texture>
 					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-					<colordiffuse>55FFFFFF</colordiffuse>
+					<colordiffuse>99FFFFFF</colordiffuse>
 				</control>
 				<control type="image">
-					<description>drop border</description>
+					<description> border</description>
 					<posx>10</posx>
 					<posy>10</posy>
 					<width>280</width>
@@ -147,12 +126,33 @@
 		<control type=group>
 			<description>labels</description>
 			<visible>Control.IsVisible(52)</visible>
+			<control type="image">
+				<description>cross</description>
+				<posx>1095</posx>
+				<posy>945</posy>
+				<width>760</width>
+				<height>120</height>
+				<texture>cross.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>DefaultColor</colordiffuse>
+			</control>
+<!-- 			<control type="image">
+				<description>line</description>
+				<posx>0</posx>
+				<posy>940</posy>
+				<width>1250</width>
+				<height>4</height>
+				<texture>line.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>DefaultColor</colordiffuse>
+			</control> -->
 			<control type="label">
 				<description>item title</description>
-				<posx>90</posx>
-				<posy>960</posy>
-				<width>1350</width>
+				<posx>1520</posx>
+				<posy>940</posy>
+				<width>1470</width>
 				<height>60</height>
+				<align>right</align>
 				<aligny>center</aligny>
 				<font>HomeMedium</font>
 				<textcolor>TextFocus</textcolor>
@@ -162,48 +162,70 @@
 			<control type="label">
 				<description>1st line item infolabels</description>
 				<visible>Container.Content(Movies)</visible>
-				<posx>1450</posx>
+				<posx>1550</posx>
 				<posy>940</posy>
-				<width>450</width>
+				<width>350</width>
 				<height>60</height>
-				<alignx>right</alignx>
-				<aligny>center</aligny>
-				<font>HomeMediumSmall</font>
-				<textcolor>TextFocus</textcolor>
-				<label>$INFO[Container(52).ListItem.year], $INFO[Container(52).ListItem.Duration] min, $INFO[Container(52).ListItem.VideoResolution]</label>
-			</control>
-			<control type="label">
-				<description>2nd line item infolabels</description>
-				<visible>Container.Content(Movies)|Container.Content(tvshows)</visible>
-				<posx>1450</posx>
-				<posy>980</posy>
-				<width>450</width>
-				<height>60</height>
-				<alignx>right</alignx>
 				<aligny>center</aligny>
 				<font>HomeMediumSmaller</font>
 				<textcolor>TextFocus</textcolor>
-				<label>IMDB: $INFO[Container(52).ListItem.Rating],  $INFO[Container(52).ListItem.Mpaa]</label>
+				<label>$INFO[Container(52).ListItem.year,, •] $INFO[Container(52).ListItem.Duration] min</label>
+			</control>
+			<control type="label">
+				<description>2nd line item infolabels</description>
+				<visible>Container.Content(Movies)|Container.Content(episodes)</visible>
+				<posx>1550</posx>
+				<posy>990</posy>
+				<width>450</width>
+				<height>60</height>
+				<aligny>center</aligny>
+				<font>HomeMediumSmaller</font>
+				<textcolor>TextFocus</textcolor>
+				<label>$INFO[Container(52).ListItem.Rating,, •] $INFO[Container(52).ListItem.Mpaa]</label>
 			</control>
 			<control type="label">
 				<description>1st line item infolabels</description>
 				<visible>Container.Content(tvshows)</visible>
-				<posx>1450</posx>
+				<posx>1550</posx>
 				<posy>940</posy>
-				<width>450</width>
+				<width>400</width>
 				<height>60</height>
-				<alignx>right</alignx>
 				<aligny>center</aligny>
 				<font>HomeMediumSmaller</font>
 				<textcolor>TextFocus</textcolor>
-				<label>$INFO[Container(52).ListItem.year], $LOCALIZE[31048]$INFO[Container(52).ListItem.Property(TotalEpisodes)] / $INFO[Container(52).ListItem.Property(UnWatchedEpisodes)]</label>
+				<label>$INFO[Container(52).ListItem.year,, •] $INFO[Container(52).ListItem.Rating,, •] $INFO[Container(52).ListItem.Mpaa]</label>
+			</control>
+			<control type="label">
+				<description>2nd line item infolabels</description>
+				<visible>Container.Content(tvshows)</visible>
+				<posx>1550</posx>
+				<posy>990</posy>
+				<width>400</width>
+				<height>60</height>
+				<aligny>center</aligny>
+				<font>HomeMediumSmaller</font>
+				<textcolor>TextFocus</textcolor>
+				<label>$LOCALIZE[31048]$INFO[Container(52).ListItem.Property(TotalEpisodes)] / $INFO[Container(52).ListItem.Property(UnWatchedEpisodes)]</label>
+			</control>
+			<control type="label">
+				<description>3rd line item infolabels</description>
+				<visible>Container.Content(Movies)|Container.Content(TVshows)</visible>
+				<posx>1520</posx>
+				<posy>990</posy>
+				<width>1000</width>
+				<height>60</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>HomeMediumSmaller</font>
+				<textcolor>TextFocus</textcolor>
+				<label>$INFO[Container(52).ListItem.genre]</label>
 			</control>
 			<control type="label">
 				<description>1st line item infolabels</description>
 				<visible>Container.Content(seasons)</visible>
-				<posx>1450</posx>
+				<posx>1550</posx>
 				<posy>940</posy>
-				<width>450</width>
+				<width>400</width>
 				<height>60</height>
 				<alignx>right</alignx>
 				<aligny>center</aligny>
@@ -212,22 +234,48 @@
 				<label>$LOCALIZE[31048]$INFO[Container(52).ListItem.Property(TotalEpisodes)] / $INFO[Container(52).ListItem.Property(UnWatchedEpisodes)]</label>
 			</control>
 			<control type="label">
-				<description>1st line item infolabels</description>
-				<visible>Container.Content(episodes)</visible>
-				<posx>1450</posx>
-				<posy>940</posy>
-				<width>450</width>
+				<description>3rd line item infolabels</description>
+				<visible>Container.Content(seasons)</visible>
+				<posx>1520</posx>
+				<posy>990</posy>
+				<width>1000</width>
 				<height>60</height>
-				<alignx>right</alignx>
+				<align>right</align>
 				<aligny>center</aligny>
 				<font>HomeMediumSmaller</font>
 				<textcolor>TextFocus</textcolor>
-				<label>$INFO[Container(52).ListItem.premiered] IMDB: $INFO[Container(52).ListItem.Rating]</label>
+				<info>ListItem.TVShowTitle</info>
+			</control>
+			<control type="label">
+				<description>1st line item infolabels</description>
+				<visible>Container.Content(episodes)</visible>
+				<posx>1550</posx>
+				<posy>940</posy>
+				<width>400</width>
+				<height>60</height>
+				<aligny>center</aligny>
+				<font>HomeMediumSmaller</font>
+				<textcolor>TextFocus</textcolor>
+				<label>$INFO[Container(52).ListItem.premiered,, •] $INFO[Container(52).ListItem.duration] min</label>
+			</control>
+			<control type="label">
+				<description>3rd line item infolabels</description>
+				<visible>Container.Content(episodes)</visible>
+				<posx>1520</posx>
+				<posy>990</posy>
+				<width>1000</width>
+				<height>60</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>HomeMediumSmaller</font>
+				<textcolor>TextFocus</textcolor>
+				<label>$INFO[Container(52).ListItem.VideoResolution,, •] $INFO[Container(52).ListItem.VideoCodec,, •]  $INFO[Container(52).ListItem.VideoAspect,, •] $INFO[Container(52).ListItem.AudioCodec,, •] Ch: $INFO[Container(52).ListItem.AudioChannels]</label>
 			</control>
 		</control>	
 		<control type="scrollbar" id="60">
 			<animation effect="slide" start="0,0" end="-8,0" time="150">Focus</animation>
 			<animation effect="slide" start="-8,0" end="0,0" time="300">UnFocus</animation>
+			<visible>Control.IsVisible(52)</visible>
 			<posx>1910</posx>
 			<posy>40</posy>
 			<width>20</width>

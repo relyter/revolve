@@ -1,10 +1,10 @@
 <colors>
 	<color name="Text">FF888888</color>
 	<color name="TextFocus">FF3F3F3F</color>
-	<color name="DefaultColor">FF7D0000</color>
+	<color name="DefaultColor">FF0E1070</color>	
 	<color name="FanartDiffuse">22FFFFFF</color>
-	<color name="CircleDiffuse">AA7D0000</color>
-
+	<color name="CircleDiffuse">AA0E1070</color>
+	
 	<!foundation colors>
 	<color name="Black">FF000000</color>
 	<color name="White">FFFFFFFF</color>

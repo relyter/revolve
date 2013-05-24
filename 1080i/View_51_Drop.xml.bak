@@ -58,7 +58,7 @@
 					<width>266</width>
 					<height>266</height>
 					<texture border="5" background="true">circlemask.png</texture>
-					<colordiffuse>DefaultColor</colordiffuse>
+					<colordiffuse>CircleDiffuse</colordiffuse>
 				</control>
 				
 				<control type="image">
@@ -69,7 +69,7 @@
 					<height>270</height>
 					<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem.Overlay]</texture>
 					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-					<colordiffuse>77000000</colordiffuse>
+					<colordiffuse>99000000</colordiffuse>
 				</control>
 				
 				<control type="image">
@@ -79,7 +79,7 @@
 					<width>270</width>
 					<height>270</height>
 					<texture background="true">circleborder.png</texture>
-					<colordiffuse>DefaultColor</colordiffuse>
+					<colordiffuse>CircleDiffuse</colordiffuse>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				
@@ -110,10 +110,10 @@
 					<animation effect="zoom" center="auto" start="100" end="80" time="200" reversible="false">UnFocus</animation>
 					
 					<control type="group">
-						<animation effect="slide" start="0,31" end="0,0" time="200" reversible="false" condition="Container(51).OnScrollNext">Focus</animation>
-						<animation effect="slide" start="0,0" end="0,-35" time="200" reversible="false" condition="Container(51).OnScrollNext">UnFocus</animation>
-						<animation effect="slide" start="0,-31" end="0,0" time="200" reversible="false" condition="Container(51).OnScrollPrevious">Focus</animation>
-						<animation effect="slide" start="0,-62" end="0,-35" time="200" reversible="false" condition="Container(51).OnScrollPrevious">UnFocus</animation>
+					<animation effect="slide" start="0,31" end="0,0" time="200" reversible="false" condition="Container(51).OnScrollNext">Focus</animation>
+					<animation effect="slide" start="0,0" end="0,-35" time="200" reversible="false" condition="Container(51).OnScrollNext">UnFocus</animation>
+					<animation effect="slide" start="0,-31" end="0,0" time="200" reversible="false" condition="Container(51).OnScrollPrevious">Focus</animation>
+					<animation effect="slide" start="0,-62" end="0,-35" time="200" reversible="false" condition="Container(51).OnScrollPrevious">UnFocus</animation>
 						
 					<control type="image">
 						<description>current item shadow</description>
@@ -134,7 +134,6 @@
 						<height>262</height>
 						<texture background="true" diffuse="circlemask.png">$INFO[ListItem.Art(fanart)]</texture>
 						<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
-						<!-- <aspectratio scalediffuse="false" aligny="center">strech</aspectratio> -->
 					</control>
 					
 					<control type="image">
@@ -145,7 +144,7 @@
 						<height>270</height>
 						<texture background="true" diffuse="circlemask.png">$INFO[ListItem.Overlay]</texture>
 						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-						<colordiffuse>55FFFFFF</colordiffuse>
+						<colordiffuse>99FFFFFF</colordiffuse>
 					</control>
 					
 					<control type="image">
@@ -154,7 +153,7 @@
 						<width>262</width>
 						<height>262</height>
 						<texture background="true">circlemask.png</texture>
-						<colordiffuse>DefaultColor</colordiffuse>
+						<colordiffuse>CircleDiffuse</colordiffuse>
 						<animation effect="fade" center="auto" start="75" end="0" time="200" reversible="false">Focus</animation>
 						<animation effect="fade" center="auto" start="0" end="75" time="200" reversible="false">UnFocus</animation>
 					</control>
@@ -178,7 +177,7 @@
 						<width>270</width>
 						<height>270</height>
 						<texture background="true">circleborder.png</texture>
-						<colordiffuse>DefaultColor</colordiffuse>
+						<colordiffuse>CircleDiffuse</colordiffuse>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					
@@ -231,7 +230,7 @@
 				<fadetime>100</fadetime>
 				<aspectratio>stretch</aspectratio>
 				<texture fallback="white.png" background="true">postershadow.png</texture>
-				<colordiffuse>DefaultColor</colordiffuse>
+				<colordiffuse>CircleDiffuse</colordiffuse>
 				<visible>!IsEmpty(ListItem.Art(poster))</visible>
 			</control>
 	
@@ -244,21 +243,9 @@
 				<fadetime>100</fadetime>
 				<aspectratio>stretch</aspectratio>
 				<texture fallback="white.png" background="true">poster.png</texture>
-				<colordiffuse>DefaultColor</colordiffuse>
+				<colordiffuse>CircleDiffuse</colordiffuse>
 				<visible>!IsEmpty(ListItem.Art(poster))</visible>
 			</control>
-			
-			<!-- <control type="image">
-				<visible>true</visible>
-				<posx>106</posx>
-				<posy>86</posy>
-				<width>516</width>
-				<height>760</height>
-				<fadetime>100</fadetime>
-				<aspectratio>stretch</aspectratio>
-				<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.SeasonThumb]</texture>
-				<visible>!IsEmpty(ListItem.Art(poster))</visible>
-			</control>	 -->		
 			
 			<control type="image">
 				<description>current item poster</description>
@@ -273,31 +260,19 @@
 			</control>
 			
 			<control type="image">
-					<description>poster border (cover scale artifacts)</description>
-					<visible>Container.Content(Movies)|Container.Content(TVshows)|Container.Content(Seasons)</visible>
-					<posx>100</posx>
-					<posy>80</posy>
-					<width>528</width>
-					<height>772</height>
-					<texture>posterbordersmall.png</texture>
-					<colordiffuse>DefaultColor</colordiffuse>
+				<description>poster border (cover scale artifacts)</description>
+				<visible>Container.Content(Movies)|Container.Content(TVshows)|Container.Content(Seasons)</visible>
+				<posx>100</posx>
+				<posy>80</posy>
+				<width>528</width>
+				<height>772</height>
+				<texture>posterbordersmall.png</texture>
+				<colordiffuse>DefaultColor</colordiffuse>
 			</control>
 			
-			<!-- <control type="image">
-				<description>current item thumb in episodes</description>
-				<visible>Container.Content(episodes)</visible>
-				<posx>106</posx>
-				<posy>86</posy>
-				<width>516</width>
-				<height>760</height>
-				<fadetime>500</fadetime>
-				<aspectratio>scale</aspectratio>
-				<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
-			</control> -->
-			
 			<control type="image">
-				<description>current item thumb in episodes</description>
-				<visible>Container.Content(episodes)</visible>
+				<description>current item thumb</description>
+				<visible>!Container.Content(Movies)+!Container.Content(TVshows)+!Container.Content(Seasons)</visible>
 				<posx>80</posx>
 				<posy>120</posy>
 				<width>600</width>
@@ -308,19 +283,20 @@
 			</control>
 			
 			<control type="image">
-					<description>thumb border (cover scale artifacts)</description>
-					<visible>Container.Content(episodes)</visible>
-					<posx>74</posx>
-					<posy>114</posy>
-					<width>612</width>
-					<height>362</height>
-					<texture>posterbordersmall1.png</texture>
-					<colordiffuse>DefaultColor</colordiffuse>
+				<description>thumb border (cover scale artifacts)</description>
+				<visible>!Container.Content(Movies)+!Container.Content(TVshows)+!Container.Content(Seasons)</visible>
+				<posx>74</posx>
+				<posy>114</posy>
+				<width>612</width>
+				<height>362</height>
+				<texture>posterbordersmall1.png</texture>
+				<colordiffuse>DefaultColor</colordiffuse>
 			</control>
 			
 			<control type="textbox">
 				<description>item plot</description>
-				<visible>Container.Content(Movies)|Container.Content(TVshows)|Container.Content(Seasons)</visible>
+				<!-- <visible>Container.Content(Movies)|Container.Content(TVshows)|Container.Content(Seasons)</visible> -->
+				<visible>!Container.Content(episodes)</visible>
 				<posx>1050</posx>
 				<posy>480</posy>
 				<align>left</align>
@@ -333,7 +309,6 @@
 				<wrapmultiline>true</wrapmultiline>
 				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 			</control>
-			
 			<control type="textbox">
 				<description>item plot</description>
 				<visible>Container.Content(episodes)</visible>
@@ -349,7 +324,21 @@
 				<wrapmultiline>true</wrapmultiline>
 				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 			</control>
-			
+			<control type="textbox">
+				<description>item plot</description>
+				<visible>Container.Content(episodes)</visible>
+				<posx>80</posx>
+				<posy>520</posy>
+				<align>left</align>
+				<aligny>top</aligny>
+				<width>620</width>
+				<height>350</height>
+				<font>Plot</font>
+				<textcolor>TextFocus</textcolor>
+				<label>$INFO[ListItem.Plot]</label>
+				<wrapmultiline>true</wrapmultiline>
+				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+			</control>
 			<control type="label">
 				<description>Info 1st line movies</description>
 				<visible>Container.Content(Movies)</visible>
@@ -359,10 +348,9 @@
 				<width>500</width>
 				<font>HomeMediumSmaller</font>
 				<textcolor>TextFocus</textcolor>
-				<label>$INFO[Container(51).ListItem.year],  $INFO[Container(51).ListItem.Duration] min </label>
+				<label>$INFO[Container(51).ListItem.year,, •] $INFO[Container(51).ListItem.Duration] min </label>
 				<align>left</align>
 			</control>
-			
 			<control type="label">
 				<description>Info 2nd line movies/tvshows</description>
 				<visible>Container.Content(tvshows)|Container.Content(Movies)</visible>
@@ -372,10 +360,9 @@
 				<width>500</width>
 				<font>HomeMediumSmaller</font>
 				<textcolor>TextFocus</textcolor>
-				<label>IMDB: $INFO[Container(51).ListItem.Rating],  $INFO[Container(51).ListItem.Mpaa] </label>
+				<label>IMDB: $INFO[Container(51).ListItem.Rating,, •] $INFO[Container(51).ListItem.Mpaa] </label>
 				<align>left</align>
 			</control>
-			
 			<control type="label">
 				<description>Info 3rd line movies</description>
 				<visible>Container.Content(Movies)</visible>
@@ -385,35 +372,47 @@
 				<width>500</width>
 				<font>HomeMediumSmaller</font>
 				<textcolor>TextFocus</textcolor>
-				<label>$INFO[Container(51).ListItem.VideoResolution]  $INFO[Container(51).ListItem.VideoCodec]  $INFO[Container(51).ListItem.VideoAspect]   $INFO[Container(51).ListItem.AudioCodec]  $INFO[Container(51).ListItem.AudioChannels]</label>
+				<label>$INFO[Container(51).ListItem.VideoResolution,, •] $INFO[Container(51).ListItem.VideoCodec,, •]  $INFO[Container(51).ListItem.VideoAspect,, •] $INFO[Container(51).ListItem.AudioCodec,, •] Ch: $INFO[Container(51).ListItem.AudioChannels]</label>
 				<align>left</align>
 			</control>
 
 			<control type="label">
-				<description>Info 1st line tv shows</description>
-				<visible>Container.Content(tvshows)</visible>
+				<description>Info 1st line tv shows/seasons</description>
+				<visible>Container.Content(tvshows)|Container.Content(seasons)</visible>
 				<posx>100</posx>
 				<posy>900</posy>
 				<height>40</height>
 				<width>500</width>
 				<font>HomeMediumSmaller</font>
 				<textcolor>TextFocus</textcolor>
-				<label>$INFO[Container(51).ListItem.year], $LOCALIZE[31048]$INFO[Container(51).ListItem.Property(TotalEpisodes)] / $INFO[Container(51).ListItem.Property(UnWatchedEpisodes)]</label>
+				<label>$INFO[Container(51).ListItem.year,, •] $LOCALIZE[31048]$INFO[Container(51).ListItem.Property(TotalEpisodes)] / $INFO[Container(51).ListItem.Property(UnWatchedEpisodes)]</label>
 				<align>left</align>
 			</control>
 			<control type="label">
-				<description>Info 1st line seasons</description>
-				<visible>Container.Content(seasons)</visible>
+				<description>Info 3rd line tv shows</description>
+				<visible>Container.Content(Tvshows)</visible>
 				<posx>100</posx>
-				<posy>900</posy>
+				<posy>1000</posy>
 				<height>40</height>
 				<width>500</width>
 				<font>HomeMediumSmaller</font>
 				<textcolor>TextFocus</textcolor>
-				<label>$LOCALIZE[31048]$INFO[Container(51).ListItem.Property(TotalEpisodes)] / $INFO[Container(51).ListItem.Property(UnWatchedEpisodes)]</label>
+				<label>$INFO[Container(51).ListItem.genre]</label>
 				<align>left</align>
+				<scroll>true</scroll>
 			</control>
-			
+			<control type="label">
+				<description>show name in season</description>
+				<visible>Container.Content(seasons)</visible>
+				<posx>110</posx>
+				<posy>960</posy>
+				<height>50</height>
+				<width>500</width>
+				<font>HomeMediumSmall</font>
+				<textcolor>Text</textcolor>
+				<info>ListItem.TVShowTitle</info>
+				<align>left</align>
+			</control>			
 			<control type="label">
 				<description>Info 1st line episodes</description>
 				<visible>Container.Content(episodes)</visible>
@@ -423,7 +422,31 @@
 				<width>500</width>
 				<font>HomeMediumSmaller</font>
 				<textcolor>TextFocus</textcolor>
-				<label>$INFO[Container(51).ListItem.premiered] IMDB: $INFO[Container(51).ListItem.Rating]</label>
+				<label>$INFO[Container(51).ListItem.premiered,, •] $INFO[Container(51).ListItem.Rating]</label>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<description>Info 2nd line episodes</description>
+				<visible>Container.Content(episodes)</visible>
+				<posx>80</posx>
+				<posy>950</posy>
+				<height>40</height>
+				<width>500</width>
+				<font>HomeMediumSmaller</font>
+				<textcolor>TextFocus</textcolor>
+				<label>$INFO[Container(51).ListItem.VideoResolution,, •] $INFO[Container(51).ListItem.VideoCodec,, •]  $INFO[Container(51).ListItem.VideoAspect,, •] $INFO[Container(51).ListItem.AudioCodec,, •] Ch: $INFO[Container(51).ListItem.AudioChannels]</label>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<description>season nr in episodes</description>
+				<visible>Container.Content(episodes)</visible>
+				<posx>80</posx>
+				<posy>30</posy>
+				<height>60</height>
+				<width>500</width>
+				<font>HomeMedium</font>
+				<textcolor>Text</textcolor>
+				<label>$LOCALIZE[31050] $INFO[Container(51).ListItem.Season]</label>
 				<align>left</align>
 			</control>
 			
@@ -444,7 +467,7 @@
 					<width>270</width>
 					<height>270</height>
 					<texture background="true">circlemask.png</texture>
-					<colordiffuse>DefaultColor</colordiffuse>
+					<colordiffuse>CircleDiffuse</colordiffuse>
 				</control>
 				
 				<control type="label">
@@ -462,15 +485,6 @@
 		
 		</control>
 		
-		<!-- <control type="scrollbar" id="60">
-			<posx>1900</posx>
-			<posy>40</posy>
-			<height>1000</height>
-			<onleft>50</onleft>
-			<onright>9000</onright>
-			<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>
-			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
-		</control> -->
 		<control type="scrollbar" id="60">
 			<animation effect="slide" start="0,0" end="-8,0" time="150">Focus</animation>
 			<animation effect="slide" start="-8,0" end="0,0" time="300">UnFocus</animation>

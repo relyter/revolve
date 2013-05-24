@@ -1,16 +1,13 @@
 <includes>
-
 	<include name="View_53_Landscape">
-	
-		<description>List View (id=53)</description>
+	<description>Landscape View (id=53)</description>
 		
 		<control type="group">
+			<description>Ring and labels</description>
 			<visible>Control.IsVisible(53)</visible>
 			<animation effect="slide" start="0,1080" end="0,0" time="1000">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,1080" time="1000">WindowClose</animation>
-			
-			<description>Ring and labels</description>
-				
+							
 			<control type="image">
 				<posy>680</posy>
 				<width>1920</width>
@@ -31,109 +28,130 @@
 				<width>1920</width>
 				<height>50</height>
 				<align>center</align>
-				<font>Homemedium</font>
+				<font>Title</font>
 				<textcolor>White</textcolor>
 				<info>ListItem.Label</info>
 			</control>
 			<control type="label">
-				<description>item year</description>
+				<description>item rating/mpaa</description>
 				<visible>Container.Content(Movies)|Container.Content(TVshows)</visible>
-				<posy>930</posy>
-				<posx>840</posx>
-				<width>100</width>
+				<posy>880</posy>
+				<width>1920</width>
 				<height>50</height>
-				<align>left</align>
+				<align>center</align>
 				<font>Homemediumsmaller</font>
 				<textcolor>White</textcolor>
-				<label>$INFO[Container(53).ListItem.year]</label>
+				<label>$INFO[Container(53).ListItem.Rating,, •] $INFO[Container(53).ListItem.Mpaa]</label>
 			</control>
 			<control type="label">
-				<description>movie duration</description>
+				<description>item year/duration</description>
 				<visible>Container.Content(Movies)</visible>
 				<posy>930</posy>
-				<posx>960</posx>
-				<width>200</width>
+				<width>1920</width>
 				<height>50</height>
-				<align>left</align>
+				<align>center</align>
 				<font>Homemediumsmaller</font>
 				<textcolor>White</textcolor>
-				<label>$INFO[Container(53).ListItem.Duration] min</label>
+				<label>$INFO[Container(53).ListItem.year,, •] $INFO[Container(53).ListItem.Duration] min</label>
 			</control>
 			<control type="label">
-				<description>episodes amount</description>
-				<visible>Container.Content(TVshows)</visible>
+				<description>item year/episodes amount</description>
+				<visible>Container.Content(TVshows)|Container.Content(seasons)</visible>
 				<posy>930</posy>
-				<posx>960</posx>
-				<width>350</width>
+				<width>1920</width>
 				<height>50</height>
-				<align>left</align>
+				<align>center</align>
 				<font>Homemediumsmaller</font>
 				<textcolor>White</textcolor>
-				<label>$LOCALIZE[31048]$INFO[Container(53).ListItem.Property(TotalEpisodes)] / $INFO[Container(53).ListItem.Property(UnWatchedEpisodes)]</label>
-			</control>
-			<control type="label">
-				<description>episodes amount</description>
-				<visible>Container.Content(seasons)</visible>
-				<posy>930</posy>
-				<posx>830</posx>
-				<width>350</width>
-				<height>50</height>
-				<align>left</align>
-				<font>Homemediumsmaller</font>
-				<textcolor>White</textcolor>
-				<label>$LOCALIZE[31048]$INFO[Container(53).ListItem.Property(TotalEpisodes)] / $INFO[Container(53).ListItem.Property(UnWatchedEpisodes)]</label>
-			</control>
-			<control type="label">
-				<description>item mpaa</description>
-				<visible>Container.Content(Movies)|Container.Content(TVshows)</visible>
-				<posy>880</posy>
-				<posx>920</posx>
-				<width>200</width>
-				<height>50</height>
-				<align>right</align>
-				<font>Homemediumsmaller</font>
-				<textcolor>White</textcolor>
-				<label>$INFO[Container(53).ListItem.Mpaa]</label>
-			</control>
-			<control type="label">
-				<description>item rating</description>
-				<visible>Container.Content(Movies)|Container.Content(TVshows)</visible>
-				<posy>880</posy>
-				<posx>960</posx>
-				<width>200</width>
-				<height>50</height>
-				<align>left</align>
-				<font>Homemediumsmaller</font>
-				<textcolor>White</textcolor>
-				<label>IMDB: $INFO[Container(53).ListItem.Rating]</label>
+				<label>$INFO[Container(53).ListItem.year,, •]$LOCALIZE[31048]$INFO[Container(53).ListItem.Property(TotalEpisodes)] / $INFO[Container(53).ListItem.Property(UnWatchedEpisodes)]</label>
 			</control>
 			<control type="label">
 				<description>item rating</description>
 				<visible>Container.Content(episodes)</visible>
 				<posy>930</posy>
-				<posx>980</posx>
-				<width>200</width>
+				<width>1920</width>
 				<height>50</height>
-				<align>left</align>
+				<align>center</align>
 				<font>Homemediumsmaller</font>
 				<textcolor>White</textcolor>
-				<label>IMDB: $INFO[Container(53).ListItem.Rating]</label>
-			</control>
-			<control type="label">
-				<description>item rating</description>
-				<visible>Container.Content(episodes)</visible>
-				<posy>930</posy>
-				<posx>940</posx>
-				<width>250</width>
-				<height>50</height>
-				<align>right</align>
-				<font>Homemediumsmaller</font>
-				<textcolor>White</textcolor>
-				<label>$INFO[Container(53).ListItem.premiered]</label>
+				<label>$INFO[Container(53).ListItem.premiered,, •] $INFO[Container(53).ListItem.Rating]</label>
 			</control>
 		</control>	
+		<control type="group">
+			<description>genre</description>
+			<visible>Control.IsVisible(53)</visible>	
+			<animation effect="slide" start="-800,0" end="0,0" time="1000">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-800,0" time="1000">WindowClose</animation>
+			<control type="label">
+				<description>item genre</description>
+				<posx>50</posx>
+				<posy>50</posy>
+				<width>1000</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>HomeMediumSmaller</font>
+				<textcolor>TextFocus</textcolor>
+				<label>$INFO[Container(53).ListItem.genre]</label>
+			</control>
+			<control type="label">
+				<description>show name in season</description>
+				<visible>Container.Content(seasons)</visible>
+				<posx>50</posx>
+				<posy>110</posy>
+				<height>40</height>
+				<width>1000</width>
+				<font>HomeMediumSmall</font>
+				<textcolor>Text</textcolor>
+				<info>ListItem.TVShowTitle</info>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<description>season number in episodes</description>
+				<visible>Container.Content(episodes)</visible>
+				<posx>50</posx>
+				<posy>58</posy>
+				<height>40</height>
+				<width>1000</width>
+				<font>HomeMediumSmall</font>
+				<textcolor>Text</textcolor>
+				<label>$LOCALIZE[31050] $INFO[Container(53).ListItem.Season]</label>
+				<align>left</align>
+			</control>
+		</control>	
+		<control type="textbox">
+			<visible>Control.IsVisible(53)</visible>
+			<description>item plot</description>
+			<animation effect="slide" start="2700,0" end="0,0" time="1000">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="2700,0" time="1000">WindowClose</animation>
+			<posx>1150</posx>
+			<posy>50</posy>
+			<align>right</align>
+			<aligny>top</aligny>
+			<width>750</width>
+			<height>300</height>
+			<font>HomeSmall</font>
+			<textcolor>TextFocus</textcolor>
+			<label>$INFO[ListItem.Plot]</label>
+			<wrapmultiline>true</wrapmultiline>
+			<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+		</control>
+		<control type="image">
+			<description>line on the top</description>
+			<visible>Control.IsVisible(53)</visible>
+			<animation effect="slide" start="0,-40" end="0,0" time="1000">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-40,0" time="1000">WindowClose</animation>
+			<posx>670</posx>
+			<posy>30</posy>
+			<width>1250</width>
+			<height>4</height>
+			<flipx>true</flipx>
+			<texture flipx="true" backgroud="true">line.png</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>DefaultColor</colordiffuse>
+		</control>
 		
-				<include>Revolve_Landscape</include>
+		<include>Revolve_Landscape</include>
 				
 		<control type="wraplist" id="53">
 			<posx>1920</posx>
@@ -143,13 +161,30 @@
 			<onleft>53</onleft>
 			<onright>53</onright>
 			<onup>9000</onup>
-			<ondown>53</ondown>
+			<ondown>60</ondown>
 			<pagecontrol>60</pagecontrol>
 			<orientation>horizontal</orientation>
 			<focusposition>0</focusposition>
 			<viewtype label="LandScape">list</viewtype>
 		</control>
-
+		<control type="scrollbar" id="60">
+			<animation effect="slide" start="0,0" end="-8,0" time="150">Focus</animation>
+			<animation effect="slide" start="-8,0" end="0,0" time="300">UnFocus</animation>
+			<visible>Control.IsVisible(53)</visible>
+			<posx>110</posx>
+			<posy>1060</posy>
+			<width>1700</width>
+			<height>20</height>
+			<texturesliderbackground>-</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>-</textureslidernib>
+			<textureslidernibfocus>scrollbarmark.png</textureslidernibfocus>
+			<showonepage>false</showonepage>
+			<orientation>horizontal</orientation> 
+			<onup>53</onup>
+			<ondown>-</ondown>
+		</control>
 	</include>
 
 </includes>

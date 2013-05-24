@@ -1,138 +1,86 @@
 <includes>
-
 	<include name="View_54_Banners">
-	
-		<description>Revolve Banner View (id=54)</description>
+	<description>Revolve Banner View (id=54)</description>
 
 		<control type="group">
-			<description>left ring+labels+plot</description>
-			<animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="500" reversible="false">WindowOpen</animation>
-			<animation effect="slide" delay="500" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="500" reversible="false">WindowClose</animation>
-			<visible>Control.IsVisible(54)</visible>
+		<description>left ring+labels+plot</description>
+		<animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="500" reversible="false">WindowOpen</animation>
+		<animation effect="slide" delay="500" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="500" reversible="false">WindowClose</animation>
+		<visible>Control.IsVisible(54)</visible>
 				
-				<include>LeftRing</include>
+			<include>LeftRing</include>
 				
-<!-- 				<control type="group">
-				<description>poster+border in left ring</description>
-				<visible>Container.Content(tvshows)|Container.Content(movies)|Container.Content(seasons)</visible>
-					<control type="image">
-						<posx>56</posx>
-						<posy>144</posy>
-						<width>300</width>
-						<height>452</height>
-						<aspectratio>stretch</aspectratio>
-						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[ListItem.Art(poster)]</texture>
-					</control>
-					<control type="image">
-						<posx>50</posx>
-						<posy>140</posy>
-						<width>312</width>
-						<height>462</height>
-						<texture>posterbordersmall.png</texture>
-					</control>
-				</control> -->
-<!-- 				<control type="group">
-				<description>thumb+border in left ring</description>
-				<visible>Container.Content(episodes)</visible>
-					<control type="image">
-						<posx>56</posx>
-						<posy>315</posy>
-						<width>500</width>
-						<height>285</height>
-						<aspectratio>stretch</aspectratio>
-						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
-					</control>
-					<control type="image">
-						<posx>50</posx>
-						<posy>309</posy>
-						<width>512</width>
-						<height>297</height>
-						<texture>posterbordersmall1.png</texture>
-					</control>
-				</control> -->
-				<control type="label">
-					<description>item label</description>
-					<posx>40</posx>
-					<posy>450</posy>
-					<align>left</align>
-					<aligny>top</aligny>
-					<width>640</width>
-					<height>50</height>
-					<font>HomeMediumSmall</font>
-					<textcolor>Text</textcolor>
-					<label>$INFO[ListItem.Label]</label>
-					<wrapmultiline>true</wrapmultiline>
-					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
-					<!-- <visible>Control.IsVisible(54)</visible> -->
-				</control>
-				<control type="label">
-					<description>item genre</description>
-					<posx>40</posx>
-					<posy>530</posy>
-					<align>left</align>
-					<aligny>top</aligny>
-					<width>640</width>
-					<height>50</height>
-					<font>Plot</font>
-					<textcolor>Text</textcolor>
-					<label>$INFO[ListItem.genre]</label>
-					<wrapmultiline>true</wrapmultiline>
-					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
-					<!-- <visible>Control.IsVisible(54)</visible> -->
-				</control>
-				<control type="label">
-					<description>1st line</description>
-					<visible>Container.Content(tvshows)|Container.Content(Movies)</visible>
-					<posx>40</posx>
-					<posy>575</posy>
-					<height>50</height>
-					<width>350</width>
-					<font>Plot</font>
-					<textcolor>Text</textcolor>
-					<label>$INFO[Container(54).ListItem.year] $INFO[Container(54).ListItem.Rating] $INFO[Container(54).ListItem.VideoResolution] </label>
-					<align>left</align>
-				</control>
-				<control type="label">
-					<description>2nd line</description>
-					<visible>Container.Content(Seasons)|Container.Content(tvshows)</visible>
-					<posx>40</posx>
-					<posy>630</posy>
-					<height>50</height>
-					<width>400</width>
-					<font>Plot</font>
-					<textcolor>Text</textcolor>
-					<label>$LOCALIZE[31048] $INFO[Container(54).ListItem.Property(TotalEpisodes)] / $INFO[Container(54).ListItem.Property(UnWatchedEpisodes)]</label>
-					<align>left</align>
-				</control>
-				<control type="label">
-					<description>2nd line</description>
-					<visible>Container.Content(Movies)</visible>
-					<posx>40</posx>
-					<posy>620</posy>
-					<height>50</height>
-					<width>400</width>
-					<font>Plot</font>
-					<textcolor>TextFocus</textcolor>
-					<label>$INFO[Container(54).ListItem.Duration] min</label>
-					<align>left</align>
-				</control>
-				<control type="textbox">
-					<description>item plot</description>
-					<posx>40</posx>
-					<posy>700</posy>
-					<align>left</align>
-					<aligny>top</aligny>
-					<width>640</width>
-					<height>330</height>
-					<font>Plot</font>
-					<textcolor>Text</textcolor>
-					<label>$INFO[ListItem.Plot]</label>
-					<wrapmultiline>true</wrapmultiline>
-					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
-					<!-- <visible>Control.IsVisible(54)</visible> -->
-				</control>
+			<control type="label">
+				<description>year, rating, 1st line</description>
+				<posx>480</posx>
+				<posy>250</posy>
+				<height>50</height>
+				<width>350</width>
+				<font>HomeMediumSmaller</font>
+				<textcolor>Text</textcolor>
+				<label>$INFO[Container(54).ListItem.year,, •] $INFO[Container(54).ListItem.Rating,, •] $INFO[Container(54).ListItem.MPAA]</label>
+				<align>right</align>
+				<shadowcolor>ff000000</shadowcolor>
+			</control>
+			<control type="label">
+				<description>episodes, 2nd line</description>
+				<visible>Container.Content(Seasons)|Container.Content(tvshows)</visible>
+				<posx>550</posx>
+				<posy>350</posy>
+				<align>right</align>
+				<height>50</height>
+				<width>400</width>
+				<font>HomeMediumSmaller</font>
+				<textcolor>Text</textcolor>
+				<label>$LOCALIZE[31048] $INFO[Container(54).ListItem.Property(TotalEpisodes)] / $INFO[Container(54).ListItem.Property(UnWatchedEpisodes)]</label>
+				<shadowcolor>ff000000</shadowcolor>
+			</control>
+			<control type="label">
+				<description>genre, 3rd line</description>
+				<posx>630</posx>
+				<posy>450</posy>
+				<align>right</align>
+				<aligny>top</aligny>
+				<width>640</width>
+				<height>50</height>
+				<font>Plot</font>
+				<textcolor>Text</textcolor>
+				<label>$INFO[ListItem.genre]</label>
+				<wrapmultiline>true</wrapmultiline>
+				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+				<shadowcolor>ff000000</shadowcolor>
+			</control>
+			<control type="label">
+				<description>item label</description>
+				<posx>680</posx>
+				<posy>540</posy>
+				<align>right</align>
+				<aligny>top</aligny>
+				<width>640</width>
+				<height>50</height>
+				<font>HomeMedium</font>
+				<textcolor>Text</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<shadowcolor>ff000000</shadowcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+			</control>
+			<control type="textbox">
+				<description>item plot</description>
+				<posx>40</posx>
+				<posy>675</posy>
+				<align>left</align>
+				<aligny>top</aligny>
+				<width>640</width>
+				<height>340</height>
+				<font>Plot</font>
+				<textcolor>Text</textcolor>
+				<label>$INFO[ListItem.Plot]</label>
+				<wrapmultiline>true</wrapmultiline>
+				<shadowcolor>TextFocus</shadowcolor>
+				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+			</control>
 		</control>
-		
 		<control type="group">
 			<visible>Control.IsVisible(54)</visible>
 			<animation effect="rotate" tween="quadratic" easing="out" center="0,773" start="180" end="360" time="1000" reversible="false">WindowOpen</animation>
@@ -869,9 +817,9 @@
 				</control>
 			</control>
 		</control>
-		
 		<control type="wraplist" id="54">
 			<viewtype label="Banners">list</viewtype>
+			<visible>Container.Content(TVshows)</visible>
 			<posx>330</posx>
 			<posy>57</posy>
 			<width>960</width>
@@ -886,8 +834,24 @@
 				<effect type="fade" start="100" end="50" time="200" />
 				<effect type="zoom" center="1290,540" start="100" end="90" time="200" />
 			</animation>
-
 		</control>
-		
+		<control type="scrollbar" id="60">
+			<animation effect="slide" start="0,0" end="-8,0" time="150">Focus</animation>
+			<animation effect="slide" start="-8,0" end="0,0" time="300">UnFocus</animation>
+			<visible>Control.IsVisible(54)</visible>
+			<posx>1910</posx>
+			<posy>760</posy>
+			<width>20</width>
+			<height>300</height>
+			<texturesliderbackground>-</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>-</textureslidernib>
+			<textureslidernibfocus>scrollbarmark.png</textureslidernibfocus>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation> 
+			<onleft>54</onleft>
+			<onright>-</onright>
+		</control>
 	</include>
 </includes>
