@@ -39,7 +39,7 @@
 				<textcolor>Text</textcolor>
 				<focusedcolor>White</focusedcolor>
 				<colordiffuse>defaultcolor</colordiffuse>	
-				<disabledcolor>Disabled</disabledcolor>
+				<disabledcolor>aa888888</disabledcolor>
 			</control>
 		</control>
 

@@ -7,7 +7,7 @@
 			<width>1920</width>
 			<height>898</height>
 			<onleft>9000</onleft>
-			<onright>60</onright>
+			<onright>9001</onright>
 			<onup>52</onup>
 			<ondown>52</ondown>
 			<scrolltime tween="sine" easing="out">200</scrolltime>

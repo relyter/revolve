@@ -2,7 +2,6 @@
 
 	<include name="Revolve_Landscape">
 		
-			<!--<include>Revolve_Landscape_Items</include>-->
 		<control type="group">
 		
 			<control type="group" id="303">
@@ -33,11 +32,7 @@
 				
 	<include name="Revolve_Landscape_Items_Previous">
 			
-			<!-- 
-			
-			ITEM -3
-			
-			-->
+			<!-- ITEM -3 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="15" condition="true">Conditional</animation>
@@ -69,16 +64,22 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-2).Icon]</texture>
 					</control>
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(-2).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				
 				</control>
 			
 			</control>
 			
-			<!-- 
-			
-			ITEM -2
-			
-			-->
+			<!-- ITEM -2 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="10" condition="true">Conditional</animation>
@@ -110,16 +111,22 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-1).Icon]</texture>
 					</control>
-				
+					
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(-1).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				</control>
 			
 			</control>
 			
-			<!-- 
-			
-			ITEM -1
-			
-			-->
+			<!-- ITEM -1 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="5" condition="true">Conditional</animation>
@@ -143,7 +150,7 @@
 						<height>464</height>
 						<fadetime>100</fadetime>
 						<aspectratio>scale</aspectratio>
-						<texture background="true">AAApostershadow.png</texture>
+						<texture background="true">postershadow.png</texture>
 					</control>
 					
 					<control type="largeimage">
@@ -163,16 +170,23 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(0).Icon]</texture>
 					</control>
+					
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(0).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				
 				</control>
 			
 			</control>
 			
-			<!-- 
-			
-			ITEM 0
-			
-			-->
+			<!-- ITEM 0 -->
 	
 			<control type="group">
 								
@@ -195,7 +209,7 @@
 						<height>464</height>
 						<fadetime>100</fadetime>
 						<aspectratio>scale</aspectratio>
-						<texture background="true">AAApostershadow.png</texture>
+						<texture background="true">postershadow.png</texture>
 					</control>
 					
 					<control type="largeimage">
@@ -216,16 +230,22 @@
 						<fadetime>200</fadetime>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(1).Icon]</texture>
 					</control>
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(1).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				
 				</control>
 				
 			</control>
 			
-			<!-- 
-			
-			ITEM 1
-			
-			-->
+			<!-- ITEM 1 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="-5" condition="true">Conditional</animation>
@@ -257,16 +277,22 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(2).Icon]</texture>
 					</control>
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(2).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				
 				</control>
 			
 			</control>
 			
-			<!-- 
-			
-			ITEM 2
-			
-			-->
+			<!-- ITEM 2 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="-10" condition="true">Conditional</animation>
@@ -298,16 +324,22 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(3).Icon]</texture>
 					</control>
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(3).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				
 				</control>
 				
 			</control>
 			
-			<!-- 
-			
-			ITEM 3
-			
-			-->
+			<!-- ITEM 3 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="-15" condition="true">Conditional</animation>
@@ -339,6 +371,17 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(4).Icon]</texture>
 					</control>
+					
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(4).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				
 				</control>
 				
@@ -348,11 +391,7 @@
 				
 	<include name="Revolve_Landscape_Items">
 			
-			<!-- 
-			
-			ITEM -3
-			
-			-->
+			<!-- ITEM -3 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="15" condition="true">Conditional</animation>
@@ -384,16 +423,22 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-3).Icon]</texture>
 					</control>
-				
-				</control>
-			
+					
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(-3).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
+				</control>		
 			</control>
 			
-			<!-- 
-			
-			ITEM -2
-			
-			-->
+
+			<!-- ITEM -2 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="10" condition="true">Conditional</animation>
@@ -425,16 +470,22 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-2).Icon]</texture>
 					</control>
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(-2).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				
 				</control>
 			
 			</control>
 			
-			<!-- 
-			
-			ITEM -1
-			
-			-->
+			<!-- ITEM -1 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="5" condition="true">Conditional</animation>
@@ -466,16 +517,22 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-1).Icon]</texture>
 					</control>
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(-1).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				
 				</control>
 			
 			</control>
 			
-			<!-- 
-			
-			ITEM 0
-			
-			-->
+			<!-- ITEM 0 -->
 	
 			<control type="group">
 								
@@ -494,7 +551,7 @@
 						<height>464</height>
 						<fadetime>100</fadetime>
 						<aspectratio>scale</aspectratio>
-						<texture background="true">AAApostershadow.png</texture>
+						<texture background="true">postershadow.png</texture>
 					</control>
 					
 					<control type="largeimage">
@@ -515,16 +572,22 @@
 						<fadetime>200</fadetime>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(0).Icon]</texture>
 					</control>
-				
+					
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(0).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				</control>
 				
 			</control>
 			
-			<!-- 
-			
-			ITEM 1
-			
-			-->
+			<!-- ITEM 1	-->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="-5" condition="true">Conditional</animation>
@@ -556,16 +619,22 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(1).Icon]</texture>
 					</control>
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(1).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				
 				</control>
 			
 			</control>
 			
-			<!-- 
-			
-			ITEM 2
-			
-			-->
+			<!-- ITEM 2 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="-10" condition="true">Conditional</animation>
@@ -597,16 +666,22 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(2).Icon]</texture>
 					</control>
-				
+					
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(2).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				</control>
 				
 			</control>
 			
-			<!-- 
-			
-			ITEM 3
-			
-			-->
+			<!-- ITEM 3 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="-15" condition="true">Conditional</animation>
@@ -647,11 +722,7 @@
 	
 	<include name="Revolve_Landscape_Items_Next">
 			
-			<!-- 
-			
-			ITEM -3
-			
-			-->
+			<!-- ITEM -3 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="15" condition="true">Conditional</animation>
@@ -683,16 +754,22 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-4).Icon]</texture>
 					</control>
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(-4).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				
 				</control>
 			
 			</control>
 			
-			<!-- 
-			
-			ITEM -2
-			
-			-->
+			<!-- ITEM -2 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="10" condition="true">Conditional</animation>
@@ -724,16 +801,23 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-3).Icon]</texture>
 					</control>
+					
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(-3).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				
 				</control>
 			
 			</control>
 			
-			<!-- 
-			
-			ITEM -1
-			
-			-->
+			<!-- ITEM -1 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="5" condition="true">Conditional</animation>
@@ -765,16 +849,23 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-2).Icon]</texture>
 					</control>
+					
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(-2).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				
 				</control>
 			
 			</control>
 			
-			<!-- 
-			
-			ITEM 0
-			
-			-->
+			<!-- ITEM 0 -->
 	
 			<control type="group">
 								
@@ -797,7 +888,7 @@
 						<height>464</height>
 						<fadetime>100</fadetime>
 						<aspectratio>scale</aspectratio>
-						<texture background="true">AAApostershadow.png</texture>
+						<texture background="true">postershadow.png</texture>
 					</control>
 					
 					<control type="largeimage">
@@ -818,16 +909,22 @@
 						<fadetime>200</fadetime>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(-1).Icon]</texture>
 					</control>
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(-1).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				
 				</control>
 				
 			</control>
 			
-			<!-- 
-			
-			ITEM 1
-			
-			-->
+			<!-- ITEM 1 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="-5" condition="true">Conditional</animation>
@@ -851,7 +948,7 @@
 						<height>464</height>
 						<fadetime>100</fadetime>
 						<aspectratio>scale</aspectratio>
-						<texture background="true">AAApostershadow.png</texture>
+						<texture background="true">postershadow.png</texture>
 					</control>
 					
 					<control type="largeimage">
@@ -871,16 +968,22 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(0).Icon]</texture>
 					</control>
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(0).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				
 				</control>
 			
 			</control>
 			
-			<!-- 
-			
-			ITEM 2
-			
-			-->
+			<!-- ITEM 2 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="-10" condition="true">Conditional</animation>
@@ -912,16 +1015,23 @@
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(1).Icon]</texture>
 					</control>
+					
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(1).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
+					</control>
 				
 				</control>
 				
 			</control>
 			
-			<!-- 
-			
-			ITEM 3
-			
-			-->
+			<!-- ITEM 3 -->
 	
 			<control type="group">
 				<animation effect="rotate" center="960,4500" end="-15" condition="true">Conditional</animation>
@@ -952,6 +1062,17 @@
 						<height>412</height>
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(2).Icon]</texture>
+					</control>
+					
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(2).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
 					</control>
 				
 				</control>

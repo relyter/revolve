@@ -135,7 +135,7 @@
 		</control>
 		
 		<control type="group" id="600">
-			<visible>Container(300).HasFocus(2)</visible>
+			<visible>Container(300).HasFocus(5)</visible>
 			<defaultcontrol>601</defaultcontrol>
 		
 			<control type="fixedlist" id="602">

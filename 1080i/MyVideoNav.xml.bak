@@ -16,7 +16,7 @@
 		<include>View_56_Gallery</include>
 
 		<control type="group">
-			<visible>ControlGroup(9000).HasFocus()</visible>
+			<visible>ControlGroup(9000).HasFocus()|Control.HasFocus(9001)</visible>
 			<include>GlobalOverlay</include>
 		</control>
 		

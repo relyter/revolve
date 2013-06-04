@@ -1,13 +1,16 @@
 <colors>
 	<color name="Text">FF888888</color>
 	<color name="TextFocus">FF3F3F3F</color>
+	<color name="Disabled">ff555555</color>
 	<color name="DefaultColor">FF7D0000</color>
 	<color name="FanartDiffuse">22FFFFFF</color>
 	<color name="CircleDiffuse">AA7D0000</color>
-
-	<!foundation colors>
+	<color name="ButtonDiffuse">887D0000</color>
 	<color name="Black">FF000000</color>
 	<color name="White">FFFFFFFF</color>
+	
+	<!foundation colors>
+
 	<color name="Red">FFFF0000</color>
 	<color name="Blue">FF0000FF</color>
 	<color name="Green">FF00FF00</color>

@@ -783,6 +783,16 @@
 						<texture border="5" background="true">$INFO[Container.ListItem(0).Art(banner)]</texture>
 						<align>Left</align>
 					</control>
+				<control type="image">
+					<description>watched overlay</description>
+					<posx>1775</posx>
+					<posy>800</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture border="5" background="true">$INFO[ListItem.Overlay]</texture>
+					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+					<colordiffuse>eeffffff</colordiffuse>
+				</control>
 					<control type="image">
 						<posx>854</posx>
 						<posy>694</posy>

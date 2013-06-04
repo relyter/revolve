@@ -61,7 +61,24 @@
 			<aspectratio>stretch</aspectratio>
 		</control>	
 	</include>
-		
+	<include name="9000button">
+		<width>600</width>
+		<align>left</align>
+		<font>HomeMediumSmall</font>
+		<textcolor>Text</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<colordiffuse>defaultcolor</colordiffuse>
+		<shadowcolor>ff000000</shadowcolor>
+		<disabledcolor>Disabled</disabledcolor>
+	</include>
+	<include name="9000divider">
+		<description>divider</description>
+		<width>500</width>
+		<height>4</height>
+		<texture backgroud="true">line.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<posx>0</posx>
+	</include>	
 	<include name="LeftRing">
 			<control type="image">
 				<width>900</width>
@@ -76,7 +93,48 @@
 				<texture>ringsleft.png</texture>
 			</control>
 		</include>
-	
+	<include name="generalbutton">
+		<height>46</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>ButtonText</font>
+		<label>-</label>
+		<textoffsetx>10</textoffsetx>
+		<textcolor>Text</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<disabledcolor>Black</disabledcolor>
+		<colordiffuse>55ffffff</colordiffuse>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>buttons/buttonbg1.png</texturefocus>
+	</include>
+	<include name="generalbutton1">
+		<height>60</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>ButtonText1</font>
+		<label>-</label>
+		<textoffsetx>25</textoffsetx>
+		<textcolor>Black</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<disabledcolor>Text</disabledcolor>
+		<colordiffuse>ButtonDiffuse</colordiffuse>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>buttons/buttonbg1.png</texturefocus>
+	</include>
+	<include name="generalbutton2">
+		<height>60</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>ButtonText1</font>
+		<label>-</label>
+		<textoffsetx>-</textoffsetx>
+		<textcolor>Black</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<disabledcolor>Text</disabledcolor>
+		<colordiffuse>ButtonDiffuse</colordiffuse>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>buttons/buttonbg1.png</texturefocus>
+	</include>
 	<include name="bannerborder">
 		<control type="image">
 				<posx>854</posx>
@@ -98,7 +156,7 @@
 			</control>
 	</include>
 		
-		<include name="HiddenButton">
+	<include name="HiddenButton">
 		<posx>-20</posx>
 		<posy>-20</posy>
 		<width>1</width>
@@ -231,7 +289,7 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture border="2">white.png</texture>
-			<colordiffuse>DialogBackgroundFade</colordiffuse>
+			<!-- <colordiffuse>DialogBackgroundFade</colordiffuse> -->
 		</control>
 
 	</include>

@@ -11,6 +11,7 @@
 			<animation effect="fade" delay="1000" start="100" end="0" time="250" reversible="false">WindowClose</animation> -->
 			<animation effect="slide" start="0,-200" end="0,0" time="300">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,-200" time="300">WindowClose</animation>
+			<!-- <visible>!Window.IsVisible(sliderdialog)|!Window.IsVisible(VideoOSDSettings)</visible> -->
 			<visible>![Window.IsActive(DialogSelect.xml) | Window.IsActive(SliderDialog) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
 				<control type="image">
 					<posx>0</posx>
