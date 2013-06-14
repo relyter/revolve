@@ -2,34 +2,38 @@
 	<defaultcontrol always="true">2</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
-
 	<controls>
 
 		<control type="group">
 			<posx>30</posx>
-			<posy>1011</posy>
+			<posy>950</posy>
 
 			<control type="group">
 
-				<visible>!VideoPlayer.IsFullscreen + !Window.IsVisible(screencalibration)</visible>
-				<description> now playing info at the bottom of the screen</description>
-				<control type="image">
-					<posx>-30</posx>
-					<posy>0</posy>
-					<width>1920</width>
-					<height>102</height>
-					<texture border="22">other_textures/ContentPanel.png</texture>
-				</control>
+				<visible>!VideoPlayer.IsFullscreen + !Window.IsVisible(screencalibration) + Window.IsVisible(Home)</visible>
+				<description> now playing info at the bottom of the home screen</description>
 
-				<control type="label">
-					<description>Now Playing Info</description>
-					<posx>15</posx>
-					<posy>9</posy>
-					<width>1830</width>
-					<label>[COLOR=Blue]$LOCALIZE[13350][/COLOR] $INFO[VideoPlayer.TVShowTitle,, - ]$INFO[VideoPlayer.Title]</label>
-					<scroll>true</scroll>
-				</control>
+			<control type="label">
+				<description>Now Playing Info</description>
+				<textcolor>White</textcolor>
+				<font>OSDTimeSmall</font>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>650</width>
+				<label>$INFO[VideoPlayer.TVShowTitle,, - ]$INFO[VideoPlayer.Title]</label>
+				<scroll>true</scroll>
+			</control>
 
+			<control type="label">
+				<textcolor>Text</textcolor>
+				<font>OSDTimeSmall</font>
+				<description>Now Playing Info</description>
+				<posx>0</posx>
+				<posy>35</posy>
+				<width>600</width>
+				<label>$INFO[Player.Time] / $INFO[Player.Duration] ($INFO[Player.FinishTime])</label>
+				<scroll>true</scroll>
+			</control>
 			</control>
 
 		</control>

@@ -1,4 +1,8 @@
 <includes>
+  <!--
+	  CUSTOM WINDOWS LIST
+		_AddonsMenu 1111
+		-->
 
 	<include file="Defaults.xml" />
 	<include file="CommonViews.xml" />
@@ -10,7 +14,7 @@
 	<include file="View_54_Banners.xml" />
 	<include file="View_55_Panel.xml" />
 	<include file="View_56_Gallery.xml" />
-	
+	<include file="View_57_RevolveAddons.xml" />
 	<include file="Revolve_Home.xml" />
 	<include file="Home_Items.xml" />
 	<include file="Revolve_Landscape.xml" />
@@ -105,21 +109,7 @@
 		<disabledcolor>Black</disabledcolor>
 		<colordiffuse>55ffffff</colordiffuse>
 		<texturenofocus>-</texturenofocus>
-		<texturefocus>buttons/buttonbg1.png</texturefocus>
-	</include>
-	<include name="generalbutton1">
-		<height>60</height>
-		<align>left</align>
-		<aligny>center</aligny>
-		<font>ButtonText1</font>
-		<label>-</label>
-		<textoffsetx>25</textoffsetx>
-		<textcolor>Black</textcolor>
-		<focusedcolor>White</focusedcolor>
-		<disabledcolor>Text</disabledcolor>
-		<colordiffuse>ButtonDiffuse</colordiffuse>
-		<texturenofocus>-</texturenofocus>
-		<texturefocus>buttons/buttonbg1.png</texturefocus>
+		<texturefocus>controls/buttonbg1.png</texturefocus>
 	</include>
 	<include name="generalbutton2">
 		<height>60</height>
@@ -133,7 +123,7 @@
 		<disabledcolor>Text</disabledcolor>
 		<colordiffuse>ButtonDiffuse</colordiffuse>
 		<texturenofocus>-</texturenofocus>
-		<texturefocus>buttons/buttonbg1.png</texturefocus>
+		<texturefocus>controls/buttonbg1.png</texturefocus>
 	</include>
 	<include name="bannerborder">
 		<control type="image">
@@ -155,7 +145,17 @@
 				<visible>Container(54).OnNext</visible>
 			</control>
 	</include>
-		
+	<include name="SettingsBG">	
+		<control type="image">
+			<description>settings bg</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<visible>true</visible>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			<texture backgroud="true">special://skin/backgrounds/settings.jpg</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+	</include>
 	<include name="HiddenButton">
 		<posx>-20</posx>
 		<posy>-20</posy>
@@ -176,7 +176,7 @@
 	<include name="WindowID">
 		<width>780</width>
 		<height>21</height>
-		<textcolor>Blue</textcolor>
+		<textcolor>White</textcolor>
 		<shadowcolor>Black</shadowcolor>
 		<align>left</align>
 	</include>

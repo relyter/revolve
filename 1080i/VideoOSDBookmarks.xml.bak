@@ -56,7 +56,7 @@
 					<posy>28</posy>
 					<width>333</width>
 					<height>333</height>
-					<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem.thumb]</texture>
+					<texture border="5" background="true" diffuse="circlemask.png" fallback="whiteoverlay.png">$INFO[ListItem.thumb]</texture>
 					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -103,7 +103,7 @@
 					<posy>28</posy>
 					<width>333</width>
 					<height>333</height>
-					<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem.thumb]</texture>
+					<texture border="5" background="true" diffuse="circlemask.png" fallback="whiteoverlay.png">$INFO[ListItem.thumb]</texture>
 					<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -132,7 +132,7 @@
 		</control>
 			<control type="grouplist" id="9000">
 				<posx>300</posx>
-				<posy>960</posy>
+				<posy>970</posy>
 				<width>1300</width>
 				<height>60</height>
 				<itemgap>3</itemgap>
@@ -145,23 +145,23 @@
 
 				<control type="button" id="2">
 					<description>Create Bookmark button</description>
+					<align>center</align>
 					<label>294</label>
 					<width>400</width>
-					<include>generalbutton2</include>
 				</control>
 
 				<control type="button" id="3">
 					<description>Clear Bookmark button</description>
+					<align>center</align>
 					<label>296</label>
 					<width>400</width>
-					<include>generalbutton2</include>
+					
 				</control>
 
 				<control type="button" id="4">
 					<description>Clear Bookmark button</description>
 					<label>20406</label>
 					<width>400</width>
-					<include>generalbutton2</include>
 					<visible>videoplayer.content(episodes)</visible>
 				</control>
 

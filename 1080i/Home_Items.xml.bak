@@ -2,15 +2,15 @@
 
 	<include name="Home_Items">
 		
-		<item id="20">
+<!-- 		<item id="20">
 			<description>reload skin</description>
 			<label>RELOAD</label>
 			<onclick>XBMC.ReloadSkin()</onclick>
 			<icon>special://skin/backgrounds/weather.jpg</icon>
 			<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
-		</item>
+		</item> -->
 		
-		<item id="2">
+<!-- 		<item id="1">
 			<description>Videos</description>
 			<label>31003</label>
 			<property name="Circle">circle/Videos.png</property>
@@ -18,9 +18,9 @@
 			<icon>special://skin/backgrounds/videos.jpg</icon>
 			<thumb>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</thumb>
 			<visible>!Skin.HasSetting(homepageShowVideos)</visible>
-		</item>
+		</item> -->
 
-		<item id="5">
+		<item id="2">
 			<description>Movies</description>
 			<label>31006</label>
 			<label2>$INFO[Window(Home).Property(Movies.Count)] $LOCALIZE[20342] | $INFO[Window(Home).Property(Movies.UnWatched)] $LOCALIZE[16101]</label2>
@@ -33,7 +33,7 @@
 			<visible>!Skin.HasSetting(homepageShowMovies) + Library.HasContent(Movies)</visible>
 		</item>
 
-		<item id="6">
+		<item id="3">
 			<description>TV Shows</description>
 			<label>31007</label>
 			<label2>$INFO[Window(Home).Property(TVShows.Count)] $LOCALIZE[31042] | $INFO[Window(Home).Property(Episodes.Count)] $LOCALIZE[20360] | $INFO[Window(Home).Property(Episodes.UnWatched)] $LOCALIZE[16101]</label2>
@@ -46,16 +46,16 @@
 			<visible>!Skin.HasSetting(homepageShowTvSeries) + Library.HasContent(TVShows)</visible>
 		</item>
 					
-		<item id="15">
+<!-- 		<item id="4">
 			<description>LiveTV</description>
 			<label>LiveTV</label>
 			<onclick>RunAddon(plugin.video.LiveTV)</onclick>
 			<icon>special://skin/backgrounds/videos.jpg</icon>
 			<thumb>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</thumb>
 			<visible>System.HasAddon(plugin.video.LiveTV)+!Skin.HasSetting(homepageShowLiveTV)</visible>
-		</item>
+		</item> -->
 				
-		<item id="3">
+		<item id="5">
 			<description>Music</description>
 			<label>31004</label>
 			<property name="Label3">$LOCALIZE[31044]</property>
@@ -66,7 +66,7 @@
 			<visible>!Skin.HasSetting(homepageShowMusic)</visible>
 		</item>
 	
-		<item id="4">
+		<item id="6">
 			<description>Pictures</description>
 			<label>31005</label>
 			<property name="Circle">circle/Pictures.png</property>
@@ -76,7 +76,7 @@
 			<visible>!Skin.HasSetting(homepageShowPictures)</visible>
 		</item>
 
-		<item id="9">
+		<item id="7">
 			<description>Weather</description>
 			<label>31010</label>
 			<property name="Circle">circle/Weather.png</property>
@@ -86,17 +86,18 @@
 			<visible>!Skin.HasSetting(homepageShowWeather)</visible>
 		</item>
 				
-		<item id="14">
+		<item id="8">
 			<description>Add-ons</description>
-			<label>ADD-ONS</label>
+			<label>24001</label>
 			<property name="Circle">circle/Plugins.png</property>
 			<icon>special://skin/backgrounds/addons.jpg</icon>
 			<thumb>$INFO[Skin.String(Home_Custom_Back_Addons_Folder)]</thumb>
-			<onclick>activatewindow(AddonBrowser)</onclick>
-			<visible>!Skin.HasSetting(homepageShowAddons)</visible>
+			<onclick>ActivateWindow(1111)</onclick>
+			<!-- <onclick>ActivateWindow(Weather)</onclick> -->
+			<!-- <visible>!Skin.HasSetting(homepageShowAddons)</visible> -->
 		</item>
 			
-		<item id="1">
+<!-- 		<item id="9">
 			<description>Programs</description>
 			<label>31002</label>
 			<property name="Circle">circle/Programs.png</property>
@@ -104,9 +105,9 @@
 			<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
 			<onclick>ActivateWindow(Programs,Addons)</onclick>
 			<visible>!Skin.HasSetting(homepageShowPrograms)</visible>
-		</item>
+		</item> -->
 
-		<item id="11">
+		<item id="10">
 			<description>Settings</description>
 			<label>31012</label>
 			<property name="Circle">circle/Settings.png</property>
@@ -116,11 +117,23 @@
 			<visible>!Skin.HasSetting(homepageShowSettings)</visible>
 		</item>
 		
-		<item id="13">
+		<item id="11">
 			<description>Play Disc</description>
 			<label>31014</label>
 			<onclick>PlayDVD</onclick>
 			<visible>System.HasMediadvd</visible>
+		</item>
+		
+		<item id="12">
+			<description>Favourites</description>
+			<label>31008</label>
+			<onclick>ActivateWindow(Favourites)</onclick>
+		</item>
+		
+		<item id="13">
+			<description>Shutdown</description>
+			<label>31013</label>
+			<onclick>ActivateWindow(shutdownmenu)</onclick>
 		</item>
 
 	</include>

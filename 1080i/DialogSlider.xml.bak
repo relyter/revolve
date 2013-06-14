@@ -26,6 +26,7 @@
 			<description>Label</description>
 			<font>HomemediumSmall</font>
 			<textcolor>TextFocus</textcolor>
+			<shadowcolor>Black</shadowcolor>
 			<posx>1243</posx>
 			<posy>480</posy>
 			<width>375</width>

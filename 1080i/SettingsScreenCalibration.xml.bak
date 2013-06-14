@@ -48,7 +48,7 @@
 			<posy>348</posy>
 			<width>384</width>
 			<height>384</height>
-			<texturefocus>calibration/center.png</texturefocus>
+			<texturefocus>calibration/CalibratePixelRatio.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<colordiffuse>DefaultColor</colordiffuse>
 		</control>

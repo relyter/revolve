@@ -10,7 +10,7 @@
 		<control type="radiobutton" id="4">
 			<description>Enable Login Screen</description>
 			<posx>25</posx>
-			<posy>25</posy>
+			<posy>520</posy>
 			<width>600</width>
 			<label>20096</label>
 			<align>left</align>

@@ -73,7 +73,7 @@
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Text</disabledcolor>
 		<texturenofocus>-</texturenofocus>
-		<texturefocus border="25">controls/buttonbg2.png</texturefocus>
+		<texturefocus border="5">controls/buttonbg2.png</texturefocus>
 		<pulseonselect>false</pulseonselect>
 		<!-- 		<alttexturenofocus border="2">other_textures/ButtonNF.png</alttexturenofocus>
 		<alttexturefocus border="5">other_textures/ButtonFo.png</alttexturefocus> -->
@@ -93,7 +93,7 @@
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Text</disabledcolor>
 		<texturenofocus>-</texturenofocus>
-		<texturefocus border="25">controls/buttonbg2.png</texturefocus>
+		<texturefocus border="5">controls/buttonbg2.png</texturefocus>
 		<pulseonselect>false</pulseonselect>
 		
 		<radiowidth>108</radiowidth>
@@ -116,7 +116,7 @@
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Text</disabledcolor>
 		<texturenofocus>-</texturenofocus>
-		<texturefocus border="25">controls/buttonbg2.png</texturefocus>
+		<texturefocus border="5">controls/buttonbg2.png</texturefocus>
 		<pulseonselect>false</pulseonselect>
 				
 		<textureup>controls/arrowup-nf.png</textureup>
@@ -161,7 +161,7 @@
 		<disabledcolor>Text</disabledcolor>
 		<textoffsetx>25</textoffsetx>
 		<texturenofocus>-</texturenofocus>
-		<texturefocus border="25">controls/buttonbg2.png</texturefocus>
+		<texturefocus border="5">controls/buttonbg2.png</texturefocus>
 		<textoffsety>0</textoffsety>
 		<sliderwidth>230</sliderwidth>
 		<sliderheight>23</sliderheight>

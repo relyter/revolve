@@ -5,7 +5,16 @@
 	<controls>
 
 		<include>GlobalBackground</include>
-		<include>SettingsBG</include>
+
+		<control type="image">
+			<description>settings bg</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<visible>true</visible>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			<texture backgroud="true">special://skin/backgrounds/settings.jpg</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
 
 		<control type="image">
 			<description>divider</description>
