@@ -19,10 +19,10 @@
 		
 			<control type="image" id="901">
 				<description>Mute Image</description>
-				<posx>-1</posx>
-				<posy>-1</posy>
-				<width>152</width>
-				<height>152</height>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>150</height>
 				<texture>controls/mute.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>

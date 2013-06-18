@@ -178,7 +178,7 @@
 		<righttexture>-</righttexture>
 		<overlaytexture>-</overlaytexture>
 		<reveal>true</reveal>
-		<colordiffuse>DefaultColor</colordiffuse>
+		<colordiffuse>CircleDiffuse</colordiffuse>
 	</default>
 
 	<default type="slider">
