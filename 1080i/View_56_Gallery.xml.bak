@@ -397,6 +397,7 @@
 	<control type="scrollbar" id="60">
 		<animation effect="slide" start="0,0" end="-8,0" time="150">Focus</animation>
 		<animation effect="slide" start="-8,0" end="0,0" time="300">UnFocus</animation>
+		<visible>Control.IsVisible(56)</visible>
 		<posx>110</posx>
 		<posy>1060</posy>
 		<width>1700</width>

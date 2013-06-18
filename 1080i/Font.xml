@@ -66,6 +66,12 @@
 			<filename>Lato-Light.ttf</filename>
 			<size>36</size>
 		</font>
+		
+		<font>
+			<name>OSDinfo</name>
+			<filename>Lato-Light.ttf</filename>
+			<size>24</size>
+		</font>
 
 		<font>
 			<name>OSDStatus</name>

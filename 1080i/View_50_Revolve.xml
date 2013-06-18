@@ -639,6 +639,7 @@
 		
 		<control type="wraplist" id="50">
 			<viewtype label="Revolve">list</viewtype>
+			<visible>!Container.Content(Addons)</visible>
 			<posx>330</posx>
 			<posy>57</posy>
 			<width>960</width>

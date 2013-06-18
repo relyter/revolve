@@ -1,5 +1,5 @@
 <window id="34">
-	<defaultcontrol always="true">4</defaultcontrol>
+	<defaultcontrol always="true">2</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
@@ -9,17 +9,26 @@
 		
 		<control type="radiobutton" id="4">
 			<description>Enable Login Screen</description>
-			<posx>25</posx>
-			<posy>520</posy>
-			<width>600</width>
-			<label>20096</label>
 			<align>left</align>
-			<onright>2</onright>
+			<posx>760</posx>
+			<posy>1000</posy>
+			<width>400</width>
+			<label>20096</label>
+			<onright>-</onright>
 			<onleft>-</onleft>
-			<onup>-</onup>
-			<ondown>-</ondown>
+			<onup>2</onup>
+			<ondown>2</ondown>
 		</control>
-		
+
+		<control type="image">
+			<posx>680</posx>
+			<posy>260</posy>
+			<width>560</width>
+			<height>560</height>
+			<texture background="true">circleshadow.png</texture>
+			<visible>Control.HasFocus(2)</visible>
+		</control>
+
 		<control type="image">
 			<posx>715</posx>
 			<posy>295</posy>
@@ -45,9 +54,9 @@
 			<posx>0</posx>
 			<posy>-53</posy>
 			<width>1920</width>
-			<height>1183</height>
+			<height>1033</height>
 			<onleft>4</onleft>
-			<onright>-</onright>
+			<onright>4</onright>
 			<onup>-</onup>
 			<ondown>-</ondown>
 			<focusposition>5</focusposition>
@@ -78,7 +87,7 @@
 					<textcolor>White</textcolor>
 					<align>center</align>
 				</control>
-				<control type="label">
+<!-- 				<control type="label">
 					<posx>960</posx>
 					<posy>60</posy>
 					<width>600</width>
@@ -87,7 +96,7 @@
 					<font>DialogText</font>
 					<textcolor>White</textcolor>
 					<align>center</align>
-				</control>
+				</control> -->
 			</focusedlayout>
 
 		</control>

@@ -785,7 +785,7 @@
 					</control>
 				<control type="image">
 					<description>watched overlay</description>
-					<posx>1770</posx>
+					<posx>1775</posx>
 					<posy>800</posy>
 					<width>100</width>
 					<height>100</height>
@@ -829,7 +829,8 @@
 		</control>
 		<control type="wraplist" id="54">
 			<viewtype label="Banners">list</viewtype>
-			<visible>Container.Content(TVshows)</visible>
+			<visible>Container.Content(TVshows)+!Container.Content(Addons)</visible>
+			<visible></visible>
 			<posx>330</posx>
 			<posy>57</posy>
 			<width>960</width>

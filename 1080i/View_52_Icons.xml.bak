@@ -7,11 +7,12 @@
 			<width>1920</width>
 			<height>898</height>
 			<onleft>9000</onleft>
-			<onright>888</onright>
+			<onright>9001</onright>
 			<onup>52</onup>
 			<ondown>52</ondown>
 			<scrolltime tween="sine" easing="out">200</scrolltime>
 			<viewtype label="Icons">icon</viewtype>
+			<visible>!Container.Content(Addons)</visible>
 			<pagecontrol>60</pagecontrol>
 			<itemlayout height="300" width="300">
 				<control type="image">
@@ -30,7 +31,7 @@
 					<posy>22</posy>
 					<width>256</width>
 					<height>256</height>
-					<texture border="5" background="true" diffuse="circlemask.png">$INFO[ListItem.thumb]</texture>
+					<texture border="5" background="true">$INFO[ListItem.thumb]</texture>
 					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				</control>
 				<control type="image">

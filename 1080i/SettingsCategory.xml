@@ -6,35 +6,41 @@
 
 		<include>GlobalBackground</include>
 		<include>SettingsBG</include>
-
-		<control type="image">
-			<description>divider</description>
-			<visible>!ControlGroup(5).HasFocus</visible> 		
-			<!-- <animation effect="fade" start="0" end="100" time="500">Visible</animation> -->
-			<animation effect="fade" start="100" end="0" time="500" reversible="false">Hidden</animation>
-			<posx>401</posx>
-			<posy>0</posy>
-			<texture>controls/divider.png</texture>
-			<aspectratio>stretch</aspectratio>
+		
+		<control type="label" description="top right label">
+			<include>ContentFade</include>			
+			<posx>1900</posx>
+			<posy>25</posy>
+			<width>800</width>
+			<align>right</align>
+			<font>Title</font>
+			<textcolor>Text</textcolor>
+			<label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
 		</control>
 		
-		<control type="image">
-			<description>divider</description>
-			<visible>ControlGroup(5).HasFocus</visible>
-			<animation effect="fade" start="0" end="100" time="500">Visible</animation>
-			<!-- <animation effect="fade" start="100" end="0" time="500">Hidden</animation> -->
-			<posx>400</posx>
-			<posy>0</posy>
-			<texture>controls/divider1.png</texture>
-			<aspectratio>stretch</aspectratio>
+		<control type="label" id="2">
+			  <description>Fake Label</description>
+			  <posx>0</posx>
+			  <posy>0</posy>
+			  <width>0</width>
+			  <height>0</height>
+			  <font>-</font>
+			  <visible>false</visible>
+			</control>
+			
+		<control type="group">
+			<description>left ring</description>
+			<include>LeftRingSlide</include>
+			<include>LeftRing</include>
 		</control>
-
+		
 		<control type="grouplist" id="3">
 			<description>Button Area</description>
-			<posx>15</posx>
-			<posy>210</posy>
-			<width>450</width>
-			<height>720</height>
+			<include>LeftRingSlide</include>
+			<posx>50</posx>
+			<posy>300</posy>
+			<width>600</width>
+			<height>700</height>
 			<itemgap>3</itemgap>
 			<onleft>5</onleft>
 			<onright>5</onright>
@@ -42,13 +48,29 @@
 			<ondown>3</ondown>
 			<orientation>vertical</orientation>
 		</control>
-
+		
+		<control type="button" id="10">
+			<description>Default Category Button</description>
+			<width>600</width>
+			<align>left</align>
+			<font>Title</font>
+			<textcolor>Text</textcolor>
+			<focusedcolor>White</focusedcolor>
+			<colordiffuse>defaultcolor</colordiffuse>
+			<shadowcolor>ff000000</shadowcolor>
+			<texturefocus>-</texturefocus>
+			<textoffsetx>0</textoffsetx>
+			<height>80</height>
+			<textoffsetx>0</textoffsetx>
+		</control>
+		
 		<control type="grouplist" id="5">
 			<description>Control Area</description>
-			<posx>510</posx>
-			<posy>210</posy>
-			<width>1230</width>
-			<height>720</height>
+			<include>ContentFade</include>			
+			<posx>800</posx>
+			<posy>200</posy>
+			<width>1100</width>
+			<height>820</height>
 			<itemgap>3</itemgap>
 			<onleft>3</onleft>
 			<onright>3</onright>
@@ -64,18 +86,13 @@
 
 		<control type="radiobutton" id="8">
 			<description>Default Radio Button</description>
-			<radioposx>1100</radioposx>
+			<radioposx>970</radioposx>
 			<align>left</align>
 		</control>
 
 		<control type="spincontrolex" id="9">
 			<description>Default Spin Control</description>
 			<spinposx>0</spinposx>
-			<align>left</align>
-		</control>
-
-		<control type="button" id="10">
-			<description>Default Category Button</description>
 			<align>left</align>
 		</control>
 

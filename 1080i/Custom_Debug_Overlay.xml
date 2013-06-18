@@ -1,18 +1,27 @@
-﻿<!-- Foundation -->
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
 <window type="dialog" id="50">
 	<zorder>2</zorder>
 	<visible>!Window.IsVisible(startup)</visible>
 	<controls>
 
+		<!-- Global debug grid -->
+
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>special://skin/backgrounds/debuggrid1080.png</texture>
+			<visible>Skin.HasSetting(DebugGrid)</visible>
+		</control>
+
 		<!-- Window/Dialog debug -->
 
 		<control type="grouplist">
-			<posx>15</posx>
-			<posy>15</posy>
-			<width>780</width>
-			<height>450</height>
-			<itemgap>12</itemgap>
-			<visible>Skin.HasSetting(HideDebugInfo)</visible>
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>520</width>
+			<height>300</height>
+			<itemgap>8</itemgap>
+			<visible>!Skin.HasSetting(HideDebugInfo)</visible>
 
 			<!-- Window labels -->
 
@@ -434,12 +443,20 @@
 
 		</control>
 
-		<!-- Global debug grid -->
+		<!-- Control label -->
 
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture>special://skin/backgrounds/debuggrid1080.png</texture>
-			<visible>Skin.HasSetting(DebugGrid)</visible>
+		<control type="label">
+			<include>PathID</include>
+			<label>$INFO[System.CurrentControl]</label>
+			<visible>!Skin.HasSetting(HideDebugInfo)</visible>
+		</control>
+
+		<!-- Path label -->
+
+		<control type="label">
+			<include>ControlID</include>
+			<label>$INFO[Container.FolderPath]</label>
+			<visible>!Skin.HasSetting(HideDebugInfo)</visible>
 		</control>
 
 	</controls>

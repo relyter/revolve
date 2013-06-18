@@ -1,0 +1,210 @@
+<includes>
+	<include name="View_58_IconsAddons">
+		<control type="panel" id="58">
+			<description>Addons Icon View (id=58)</description>
+			<visible>Container.Content(Addons)</visible>
+			<posx>60</posx>
+			<posy>30</posy>
+			<width>1920</width>
+			<height>898</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>58</onup>
+			<ondown>58</ondown>
+			<scrolltime tween="sine" easing="out">200</scrolltime>
+			<viewtype label="Icons">icon</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<itemlayout height="300" width="300">
+				<control type="image">
+					<description>item shadow</description>
+					<posx>-15</posx>
+					<posy>-15</posy>
+					<width>330</width>
+					<height>330</height>
+					<texture background="true">circleshadow.png</texture>
+					<animation effect="fade" center="auto" start="0" end="100" time="200" reversible="false">Focus</animation>
+					<animation effect="fade" center="auto" start="100" end="0" time="200" reversible="false">UnFocus</animation>
+				</control>
+				<control type="image">
+					<description>item thumb</description>
+					<posx>22</posx>
+					<posy>22</posy>
+					<width>256</width>
+					<height>256</height>
+					<texture border="5" fallback="white.png" background="true" diffuse="circlemask.png">$INFO[ListItem.thumb]</texture>
+					<aspectratio scalediffuse="false" aligny="top">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<description>color overlay</description>
+					<animation effect="fade" end="75" condition="true">Conditional</animation>
+					<posx>22</posx>
+					<posy>22</posy>
+					<width>256</width>
+					<height>256</height>
+					<texture border="5" background="true">circlemask.png</texture>
+					<colordiffuse>CircleDiffuse</colordiffuse>
+				</control>
+				<control type="image">
+					<description>border</description>
+					<posx>18</posx>
+					<posy>18</posy>
+					<width>264</width>
+					<height>264</height>
+					<texture background="true">circleborder.png</texture>
+					<colordiffuse>DefaultColor</colordiffuse>
+					<aspectratio>stretch</aspectratio>
+				</control>
+			</itemlayout>
+			<focusedlayout height="310" width="310">
+				<control type="group">
+					<animation effect="slide" start="0,31" end="0,0" time="200" reversible="false" condition="Container(52).OnScrollNext">Focus</animation>
+					<animation effect="slide" start="0,0" end="0,-35" time="200" reversible="false" condition="Container(52).OnScrollNext">UnFocus</animation>
+					<animation effect="slide" start="0,-31" end="0,0" time="200" reversible="false" condition="Container(52).OnScrollPrevious">Focus</animation>
+					<animation effect="slide" start="0,-62" end="0,-35" time="200" reversible="false" condition="Container(52).OnScrollPrevious">UnFocus</animation>
+				<control type="image">
+					<description>current item shadow</description>
+					<posx>-20</posx>
+					<posy>-20</posy>
+					<width>340</width>
+					<height>340</height>
+					<texture background="true">circleshadow.png</texture>
+					<animation effect="fade" center="auto" start="0" end="100" time="200" reversible="false">Focus</animation>
+					<animation effect="fade" center="auto" start="100" end="0" time="200" reversible="false">UnFocus</animation>
+				</control>
+				<control type="image">
+					<description>current item thumb</description>
+					<posx>12</posx>
+					<posy>12</posy>
+					<width>278</width>
+					<height>278</height>
+					<texture border="5" fallback="white.png" background="true" diffuse="circlemask.png">$INFO[ListItem.thumb]</texture>
+					<aspectratio scalediffuse="false" aligny="center">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<description>smooth move</description>
+					<posx>12</posx>
+					<posy>12</posy>
+					<width>278</width>
+					<height>278</height>
+					<texture background="true">circlemask.png</texture>
+					<colordiffuse>DefaultColor</colordiffuse>
+					<animation effect="fade" center="auto" start="75" end="0" time="200" reversible="false">Focus</animation>
+					<animation effect="fade" center="auto" start="0" end="75" time="200" reversible="false">UnFocus</animation>
+				</control>
+				<control type="image">
+					<description>border</description>
+					<posx>6</posx>
+					<posy>6</posy>
+					<width>288</width>
+					<height>288</height>
+					<texture background="true">circleborder.png</texture>
+					<colordiffuse>DefaultColor</colordiffuse>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="group" description="labels">
+			<visible>Control.IsVisible(58)</visible>
+			<control type="image">
+				<description>cross</description>
+				<posx>1095</posx>
+				<posy>945</posy>
+				<width>760</width>
+				<height>120</height>
+				<texture>cross.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>DefaultColor</colordiffuse>
+			</control>
+			<control type="label" description="addon name">
+				<posx>1520</posx>
+				<posy>940</posy>
+				<width>1470</width>
+				<height>60</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>HomeMedium</font>
+				<textcolor>TextFocus</textcolor>
+				<info>ListItem.Label</info>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" description="addon ver">
+				<label>Ver. $INFO[ListItem.Property(Addon.Version)]</label>
+				<visible>!IsEmpty(ListItem.Property(Addon.Name)) + !Stringcompare(ListItem.Label,..)</visible>
+				<posx>1550</posx>
+				<posy>940</posy>
+				<width>350</width>
+				<height>60</height>
+				<aligny>center</aligny>
+				<font>HomeMediumSmaller</font>
+				<textcolor>TextFocus</textcolor>
+			</control>
+			<control type="label" description="if broken">
+				<visible>!IsEmpty(ListItem.Property(Addon.broken))</visible>
+				<label>[B]Broken[/B]</label>
+				<posx>1550</posx>
+				<posy>995</posy>
+				<width>350</width>
+				<height>60</height>
+				<aligny>center</aligny>
+				<font>HomeMediumSmaller</font>
+				<textcolor>Red</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" description="addon auhor">
+				<posx>1520</posx>
+				<posy>995</posy>
+				<width>1000</width>
+				<height>60</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>HomeMediumSmaller</font>
+				<textcolor>TextFocus</textcolor>
+				<visible>!IsEmpty(ListItem.Property(Addon.Name)) + !Stringcompare(ListItem.Label,..)</visible>
+				<label>Author: [B]$INFO[ListItem.Property(Addon.Creator)][/B]</label>
+			</control>
+			<control type="label" description="bottom left label">
+				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+				<posx>50</posx>
+				<posy>995</posy>
+				<width>800</width>
+				<align>left</align>
+				<font>HomeMediumSmall</font>
+				<textcolor>Text</textcolor>
+				<label>$INFO[Container.FolderName]</label>
+				<visible>!IsEmpty(Container.FolderName) + Control.IsVisible(58)</visible>
+			</control>	
+			<control type="label" description="bottom left label fallback">
+				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+				<posx>50</posx>
+				<posy>995</posy>
+				<width>800</width>
+				<align>left</align>
+				<font>HomeMediumSmall</font>
+				<textcolor>Text</textcolor>
+				<label>$LOCALIZE[24001]</label>
+				<visible>IsEmpty(Container.FolderName) + Control.IsVisible(58)</visible>
+			</control>	
+		</control>	
+		<control type="scrollbar" id="60">
+			<animation effect="slide" start="0,0" end="-8,0" time="150">Focus</animation>
+			<animation effect="slide" start="-8,0" end="0,0" time="300">UnFocus</animation>
+			<visible>Control.IsVisible(58)</visible>
+			<posx>1910</posx>
+			<posy>40</posy>
+			<width>20</width>
+			<height>1000</height>
+			<texturesliderbackground>-</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>-</textureslidernib>
+			<textureslidernibfocus>scrollbarmark.png</textureslidernibfocus>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<onleft>58</onleft>
+			<onright>-</onright>
+		</control>
+	</include>
+</includes>

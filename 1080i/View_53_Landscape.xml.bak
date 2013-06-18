@@ -7,7 +7,7 @@
 			<visible>Control.IsVisible(53)</visible>
 			<animation effect="slide" start="0,1080" end="0,0" time="1000">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,1080" time="1000">WindowClose</animation>
-							
+			<include>Revolve_Landscape</include>				
 			<control type="image">
 				<posy>680</posy>
 				<width>1920</width>
@@ -151,7 +151,7 @@
 			<colordiffuse>DefaultColor</colordiffuse>
 		</control>
 		
-		<include>Revolve_Landscape</include>
+		
 				
 		<control type="wraplist" id="53">
 			<posx>1920</posx>

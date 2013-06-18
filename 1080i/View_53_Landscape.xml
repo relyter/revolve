@@ -150,9 +150,7 @@
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<colordiffuse>DefaultColor</colordiffuse>
 		</control>
-		
-		
-				
+			
 		<control type="wraplist" id="53">
 			<posx>1920</posx>
 			<posy>57</posy>
@@ -166,6 +164,7 @@
 			<orientation>horizontal</orientation>
 			<focusposition>0</focusposition>
 			<viewtype label="LandScape">list</viewtype>
+			<visible>!Container.Content(Addons)</visible>
 		</control>
 		<control type="scrollbar" id="60">
 			<animation effect="slide" start="0,0" end="-8,0" time="150">Focus</animation>

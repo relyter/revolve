@@ -829,7 +829,7 @@
 		</control>
 		<control type="wraplist" id="54">
 			<viewtype label="Banners">list</viewtype>
-			<visible>Container.Content(TVshows)</visible>
+			<visible>Container.Content(TVshows)+!Container.Content(Addons)</visible>
 			<posx>330</posx>
 			<posy>57</posy>
 			<width>960</width>

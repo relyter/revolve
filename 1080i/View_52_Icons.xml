@@ -12,6 +12,7 @@
 			<ondown>52</ondown>
 			<scrolltime tween="sine" easing="out">200</scrolltime>
 			<viewtype label="Icons">icon</viewtype>
+			<visible>!Container.Content(Addons)</visible>
 			<pagecontrol>60</pagecontrol>
 			<itemlayout height="300" width="300">
 				<control type="image">

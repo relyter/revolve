@@ -13,6 +13,7 @@
 		<orientation>horizontal</orientation>
 		<pagecontrol>60</pagecontrol>
 		<viewtype label="Gallery">list</viewtype>
+		<visible>!Container.Content(Addons)</visible>
 		<scrolltime>200</scrolltime>
 	</control>
 	<control type="group">

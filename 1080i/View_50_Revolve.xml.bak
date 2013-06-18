@@ -659,7 +659,7 @@
 			<posx>1910</posx>
 			<posy>760</posy>
 			<width>20</width>
-			<height>1000</height>
+			<height>300</height>
 			<texturesliderbackground>-</texturesliderbackground>
 			<texturesliderbar>-</texturesliderbar>
 			<texturesliderbarfocus>-</texturesliderbarfocus>

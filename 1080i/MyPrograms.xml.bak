@@ -1,23 +1,21 @@
-<window id="20">
+<window id="1">
 	<defaultcontrol always="true">57</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<!-- <views>57,58</views> -->
-	
+
 	<controls>
 
 		<include>GlobalBackground</include>
-		
 		<include>View_57_RevolveAddons</include>
 		<include>View_58_IconsAddons</include>
-		
 		<include>9000ScreenDim</include>
-				
 		<include>9000LeftRing</include>
 		
 		<control type="group">
 			<include>9000ListAnimation</include>
 			
 			<control type="grouplist" id="9000">
+
 				<posx>50</posx>
 				<posy>500</posy>
 				<width>600</width>
@@ -29,9 +27,9 @@
 				<ondown>9000</ondown>
 				<onback>57</onback>
 				<orientation>vertical</orientation>
-				
+
 				<control type="button" id="2">
-					<description>View type</description>
+					<description>View</description>
 					<include>9000button</include>
 				</control>
 
@@ -41,33 +39,12 @@
 				</control>
 
 				<control type="togglebutton" id="4">
-					<description>Ascending/Descending</description>
-					<include>9000button</include>
+					<description>Ascending</description>
+					<width>330</width>
+					<align>left</align>
 					<label>584</label>
 					<altlabel>585</altlabel>
-				</control>
-
-				<control type="radiobutton" id="5">
-					<description>Enable auto-updates</description>
-					<label>24063</label>
-					<align>left</align>
-					<width>500</width>
-					<font>HomeMediumSmall</font>
-					<textcolor>Text</textcolor>
-					<focusedcolor>White</focusedcolor>
-					<disabledcolor>Disabled</disabledcolor>
-					<texturefocus>-</texturefocus>
-				</control>
-
-				<control type="radiobutton" id="6">
-					<description>No notifications</description>
-					<label>25000</label>
-					<width>500</width>
-					<font>HomeMediumSmall</font>
-					<textcolor>Text</textcolor>
-					<focusedcolor>White</focusedcolor>
-					<disabledcolor>Disabled</disabledcolor>
-					<texturefocus>-</texturefocus>
+					<include>9000button</include>
 				</control>
 
 	<!-- 			<control type="button" id="98">
@@ -77,11 +54,11 @@
 					<label>31015</label>
 					<onclick>ActivateWindow(playercontrols)</onclick>
 					<visible>Player.HasMedia</visible>
+					<include>9000button</include>
 				</control> -->
 
 			</control>
 		</control>
-		
 	</controls>
 
 </window>

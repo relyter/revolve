@@ -95,11 +95,10 @@
 		<texturenofocus>-</texturenofocus>
 		<texturefocus border="25">controls/buttonbg2.png</texturefocus>
 		<pulseonselect>false</pulseonselect>
-		
 		<radiowidth>108</radiowidth>
 		<radioheight>60</radioheight>
-		<textureradiofocus>controls/radiobutton-on.png</textureradiofocus>
-		<textureradionofocus>controls/radiobutton-off.png</textureradionofocus>
+		<textureradioon>controls/radiobutton-on.png</textureradioon>
+		<textureradiooff>controls/radiobutton-off.png</textureradiooff>
 	</default>
 
 	<default type="spincontrolex">
@@ -171,13 +170,15 @@
 	</default>
 
 	<default type="progress">
-		<posx>345</posx>
-		<posy>488</posy>
-		<texturebg border="6">other_textures/OSD/ProgressBack.png</texturebg>
+		<posx>960</posx>
+		<posy>540</posy>
+		<texturebg>controls/progressbg.png</texturebg>
 		<lefttexture>-</lefttexture>
-		<midtexture border="6">other_textures/OSD/ProgressMid.png</midtexture>
+		<midtexture>controls/progressmid.png</midtexture>
 		<righttexture>-</righttexture>
 		<overlaytexture>-</overlaytexture>
+		<reveal>true</reveal>
+		<colordiffuse>CircleDiffuse</colordiffuse>
 	</default>
 
 	<default type="slider">
