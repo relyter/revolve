@@ -7,29 +7,19 @@
 		<include>GlobalBackground</include>
 		<include>Revolve_Home</include>
 		
-		<control type="group">
-			<description>Ring</description>
-			<animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="500" reversible="false">WindowOpen</animation>
-			<animation effect="slide" delay="500" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="500" reversible="false">WindowClose</animation>
-			
+		<control type="group" description="leftring">
+			<include>LeftRingSlide</include>
 			<include>LeftRing</include>
-						
+					
 			<control type="image">
-				<posx>-100</posx>
-				<posy>330</posy>
-				<width>662</width>
-				<height>662</height>
-				<texture backgroud="true">$INFO[Container(300).ListItem.Property(inCircle)]</texture>
-				<fadetime>500</fadetime>
-				<colordiffuse>55000000</colordiffuse>
+				<include>LeftRingDynamicIcon</include>	
 			</control>
 			
 		</control>
 		
-		<control type="wraplist" id="300">
+		<control type="wraplist" id="300" description="addons menu">
 			<visible allowhiddenfocus="true">false</visible>
 			<defaultcontrol>1</defaultcontrol>
-			<description>addons menu</description>
 			<posx>1200</posx>
 			<posy>270</posy>
 			<width>810</width>

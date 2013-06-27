@@ -9,9 +9,7 @@
 		
 		<control type="group">
 			<description>Ring</description>
-			<animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="500" reversible="false">WindowOpen</animation>
-			<animation effect="slide" delay="500" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="500" reversible="false">WindowClose</animation>
-			
+			<include>LeftRingSlide</include>
 			<include>LeftRing</include>
 						
 			<control type="image">
@@ -110,7 +108,7 @@
 					<description>Addon manager</description>
 					<label>Addon manager</label>
 					<icon>special://skin/backgrounds/addons.jpg</icon>
-					<property name="inCircle">circle/addons.png</property>
+					<property name="inCircle">circle/plugins.png</property>
 					<onclick>ActivateWindow(AddonBrowser,root)</onclick>
 				</item>
 

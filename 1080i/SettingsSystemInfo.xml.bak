@@ -119,7 +119,7 @@
 		</control>
 		
 		<control type="grouplist" description="info">
-			<posx>840</posx>
+			<posx>850</posx>
 			<posy>450</posy>
 			<include>SettingsContolList</include>
 

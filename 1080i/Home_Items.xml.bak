@@ -87,13 +87,12 @@
 		</item>
 				
 		<item id="8">
-			<description>Add-ons</description>
+			<description>Addons</description>
 			<label>24001</label>
 			<property name="Circle">circle/Plugins.png</property>
 			<icon>special://skin/backgrounds/addons.jpg</icon>
 			<thumb>$INFO[Skin.String(Home_Custom_Back_Addons_Folder)]</thumb>
 			<onclick>ActivateWindow(1111)</onclick>
-			<!-- <onclick>ActivateWindow(Weather)</onclick> -->
 			<!-- <visible>!Skin.HasSetting(homepageShowAddons)</visible> -->
 		</item>
 			
@@ -132,6 +131,8 @@
 		
 		<item id="13">
 			<description>Shutdown</description>
+			<property name="Circle">circle/power.png</property>
+			<icon>special://skin/backgrounds/shutdown.jpg</icon>
 			<label>31013</label>
 			<onclick>ActivateWindow(shutdownmenu)</onclick>
 		</item>

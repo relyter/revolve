@@ -4,27 +4,13 @@
 	<description>RevolveAddons(id=57)</description>
 
 		<control type="label" description="top right label">
-			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-			<posx>1900</posx>
-			<posy>25</posy>
-			<width>800</width>
-			<align>right</align>
-			<font>Title</font>
-			<textcolor>Text</textcolor>
+			<include>TopRightLabel</include>
 			<label>$INFO[Container.FolderName]</label>
 			<visible>!IsEmpty(Container.FolderName) + Control.IsVisible(57)</visible>
 		</control>	
 		
 		<control type="label" description="top right label fallback">
-			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-			<posx>1900</posx>
-			<posy>25</posy>
-			<width>800</width>
-			<align>right</align>
-			<font>Title</font>
-			<textcolor>Text</textcolor>
+			<include>TopRightLabel</include>
 			<label>$LOCALIZE[24001]</label>
 			<visible>IsEmpty(Container.FolderName) + Control.IsVisible(57)</visible>
 		</control>	
@@ -40,21 +26,12 @@
 			<visible>!ControlGroup(9000).HasFocus()</visible>
 			<animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="500" reversible="false">Visible</animation>
 				<control type="image" description="thumb">
-					<posx>75</posx>
-					<posy>244</posy>
-					<width>352</width>
-					<height>352</height>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>500</fadetime>
-					<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[ListItem.thumb]</texture>
+					<include>RingSquareThumb</include>
 					<visible>!IsEmpty(ListItem.Property(Addon.Name)) + !Stringcompare(ListItem.Label,..)</visible>
 				</control>
+				
 				<control type="image" description="border">
-					<posx>70</posx> 
-					<posy>240</posy>
-					<width>362</width>
-					<height>362</height>
-					<texture border="6">posterbordersmall.png</texture>
+					<include>RingSquareThumbBorder</include>
 					<visible>!IsEmpty(ListItem.Property(Addon.Name)) + !Stringcompare(ListItem.Label,..)</visible>
 				</control>
 				<control type="label" description="addon version">
@@ -70,17 +47,16 @@
 					<label>Ver. $INFO[ListItem.Property(Addon.Version)]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 				</control>
-				<control type="label" description="if broken">
-					<visible>!IsEmpty(ListItem.Property(Addon.broken))</visible>
-					<label>[B]Broken[/B]</label>
-					<posx>550</posx>
+				<control type="label" description="status">
+					<label>$INFO[ListItem.Property(Addon.Status)]</label>
+					<posx>650</posx>
 					<posy>630</posy>
-					<align>left</align>
+					<align>right</align>
 					<aligny>top</aligny>
-					<width>150</width>
+					<width>250</width>
 					<height>50</height>
 					<font>Plot</font>
-					<textcolor>Text</textcolor>
+					<textcolor>White</textcolor>
 				</control>
 				<control type="textbox" description="addon description">
 					<visible>!IsEmpty(ListItem.Property(Addon.Name)) + !Stringcompare(ListItem.Label,..)</visible>
@@ -132,12 +108,12 @@
 					<posx>865</posx>
 					<posy>750</posy>
 					<height>100</height>
-					<width>800</width>
+					<width>900</width>
 					<font>Plot</font>
 					<textcolor>TextFocus</textcolor>
 					<label>$INFO[ListItem.Property(Addon.Summary)]</label>
 					<align>left</align>
-					<autoscroll>true</autoscroll>
+					<scroll>true</scroll>
 				</control>
 		</control>
 		

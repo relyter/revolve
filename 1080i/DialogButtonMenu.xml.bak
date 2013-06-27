@@ -1,136 +1,135 @@
 <window type="buttonMenu" id="111">
-	<defaultcontrol always="true">2</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
 
 	<controls>
 
-		<include>WhiteFade</include>
+		<control type="image" description="power menu background">
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true">special://skin/backgrounds/shutdown.jpg</texture>
+		</control>
+		<include>GlobalOverlay</include>
+		<include>Revolve_List</include>
 		
-		<control type="image">
-			<posx>675</posx>
-			<posy>255</posy>
-			<width>570</width>
-			<height>570</height>
-			<texture background="true">circleshadow.png</texture>
+		<control type="group" description="leftring">
+			<include>LeftRingSlide</include>
+			<include>LeftRing</include>
+			
+			<control type="image">
+				<include>LeftRingStaticIcon</include>
+				<texture backgroud="true">circle/power.png</texture>
+			</control>
+		
 		</control>
 		
-		<control type="image">
-			<posx>715</posx>
-			<posy>295</posy>
-			<width>490</width>
-			<height>490</height>
-			<texture>circlemask.png</texture>
-			<colordiffuse>DefaultColor</colordiffuse>
-		</control>
-		
-		<control type="fixedlist" id="2">
-			<description>power menu</description>
-			<posx>0</posx>
-			<posy>-53</posy>
-			<width>1920</width>
-			<height>1183</height>
-			<onleft>4</onleft>
-			<onright>-</onright>
-			<onup>-</onup>
-			<ondown>-</ondown>
-			<focusposition>5</focusposition>
-			<scrolltime>200</scrolltime>
+		<control type="wraplist" id="50" description="powermenu">
+			<visible allowhiddenfocus="true">false</visible>
+			<defaultcontrol>1</defaultcontrol>
+			<posx>1200</posx>
+			<posy>270</posy>
+			<width>810</width>
+			<height>846</height>
+			<onup>300</onup>
+			<ondown>300</ondown>
+			<onleft>600</onleft>
+			<onright>300</onright>
+			<!-- <focusposition>3</focusposition> -->
 
-			<itemlayout width="600" height="69">
+			<itemlayout width="540" height="75">
 
 				<control type="label">
-					<posx>960</posx>
-					<height>69</height>
-					<width>800</width>
-					<font>DialogButton</font>
-					<textcolor>TextFocus</textcolor>
-					<label>$INFO[ListItem.Label] $INFO[ListItem.Label2]</label>
+					<posx>405</posx>
+					<height>75</height>
+					<width>375</width>
+					<font>Medium</font>
+					<textcolor>Text</textcolor>
+					<info>ListItem.Label</info>
 					<align>center</align>
 				</control>
 
 			</itemlayout>
 
-			<focusedlayout width="600" height="493">
+			<focusedlayout width="540" height="75">
 
 				<control type="label">
-					<posx>960</posx>
-					<width>600</width>
-					<height>493</height>
+					<posx>405</posx>
+					<width>540</width>
+					<height>75</height>
 					<info>ListItem.Label</info>
-					<font>DialogButton</font>
-					<textcolor>White</textcolor>
+					<font>Medium</font>
+					<textcolor>Red</textcolor>
 					<align>center</align>
 				</control>
-				<control type="label">
-					<posx>960</posx>
-					<width>600</width>
-					<height>600</height>
-					<info>ListItem.Label2</info>
-					<font>DialogButton</font>
-					<textcolor>White</textcolor>
-					<align>center</align>
-				</control>
+
 			</focusedlayout>
 			<content>
-				<item id="1" >
-					<description>Custom Shutdown Timer button</description>
-					<label>Shutdown</label>
-					<label2>Timer</label2>
-					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
-					<visible>!System.HasAlarm(shutdowntimer)</visible>
-				</item>
-				<item id="2" >
-					<description>Custom Shutdown Timer button</description>
-					<!-- <label>20151</label> -->
-					<label>Cancel Timer</label>
-					<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
-					<visible>System.HasAlarm(shutdowntimer)</visible>
-				</item>
-				<!-- <item id="3" >
-					<description>Alarm Time</description>
-					<align>center</align>
-					<label>$LOCALIZE[20145] [B]$INFO[System.Alarmpos][/B]</label> 
-					<visible>System.HasAlarm(shutdowntimer)</visible>
-				</item> -->
-				<item id="4" >
-					<description>Master mode button</description>
-					<label>Leave</label>
-					<label2>Master Mode</label2>
-					<!-- 					<label>20046</label>
-					<altlabel>20045</altlabel> -->
-					<onclick>xbmc.mastermode</onclick>
-					<visible>System.HasLocks</visible>			
-				</item>
-				<item id="5" >
-					<description>LogOff Profile</description>
-					<label>$LOCALIZE[20126]</label>
-					<label2>$INFO[system.profilename]</label2>
-					<onclick>dialog.close(all,true)</onclick>
-					<onclick>System.LogOff</onclick>
-					<visible>System.Loggedon + System.HasLoginScreen</visible>
-				</item>		
-				<item id="6" >
-					<description>Shutdown</description>
-					<label>13005</label>
-					<onclick>ShutDown()</onclick>
-				</item>
-				<item id="7" >
-					<description>Reboot button</description>
-					<label>13013</label>
-					<onclick>XBMC.Reset()</onclick>	
-				</item>
-				<item id="8" >
-					<description>Suspend xbmc</description>
-					<label>13011</label>
-					<onclick>XBMC.Suspend()</onclick>	
-				</item>
-				<item id="9" >
-					<description>Exit XBMC button</description>
+				<item id="1" description="Exit XBMC button">
 					<label>13012</label>
 					<onclick>Quit()</onclick>
 					<visible>System.ShowExitButton</visible>
 				</item>
+				<item id="2" description="Suspend xbmc">
+					<label>13011</label>
+					<onclick>XBMC.Suspend()</onclick>
+				</item>
+				<item id="3" description="Shutdown">
+					<label>13005</label>
+					<onclick>ShutDown()</onclick>
+				</item>
+				<item id="4" description="Reboot button">
+					<label>13013</label>
+					<onclick>XBMC.Reset()</onclick>			
+				</item>
+				<item id="5" description="LogOff Profile">
+					<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+					<onclick>dialog.close(all,true)</onclick>
+					<onclick>System.LogOff</onclick>
+					<visible>System.Loggedon + System.HasLoginScreen</visible>
+				</item>		
+				<item id="6" description="Master mode button">
+					<label>20046</label>
+					<altlabel>20045</altlabel>
+					<onclick>xbmc.mastermode</onclick>
+					<visible>System.HasLocks</visible>
+				</item>
+				<item id="7" description="Cancel Shutdown Timer button">
+					<label>20151</label>
+					<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
+					<visible>System.HasAlarm(shutdowntimer)</visible>
+				</item>
+				<item id="8" description="Custom Shutdown Timer button">
+					<label>20150</label>
+					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
+					<scroll>true</scroll>
+					<visible>!System.HasAlarm(shutdowntimer)</visible>	
+				</item>
 			</content>
+		</control>
+		
+		<control type="group">
+			<description>power menu title</description>
+			<animation effect="fade" start="0" end="100" time="500" reversible="false">WindowOpen</animation>
+			<animation effect="fade" delay="500" start="100" end="0" time="500" reversible="false">WindowClose</animation>
+			
+			<control type="label">
+				<posx>1340</posx>
+				<posy>15</posy>
+				<align>right</align>
+				<font>HomeClock</font>
+				<label>Power Menu</label>
+				<textcolor>Text</textcolor>
+			</control>
+			
+			<control type="label" id="3119" description="Alarm Time">
+				<textcolor>White</textcolor>
+				<font>OSDTime</font>
+				<posx>30</posx>
+				<posy>1000</posy>
+				<width>650</width>
+				<label>Timer: [B]$INFO[System.Alarmpos][/B]</label>
+				<visible>System.HasAlarm(shutdowntimer)</visible>
+			</control>
+			
 		</control>
 	</controls>
 

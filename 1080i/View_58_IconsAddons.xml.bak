@@ -2,6 +2,7 @@
 	<include name="View_58_IconsAddons">
 		<control type="panel" id="58">
 			<description>Addons Icon View (id=58)</description>
+			<visible>Container.Content(Addons)</visible>
 			<posx>60</posx>
 			<posy>30</posy>
 			<width>1920</width>

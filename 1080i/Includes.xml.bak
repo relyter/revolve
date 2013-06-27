@@ -16,10 +16,164 @@
 	<include file="View_56_Gallery.xml" />
 	<include file="View_57_RevolveAddons.xml" />
 	<include file="View_58_IconsAddons.xml" />
+	<include file="Revolve_List.xml" />
 	<include file="Revolve_Home.xml" />
 	<include file="Home_Items.xml" />
 	<include file="Revolve_Landscape.xml" />
 	<include file="Recently_Added.xml" />
+	
+	<include name="GlobalOverlay">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture border="2">whiteoverlay.png</texture>
+		</control>
+	</include>
+	<include name="WhiteFade">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture border="2">white.png</texture>
+			<!-- <colordiffuse>DialogBackgroundFade</colordiffuse> -->
+		</control>
+	</include>
+	<include name="RingSquareThumb">
+		<posx>75</posx>
+		<posy>244</posy>
+		<width>352</width>
+		<height>352</height>
+		<aspectratio>stretch</aspectratio>
+		<fadetime>500</fadetime>
+		<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[ListItem.thumb]</texture>
+	</include>	
+	<include name="RingSquareThumbBorder">
+		<posx>70</posx> 
+		<posy>240</posy>
+		<width>362</width>
+		<height>362</height>
+		<texture border="6">posterbordersmall.png</texture>
+	</include>	
+	<include name="RingVertThumb">	
+		<control type="image">
+			<posx>56</posx>
+			<posy>144</posy>
+			<width>300</width>
+			<height>452</height>
+			<aspectratio>scale</aspectratio>
+			<fadetime>500</fadetime>
+			<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+		</control>
+	</include>
+	<include name="RingVertThumbBorder">
+		<control type="image">
+			<posx>50</posx>
+			<posy>140</posy>
+			<width>312</width>
+			<height>462</height>
+			<texture>posterbordersmall.png</texture>
+		</control>
+	</include>
+	<include name="RingHorizThumb">
+		<control type="image">
+			<posx>56</posx>
+			<posy>313</posy>
+			<width>500</width>
+			<height>288</height>
+			<fadetime>500</fadetime>
+			<aspectratio>scale</aspectratio>
+			<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+		</control>
+	</include>
+	<include name="RingHorizThumbBorder">
+		<control type="image">
+			<posx>50</posx>
+			<posy>309</posy>
+			<width>512</width>
+			<height>297</height>
+			<texture>posterbordersmall1.png</texture>
+		</control>
+	</include>
+	<include name="RingWatchedOL">
+		<control type="image">
+			<description>watched overlay</description>
+			<posx>50</posx>
+			<posy>400</posy>
+			<width>200</width>
+			<height>200</height>
+			<aspectratio>scale</aspectratio>
+			<texture background="true" diffuse="circlemask.png">$INFO[ListItem.Overlay]</texture>
+			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			<colordiffuse>99FFFFFF</colordiffuse>
+		</control>
+	</include>
+	<include name="RingItemGenre">
+		<control type="label" description="item genre">
+			<visible>!Container.Content(episodes)</visible>
+			<posx>50</posx>
+			<posy>630</posy>
+			<align>left</align>
+			<aligny>top</aligny>
+			<width>640</width>
+			<height>50</height>
+			<font>Plot</font>
+			<textcolor>Text</textcolor>
+			<label>$INFO[ListItem.genre]</label>
+			<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+		</control>
+	</include>
+	<include name="RingItemCodec">
+		<control type="label" decription="codec">
+			<visible>Container.Content(episodes)</visible>
+			<visible>!IsEmpty(ListItem.Title) + !Stringcompare(ListItem.Label,..)</visible>
+			<posx>50</posx>
+			<posy>630</posy>
+			<align>left</align>
+			<aligny>top</aligny>
+			<width>640</width>
+			<height>50</height>
+			<font>Plot</font>
+			<textcolor>Text</textcolor>
+			<label>$INFO[Container(50).ListItem.VideoResolution,,  • ]  $INFO[Container(50).ListItem.VideoCodec,,  • ]  $INFO[Container(50).ListItem.VideoAspect,,  • ]   $INFO[Container(50).ListItem.AudioCodec,,  • ]  Ch: $INFO[Container(50).ListItem.AudioChannels]</label>
+			<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+		</control>
+	</include>
+	<include name="RingItemPlot">
+		<control type="textbox">
+			<description>item plot</description>
+			<posx>50</posx>
+			<posy>700</posy>
+			<align>left</align>
+			<aligny>top</aligny>
+			<width>640</width>
+			<height>330</height>
+			<font>Plot</font>
+			<textcolor>Text</textcolor>
+			<label>$INFO[ListItem.Plot]</label>
+			<wrapmultiline>true</wrapmultiline>
+			<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+		</control>
+	
+	<include name="TopRing">
+		<posx>0</posx>
+		<posy>0</posy>
+		<animation effect="slide" start="0,-200" end="0,0" time="300">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="0,-200" time="300">WindowClose</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>200</height>
+				<texture flipy="true">ringsbottom.png</texture>
+				<aspectratio scalediffuse="true">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>200</height>
+				<texture flipy="true">maskbottom.png</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<colordiffuse>DefaultColor</colordiffuse>
+			</control>
+	</include>
 	<include name="LeftRing">
 			<control type="image">
 				<width>900</width>
@@ -130,6 +284,7 @@
 			<visible>ControlGroup(9000).HasFocus()</visible>			
 			<include>GlobalOverlay</include>
 		</control>
+	</include>
 	<include name="generalbutton">
 		<height>46</height>
 		<align>left</align>
@@ -206,29 +361,23 @@
 		<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 	</include>
-	<include name="Dimensions_Fullscreen">
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1920</width>
-		<height>1080</height>
+	<include name="LeftRingDynamicIcon">
+		<posx>-100</posx>
+		<posy>330</posy>
+		<width>662</width>
+		<height>662</height>
+		<texture backgroud="true">$INFO[Container(300).ListItem.Property(inCircle)]</texture>
+		<fadetime>500</fadetime>
+		<colordiffuse>55000000</colordiffuse>
 	</include>
-
-	<include name="WindowID">
-		<width>780</width>
-		<height>21</height>
-		<textcolor>White</textcolor>
-		<shadowcolor>Black</shadowcolor>
-		<align>left</align>
+	<include name="LeftRingStaticIcon">
+		<posx>-100</posx>
+		<posy>330</posy>
+		<width>662</width>
+		<height>662</height>
+		<fadetime>500</fadetime>
+		<colordiffuse>55000000</colordiffuse>
 	</include>
-
-	<include name="DialogID">
-		<width>780</width>
-		<height>21</height>
-		<textcolor>Green</textcolor>
-		<shadowcolor>Black</shadowcolor>
-		<align>left</align>
-	</include>
-	
 	<include name="Clock">
 		
 		<control type="group">
@@ -314,22 +463,84 @@
 		</control>
 		
 	</include>
-
-	<include name="GlobalOverlay">
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture border="2">whiteoverlay.png</texture>
-		</control>
+	<include name="TopRightLabel">
+		<include>ContentFade</include>			
+		<posx>1900</posx>
+		<posy>25</posy>
+		<width>1400</width>
+		<align>right</align>
+		<font>Title</font>
+		<textcolor>Text</textcolor>
 	</include>
-	
-	<include name="WhiteFade">
+	<include name="SettingsButtonList">
+		<include>LeftRingSlide</include>
+		<posx>75</posx>
+		<posy>240</posy>
+		<width>600</width>
+		<height>700</height>
+		<itemgap>3</itemgap>
+		<orientation>vertical</orientation>
+	</include>
+	<include name="SettingsLeftButton">
+		<width>600</width>
+		<align>left</align>
+		<font>Title</font>
+		<textcolor>Text</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<colordiffuse>defaultcolor</colordiffuse>
+		<shadowcolor>ff000000</shadowcolor>
+		<texturefocus>-</texturefocus>
+		<textoffsetx>0</textoffsetx>
+		<height>80</height>
+		<textoffsetx>0</textoffsetx>
+	</include>
+	<include name="SettingsContolList">
+		<include>ContentFade</include>			
+		<posx>830</posx>
+		<posy>240</posy>
+		<width>1070</width>
+		<height>800</height>
+		<itemgap>3</itemgap>
+		<orientation>vertical</orientation>
+	</include>	
+	<include name="Dimensions_Fullscreen">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1920</width>
+		<height>1080</height>
+	</include>
 
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture border="2">white.png</texture>
-			<!-- <colordiffuse>DialogBackgroundFade</colordiffuse> -->
-		</control>
-
+	<include name="WindowID">
+		<width>520</width>
+		<height>14</height>
+		<textcolor>White</textcolor>
+		<shadowcolor>Black</shadowcolor>
+		<align>left</align>
+	</include>
+	<include name="DialogID">
+		<width>520</width>
+		<height>14</height>
+		<textcolor>Green</textcolor>
+		<shadowcolor>Black</shadowcolor>
+		<align>left</align>
+	</include>
+	<include name="PathID">
+		<posx>10r</posx>
+		<posy>10</posy>
+		<width>520</width>
+		<height>14</height>
+		<textcolor>Blue</textcolor>
+		<shadowcolor>Black</shadowcolor>
+		<align>right</align>
+	</include>
+	<include name="ControlID">
+		<posx>10r</posx>
+		<posy>32</posy>
+		<width>520</width>
+		<height>14</height>
+		<textcolor>Red</textcolor>
+		<shadowcolor>Black</shadowcolor>
+		<align>right</align>
 	</include>
 
 	<include name="GlobalBackground">

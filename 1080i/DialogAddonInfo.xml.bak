@@ -65,7 +65,7 @@
 				</control>
 				
 				<control type="button" id="11">
-					<description>rollback Addon button</description>
+					<description>Update Addon button</description>
 					<include>9000button</include>
 					<label>24048</label>
 				</control>
@@ -81,8 +81,15 @@
 		</control>
 		
 		<control type="label" description="top right label">
+			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<visible>!Window.IsVisible(AddonSettings) + !Window.IsActive(TextViewer)</visible>
-			<include>TopRightLabel</include>
+			<posx>1900</posx>
+			<posy>25</posy>
+			<width>800</width>
+			<align>right</align>
+			<font>Title</font>
+			<textcolor>Text</textcolor>
 			<label>24003</label>
 		</control>
 		

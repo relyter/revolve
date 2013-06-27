@@ -8,13 +8,7 @@
 		<include>SettingsBG</include>
 		
 		<control type="label" description="top right label">
-			<include>ContentFade</include>			
-			<posx>1900</posx>
-			<posy>25</posy>
-			<width>800</width>
-			<align>right</align>
-			<font>Title</font>
-			<textcolor>Text</textcolor>
+			<include>TopRightLabel</include>
 			<label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
 		</control>
 		
@@ -34,49 +28,25 @@
 			<include>LeftRing</include>
 		</control>
 		
-		<control type="grouplist" id="3">
-			<description>Button Area</description>
-			<include>LeftRingSlide</include>
-			<posx>50</posx>
-			<posy>300</posy>
-			<width>600</width>
-			<height>700</height>
-			<itemgap>3</itemgap>
+		<control type="grouplist" id="3" description="Button Area">
+			<include>SettingsButtonList</include>	
 			<onleft>5</onleft>
 			<onright>5</onright>
 			<onup>3</onup>
 			<ondown>3</ondown>
-			<orientation>vertical</orientation>
 		</control>
 		
-		<control type="button" id="10">
-			<description>Default Category Button</description>
-			<width>600</width>
-			<align>left</align>
-			<font>Title</font>
-			<textcolor>Text</textcolor>
-			<focusedcolor>White</focusedcolor>
-			<colordiffuse>defaultcolor</colordiffuse>
-			<shadowcolor>ff000000</shadowcolor>
-			<texturefocus>-</texturefocus>
-			<textoffsetx>0</textoffsetx>
-			<height>80</height>
-			<textoffsetx>0</textoffsetx>
+		<control type="button" id="10" description="Default Category Button">
+			<include>SettingsLeftButton</include>
 		</control>
 		
 		<control type="grouplist" id="5">
 			<description>Control Area</description>
-			<include>ContentFade</include>			
-			<posx>800</posx>
-			<posy>200</posy>
-			<width>1100</width>
-			<height>820</height>
-			<itemgap>3</itemgap>
+			<include>SettingsContolList</include>			
 			<onleft>3</onleft>
 			<onright>3</onright>
 			<onup>5</onup>
 			<ondown>5</ondown>
-			<orientation>vertical</orientation>
 		</control>
 
 		<control type="button" id="7">
@@ -86,7 +56,7 @@
 
 		<control type="radiobutton" id="8">
 			<description>Default Radio Button</description>
-			<radioposx>970</radioposx>
+			<radioposx>940</radioposx>
 			<align>left</align>
 		</control>
 
@@ -95,8 +65,6 @@
 			<spinposx>0</spinposx>
 			<align>left</align>
 		</control>
-
-		
 
 	</controls>
 

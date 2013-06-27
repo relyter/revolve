@@ -39,12 +39,12 @@
 				<ondown>9</ondown>
 				<orientation>vertical</orientation>
 			</control>
-			
 			<control type="button" id="13" description="left button description">
 				<include>9000button</include>
 			</control>
-			
 		</control>
+		
+
 		
 		<control type="group">	
 			
@@ -90,6 +90,7 @@
 
 			<control type="label" id="7">
 				<label>-</label>
+				<textcolor>blue</textcolor>
 			</control>
 
 			<control type="image" id="6">
