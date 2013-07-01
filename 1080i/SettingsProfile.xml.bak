@@ -21,10 +21,10 @@
 		</control>
 
 		<control type="image">
-			<posx>680</posx>
-			<posy>260</posy>
-			<width>560</width>
-			<height>560</height>
+			<posx>675</posx>
+			<posy>255</posy>
+			<width>570</width>
+			<height>570</height>
 			<texture background="true">circleshadow.png</texture>
 			<visible>Control.HasFocus(2)</visible>
 		</control>

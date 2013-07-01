@@ -127,6 +127,12 @@
 			<size>36</size>
 		</font>
 		
+		<font>
+			<name>Keyboard</name>
+			<filename>Lato-Regular.ttf</filename>
+			<size>20</size>
+		</font>
+		
 		<!-- <foundation fonts> -->
 		
 		<font>

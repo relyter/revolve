@@ -4,7 +4,7 @@
 
 	<controls>
 
-		<include>WhiteFade</include>
+		<!-- <include>WhiteFade</include> -->
 		
 		<control type="image" description="backdrop">
 			<include>Backdrop</include>

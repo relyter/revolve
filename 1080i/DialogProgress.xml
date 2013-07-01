@@ -1,77 +1,66 @@
-﻿<!-- Foundation -->
-<window id="101">
+﻿<window id="101">
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
 
 		<include>GlobalOverlay</include>
-
+		
 		<control type="group">
-			<posx>570</posx>
-			<posy>333</posy>
+		
+			<include>Dimensions_Fullscreen</include>
+			
+			<control type="grouplist">
+				
+				<include>DialogCommonGrouplist</include>
+				
+				<include>Line1-4</include>
+				
+				<control type="group" description="button area">
+					<height>266</height>
 
-			<control type="image">
-				<posx>-30</posx>
-				<posy>-30</posy>
-				<width>840</width>
-				<height>414</height>
-				<texture border="22">other_textures/ContentPanel.png</texture>
-			</control>
+					<include>DialogButtonshadow</include>
 
-			<control type="label" id="1">
-				<description>heading</description>
-				<posx>15</posx>
-				<width>750</width>
-				<label>-</label>
-				<font>Medium</font>
-				<shadowcolor>black</shadowcolor>
-				<align>center</align>
-			</control>
-
-			<control type="label" id="2">
-				<description>Line 1</description>
-				<posx>15</posx>
-				<posy>75</posy>
-				<width>750</width>
-				<label>-</label>
-			</control>
-
-			<control type="label" id="3">
-				<description>Line 2</description>
-				<posx>15</posx>
-				<posy>113</posy>
-				<width>750</width>
-				<label>-</label>
-			</control>
-
-			<control type="label" id="4">
-				<description>Line 3</description>
-				<posx>15</posx>
-				<posy>150</posy>
-				<width>750</width>
-				<label>-</label>
-			</control>
-
-			<control type="progress">
-				<description>Progressbar</description>
-				<posx>15</posx>
-				<posy>225</posy>
-				<width>750</width>
-				<height>27</height>
-				<info>System.Progressbar</info>
-			</control>
-
-			<control type="button" id="10">
-				<description>Cancel</description>
-				<posx>278</posx>
-				<posy>267</posy>
-				<width>225</width>
-				<label>222</label>
-				<onleft>10</onleft>
-				<onright>10</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
+					<include>DialogButtonMask</include>
+					
+					<control type="progress" id="20" description="progress control">
+						<posx>827</posx>
+						<width>266</width>
+						<height>266</height>
+						<!-- <info>Player.Volume</info> -->
+						<info>System.Progressbar</info>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="image" description="border">
+						<posx>823</posx>
+						<width>270</width>
+						<height>270</height>
+						<texture>circleborder.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="button" id="10" description="cancel">
+						<posx>810</posx>
+						<posy>100</posy>
+						<width>300</width>
+						<label>222</label>
+						<font>DialogButton</font>
+						<align>center</align>
+						<scroll>false</scroll>
+						<textcolor>TextFocus</textcolor>
+						<focusedcolor>White</focusedcolor>
+						<disabledcolor>Text</disabledcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onleft>10</onleft>
+						<onright>10</onright>
+						<onup>10</onup>
+						<ondown>10</ondown>
+					</control>
+						
+				</control>
+				
 			</control>
 
 		</control>

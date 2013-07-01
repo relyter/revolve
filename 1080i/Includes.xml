@@ -140,7 +140,7 @@
 			<description>item plot</description>
 			<posx>50</posx>
 			<posy>700</posy>
-			<align>left</align>
+			<align>justify</align>
 			<aligny>top</aligny>
 			<width>640</width>
 			<height>330</height>
@@ -173,6 +173,15 @@
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<colordiffuse>DefaultColor</colordiffuse>
 			</control>
+	</include>
+	<include name="TopRingTransp">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1920</width>
+		<height>200</height>
+		<texture flipy="true" border="5">masktop.png</texture>
+		<aspectratio scalediffuse="false">stretch</aspectratio>
+		<colordiffuse>DefaultColor</colordiffuse>
 	</include>
 	<include name="LeftRing">
 			<control type="image">
@@ -333,16 +342,11 @@
 				<visible>Container(54).OnNext</visible>
 			</control>
 	</include>
-	<include name="SettingsBG">	
-		<control type="image">
-			<description>settings bg</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<visible>true</visible>
-			<colordiffuse>FanartDiffuse</colordiffuse>
-			<texture backgroud="true">special://skin/backgrounds/settings.jpg</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
+	<include name="Backdrop">	
+		<include>Dimensions_Fullscreen</include>
+		<visible>true</visible>
+		<colordiffuse>FanartDiffuse</colordiffuse>
+		<aspectratio>stretch</aspectratio>
 	</include>
 	<include name="HiddenButton">
 		<posx>-20</posx>
@@ -503,6 +507,147 @@
 		<itemgap>3</itemgap>
 		<orientation>vertical</orientation>
 	</include>	
+	<include name="VideoInfoList">
+		<posx>850</posx>
+		<posy>200</posy>
+		<width>1000</width>
+		<height>600</height>
+		<onleft>-</onleft>
+		<onright>-</onright>
+		<onup>9000</onup>
+		<ondown>9000</ondown>
+		<pagecontrol>-</pagecontrol>
+		<itemlayout height="45" width="1000">
+		  <control type="label">
+			<posx>210</posx>
+			<posy>0</posy>
+			<width>210</width>
+			<height>45</height>
+			<font>HomeMediumSmaller</font>
+			<align>right</align>
+			<aligny>center</aligny>
+			<textcolor>TextFocus</textcolor>
+			<info>ListItem.Label</info>
+			<scroll>false</scroll>
+		  </control>
+		  <control type="label">
+			<posx>230</posx>
+			<posy>0</posy>
+			<width>800</width>
+			<height>45</height>
+			<font>HomeMediumSmaller</font>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>Black</textcolor>
+			<info>ListItem.Label2</info>
+			<scroll>false</scroll>
+		  </control>
+		</itemlayout>
+		<focusedlayout height="45" width="1000">
+		  <control type="label">
+			<posx>210</posx>
+			<posy>0</posy>
+			<width>210</width>
+			<height>45</height>
+			<font>HomeMediumSmaller</font>
+			<align>right</align>
+			<aligny>center</aligny>
+			<textcolor>TextFocus</textcolor>
+			<info>ListItem.Label</info>
+			<scroll>false</scroll>
+		  </control>
+		  <control type="label">
+			<posx>230</posx>
+			<posy>0</posy>
+			<width>800</width>
+			<height>45</height>
+			<font>HomeMediumSmaller</font>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>Black</textcolor>
+			<info>ListItem.Label2</info>
+			<scroll>false</scroll>
+		  </control>
+		</focusedlayout>
+	</include>
+	<include name="BigThumb">
+		<posx>1350</posx>
+		<posy>295</posy>
+		<width>500</width>
+		<height>490</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<aspectratio align="center" aligny="center">keep</aspectratio>
+		<bordertexture>posterborderbig.png</bordertexture>
+		<bordersize>6</bordersize>
+	</include>
+	<include name="Line1-4">
+		<control type="label" id="1">
+			<description>Heading</description>
+			<label>-</label>
+			<width>1920</width>
+			<font>DialogTitle</font>
+			<textcolor>TextFocus</textcolor>
+			<align>center</align>
+		</control>
+
+		<control type="label" id="2">
+			<description>Line 1</description>
+			<label>-</label>
+			<width>1920</width>
+			<height>auto</height>
+			<font>DialogText</font>
+			<textcolor>TextFocus</textcolor>
+			<scroll>true</scroll>
+			<align>center</align>
+		</control>
+
+		<control type="label" id="3">
+			<description>Line 2</description>
+			<label>-</label>
+			<width>1920</width>
+			<height>auto</height>
+			<font>DialogText</font>
+			<textcolor>TextFocus</textcolor>
+			<scroll>true</scroll>
+			<align>center</align>
+		</control>
+
+		<control type="label" id="4">
+			<description>Line 3</description>
+			<label>-</label>
+			<width>1920</width>
+			<height>auto</height>
+			<font>DialogText</font>
+			<textcolor>TextFocus</textcolor>
+			<scroll>true</scroll>
+			<align>center</align>
+		</control>
+	</include>
+	<include name="DialogCommonGrouplist">
+		<posy>320</posy>
+		<width>1920</width>
+		<height>1080</height>
+		<itemgap>35</itemgap>
+	</include>
+	<include name="DialogButtonMask">
+		<control type="image">
+			<posx>827</posx>
+			<width>266</width>
+			<height>266</height>
+			<texture border="22">circlemask.png</texture>
+			<colordiffuse>DefaultColor</colordiffuse>
+		</control>
+	</include>
+	<include name="DialogButtonshadow">
+		<control type="image" description="shadow">
+			<posx>792</posx>
+			<posy>-33</posy>
+			<width>333</width>
+			<height>333</height>
+			<texture>circleshadowborder.png</texture>
+		</control>
+	</include>
 	<include name="Dimensions_Fullscreen">
 		<posx>0</posx>
 		<posy>0</posy>

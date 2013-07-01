@@ -550,7 +550,7 @@
 						<width>330</width>
 						<height>464</height>
 						<fadetime>100</fadetime>
-						<aspectratio>scale</aspectratio>
+						<aspectratio>stretch</aspectratio>
 						<texture background="true">postershadow.png</texture>
 					</control>
 					
@@ -1062,6 +1062,17 @@
 						<height>412</height>
 						<aspectratio>scale</aspectratio>
 						<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[Container.ListItem(2).Icon]</texture>
+					</control>
+					
+					<control type="image">
+						<description>watched overlay</description>
+						<posx>235</posx>
+						<posy>360</posy>
+						<width>75</width>
+						<height>75</height>
+						<texture border="5">$INFO[Container.ListItem(2).Overlay]</texture>
+						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+						<colordiffuse>aaFFFFFF</colordiffuse>
 					</control>
 				
 				</control>

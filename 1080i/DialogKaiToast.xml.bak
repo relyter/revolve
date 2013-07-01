@@ -25,10 +25,9 @@
 				<description>heading</description>
 				<posx>550</posx>
 				<posy>60</posy>
-				<width>1400</width>
+				<width>1100</width>
 				<height>48</height>
 				<font>OSDTimeSmall</font>
-				<align>center</align>
 				<textcolor>White</textcolor>
 				<label>-</label>
 				<scroll>true</scroll>
@@ -38,10 +37,9 @@
 				<description>message</description>
 				<posx>550</posx>
 				<posy>15</posy>
-				<width>1400</width>
+				<width>1300</width>
 				<height>48</height>
 				<font>OSDTime</font>
-				<align>center</align>
 				<textcolor>White</textcolor>
 				<label>-</label>
 				<scroll>true</scroll>

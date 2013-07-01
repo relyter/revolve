@@ -5,7 +5,7 @@
 
 	<controls>
 
-		<include>GlobalOverlay</include>
+		<!-- <include>GlobalOverlay</include> -->
 		
 		<control type="group">
 		
@@ -25,7 +25,7 @@
 				<description>heading</description>
 				<posx>550</posx>
 				<posy>60</posy>
-				<width>1400</width>
+				<width>1100</width>
 				<height>48</height>
 				<font>OSDTimeSmall</font>
 				<textcolor>White</textcolor>
@@ -37,7 +37,7 @@
 				<description>message</description>
 				<posx>550</posx>
 				<posy>15</posy>
-				<width>1400</width>
+				<width>1300</width>
 				<height>48</height>
 				<font>OSDTime</font>
 				<textcolor>White</textcolor>

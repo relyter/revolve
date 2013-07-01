@@ -5,7 +5,12 @@
 	<controls>
 
 		<include>GlobalBackground</include>
-		<include>SettingsBG</include>
+		
+		<control type="image" description="backdrop">
+			<include>Backdrop</include>
+			<texture backgroud="true">special://skin/backgrounds/settings.jpg</texture>
+		</control>
+		
 		<include>Revolve_Home</include>
 				
 		<control type="group">

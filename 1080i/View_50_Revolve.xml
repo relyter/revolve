@@ -92,7 +92,7 @@
 					<width>800</width>
 					<font>Plot</font>
 					<textcolor>TextFocus</textcolor>
-					<label>$LOCALIZE[31050] $INFO[Container(50).ListItem.Season]</label>
+					<label>$LOCALIZE[20373] $INFO[Container(50).ListItem.Season]</label>
 					<align>left</align>
 				</control>
 				<control type="label">

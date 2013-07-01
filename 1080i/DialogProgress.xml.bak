@@ -1,4 +1,4 @@
-﻿<window id="2002">
+﻿<window id="101">
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
@@ -7,7 +7,7 @@
 		<include>GlobalOverlay</include>
 		
 		<control type="group">
-			
+		
 			<include>Dimensions_Fullscreen</include>
 			
 			<control type="grouplist">
@@ -18,18 +18,37 @@
 				
 				<control type="group" description="button area">
 					<height>266</height>
-					
+
 					<include>DialogButtonshadow</include>
-					
+
 					<include>DialogButtonMask</include>
 					
-					<control type="button" id="10" description="OK">
+					<control type="progress" id="20">
+						<description>progress control</description>
 						<posx>827</posx>
-						<posy>100</posy>
 						<width>266</width>
-						<label>106</label>
+						<height>266</height>
+						<!-- <info>Player.Volume</info> -->
+						<info>System.Progressbar</info>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="image" description="border">
+						<posx>823</posx>
+						<width>270</width>
+						<height>270</height>
+						<texture>circleborder.png</texture>
+						<colordiffuse>DefaultColor</colordiffuse>
+					</control>
+					
+					<control type="button" id="10" description="cancel">
+						<posx>810</posx>
+						<posy>100</posy>
+						<width>300</width>
+						<label>222</label>
 						<font>DialogButton</font>
 						<align>center</align>
+						<scroll>false</scroll>
 						<textcolor>TextFocus</textcolor>
 						<focusedcolor>White</focusedcolor>
 						<disabledcolor>Text</disabledcolor>
@@ -46,7 +65,7 @@
 			</control>
 
 		</control>
-	
+
 	</controls>
 
 </window>

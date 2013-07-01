@@ -24,7 +24,7 @@
 					<include>DialogButtonMask</include>
 					
 					<control type="button" id="10" description="OK">
-						<posx>827</posx>
+						<posx>820</posx>
 						<posy>100</posy>
 						<width>266</width>
 						<label>106</label>

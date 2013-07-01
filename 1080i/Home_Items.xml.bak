@@ -2,14 +2,6 @@
 
 	<include name="Home_Items">
 		
-<!-- 		<item id="20">
-			<description>reload skin</description>
-			<label>RELOAD</label>
-			<onclick>XBMC.ReloadSkin()</onclick>
-			<icon>special://skin/backgrounds/weather.jpg</icon>
-			<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
-		</item> -->
-		
 <!-- 		<item id="1">
 			<description>Videos</description>
 			<label>31003</label>

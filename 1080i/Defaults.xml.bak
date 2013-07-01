@@ -11,7 +11,7 @@
 		<textcolor>Black</textcolor>
 		<focusedcolor>TextFocus</focusedcolor>
 		<selectedcolor>TextFocus</selectedcolor>
-		<disabledcolor>Red</disabledcolor>
+		<disabledcolor>Disabled</disabledcolor>
 	</default>
 
 	<default type="fadelabel">

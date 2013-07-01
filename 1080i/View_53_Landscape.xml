@@ -115,7 +115,7 @@
 				<width>1000</width>
 				<font>HomeMediumSmall</font>
 				<textcolor>Text</textcolor>
-				<label>$LOCALIZE[31050] $INFO[Container(53).ListItem.Season]</label>
+				<label>$LOCALIZE[20373] $INFO[Container(53).ListItem.Season]</label>
 				<align>left</align>
 			</control>
 		</control>	

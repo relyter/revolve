@@ -40,8 +40,7 @@
 			<include>SettingsLeftButton</include>
 		</control>
 		
-		<control type="grouplist" id="5">
-			<description>Control Area</description>
+		<control type="grouplist" id="5" description="Control Area">
 			<include>SettingsContolList</include>			
 			<onleft>3</onleft>
 			<onright>3</onright>

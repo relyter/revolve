@@ -335,7 +335,7 @@
 			<aligny>top</aligny>
 			<font>Title</font>
 			<textcolor>TextFocus</textcolor>
-			<label>$LOCALIZE[31050] $INFO[Container(56).ListItem.Season,, •] $INFO[Container(56).ListItem.Label]</label>
+			<label>$LOCALIZE[20373] $INFO[Container(56).ListItem.Season,, •] $INFO[Container(56).ListItem.Label]</label>
 			<scroll>true</scroll>
 		</control>
 		<control type="label">

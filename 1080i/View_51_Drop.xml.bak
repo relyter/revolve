@@ -16,6 +16,7 @@
 			<focusposition>2</focusposition>
 			<pagecontrol>60</pagecontrol>
 			<viewtype label="Drop">list</viewtype>
+			<visible>!Container.Content(Addons)</visible>
 			<scrolltime>200</scrolltime>
 			
 			<animation effect="fade" start="100" end="0" time="200" condition="Container(51).Scrolling + !Container.Content(Episodes) + !Container.Content(Seasons)">Conditional</animation>

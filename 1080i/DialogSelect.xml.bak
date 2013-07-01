@@ -5,7 +5,7 @@
 
 	<controls>
 
-<!-- 		<include>WhiteFade</include> -->
+		<include>WhiteFade</include>
 		<include>GlobalOverlay</include>
 		
 		<control type="group">

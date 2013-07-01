@@ -5,8 +5,8 @@
 	<controls>
 
 		<control type="group">
-			<posx>1750</posx>
-			<posy>150</posy>
+			<posx>1760</posx>
+			<posy>160</posy>
 			<include>ContentFade</include>
 			
 			<control type="image" description="shadow">
@@ -22,8 +22,8 @@
 
 				<control type="progress" id="20">
 					<description>progress control</description>
-					<posx>0</posx>
-					<posy>1</posy>
+					<posx>960</posx>
+					<posy>541</posy>
 					<width>150</width>
 					<height>150</height>
 					<info>Player.Volume</info>

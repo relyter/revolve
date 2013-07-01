@@ -257,7 +257,7 @@
 				<height>760</height>
 				<fadetime>500</fadetime>
 				<aspectratio>scale</aspectratio>
-				<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+				<texture fallback="white.png" diffuse="postermask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 			</control>
 			
 			<control type="image">

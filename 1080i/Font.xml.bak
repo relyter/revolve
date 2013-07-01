@@ -66,6 +66,12 @@
 			<filename>Lato-Light.ttf</filename>
 			<size>36</size>
 		</font>
+		
+		<font>
+			<name>OSDinfo</name>
+			<filename>Lato-Light.ttf</filename>
+			<size>24</size>
+		</font>
 
 		<font>
 			<name>OSDStatus</name>
@@ -117,8 +123,14 @@
 		
 		<font>
 			<name>ButtonText1</name>
-			<filename>Lato-Light.ttf</filename>
+			<filename>Lato-Regular.ttf</filename>
 			<size>36</size>
+		</font>
+		
+		<font>
+			<name>Keyboard</name>
+			<filename>Lato-Light.ttf</filename>
+			<size>20</size>
 		</font>
 		
 		<!-- <foundation fonts> -->

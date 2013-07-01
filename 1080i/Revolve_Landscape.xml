@@ -149,7 +149,7 @@
 						<width>330</width>
 						<height>464</height>
 						<fadetime>100</fadetime>
-						<aspectratio>scale</aspectratio>
+						<aspectratio>stretch</aspectratio>
 						<texture background="true">postershadow.png</texture>
 					</control>
 					
@@ -208,7 +208,7 @@
 						<width>330</width>
 						<height>464</height>
 						<fadetime>100</fadetime>
-						<aspectratio>scale</aspectratio>
+						<aspectratio>stretch</aspectratio>
 						<texture background="true">postershadow.png</texture>
 					</control>
 					
@@ -550,7 +550,7 @@
 						<width>330</width>
 						<height>464</height>
 						<fadetime>100</fadetime>
-						<aspectratio>scale</aspectratio>
+						<aspectratio>stretch</aspectratio>
 						<texture background="true">postershadow.png</texture>
 					</control>
 					
@@ -887,7 +887,7 @@
 						<width>330</width>
 						<height>464</height>
 						<fadetime>100</fadetime>
-						<aspectratio>scale</aspectratio>
+						<aspectratio>stretch</aspectratio>
 						<texture background="true">postershadow.png</texture>
 					</control>
 					
@@ -947,7 +947,7 @@
 						<width>330</width>
 						<height>464</height>
 						<fadetime>100</fadetime>
-						<aspectratio>scale</aspectratio>
+						<aspectratio>stretch</aspectratio>
 						<texture background="true">postershadow.png</texture>
 					</control>
 					

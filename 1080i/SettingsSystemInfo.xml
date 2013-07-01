@@ -6,6 +6,11 @@
 
 		<include>GlobalBackground</include>
 		
+		<control type="image" description="backdrop">
+			<include>Backdrop</include>
+			<texture backgroud="true">special://skin/backgrounds/settings.jpg</texture>
+		</control>		
+		
 		<control type="label" description="top right label">
 			<include>TopRightLabel</include>
 			<label>130</label>

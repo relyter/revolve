@@ -5,7 +5,11 @@
 	<controls>
 
 		<include>GlobalBackground</include>
-		<include>SettingsBG</include>
+		
+		<control type="image" description="backdrop">
+			<include>Backdrop</include>
+			<texture backgroud="true">special://skin/backgrounds/settings.jpg</texture>
+		</control>
 		
 		<control type="radiobutton" id="4">
 			<description>Enable Login Screen</description>
