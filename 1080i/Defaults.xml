@@ -112,7 +112,7 @@
 		<label>-</label>
 		<textoffsetx>25</textoffsetx>
 		<textcolor>Black</textcolor>
-		<focusedcolor>White</focusedcolor>
+		<focusedcolor>Black</focusedcolor>
 		<disabledcolor>Text</disabledcolor>
 		<texturenofocus>-</texturenofocus>
 		<texturefocus border="25">controls/buttonbg2.png</texturefocus>

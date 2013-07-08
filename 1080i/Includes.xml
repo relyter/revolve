@@ -648,6 +648,19 @@
 			<texture>circleshadowborder.png</texture>
 		</control>
 	</include>
+	<include name="KeyboardButton">
+		<width>97</width>
+		<height>97</height>
+		<texturenofocus>keyboard/kbd-nf.png</texturenofocus>
+		<texturefocus>keyboard/kbd-fo.png</texturefocus>
+		<align>center</align>
+		<aligny>top</aligny>
+		<font>ButtonText</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>DefaultColor</focusedcolor>
+		<!-- <textoffsetx>34</textoffsetx> -->
+		<textoffsety>25</textoffsety>
+	</include>
 	<include name="Dimensions_Fullscreen">
 		<posx>0</posx>
 		<posy>0</posy>

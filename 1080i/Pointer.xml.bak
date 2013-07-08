@@ -1,0 +1,44 @@
+<window id="105">
+	<defaultcontrol>-</defaultcontrol>
+	
+	<controls>
+           <control type="image" id="1" description="mouseicon">
+                <description>Icon</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>50</width>
+                <height>50</height>
+                <texture>keyboard/mouse.png</texture>
+                <animation effect="fade" start="65" end="100" time="500" tween="sine" easing="in" pulse="true" condition="true">Conditional</animation>
+            </control>
+<!-- 		<control type="image" id="1">
+			<description>Pointer</description>
+			<width>45</width>
+			<height>45</height>
+			<texture>other_textures/PointerNF.png</texture>
+		</control>
+
+		<control type="image" id="2">
+			<description>Pointer Focus</description>
+			<width>45</width>
+			<height>45</height>
+			<texture>other_textures/PointerFo.png</texture>
+		</control>
+
+		<control type="image" id="3">
+			<description>Pointer Drag</description>
+			<width>45</width>
+			<height>45</height>
+			<texture>other_textures/PointerDrag.png</texture>
+		</control>
+
+		<control type="image" id="4">
+			<description>pointer_click</description>
+			<width>45</width>
+			<height>45</height>
+			<texture>other_textures/PointerClick.png</texture>
+		</control> -->
+
+	</controls>
+
+</window>

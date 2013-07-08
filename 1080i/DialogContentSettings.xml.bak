@@ -97,7 +97,7 @@
 					<itemlayout height="65">
 
 						<control type="image">
-							<!-- <visible>Control.HasFocus(4)</visible> -->
+							<visible>Control.HasFocus(4)</visible>
 							<width>50</width>
 							<height>50</height>
 							<posy>10</posy>
@@ -118,7 +118,7 @@
 					<focusedlayout height="65">
 
 						<control type="image">
-							<!-- <visible>Control.HasFocus(4)</visible> -->
+							<visible>Control.HasFocus(4)</visible>
 							<width>50</width>
 							<height>50</height>
 							<posy>10</posy>

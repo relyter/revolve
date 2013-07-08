@@ -1,1031 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="103">
 	<defaultcontrol always="true">300</defaultcontrol>
 	<controls>
 		
-		<include>WhiteFade</include>
-		
 		<control type="group">
-			<include>DialogAnimation</include>
-			<visible>!Window.IsVisible(NumericInput)</visible>
-			<control type="image">
-				<description>background image</description>
-				<include>FullscreenDimensions</include>
-				<texture>other_textures/contentpanel.png</texture>
-				<colordiffuse>CircleDiffuse</colordiffuse>
+			<visible>!Window.IsVisible(numericinput)</visible>
+			<include>ContentFade</include>
+			<posx>245</posx>
+			<posy>508</posy>
+			
+			<control type="image" description="kbd mask">
+				<width>1430</width>
+				<height>625</height>
+				<texture>keyboard/kbd-bg.png</texture>
 			</control>				
 
 			<control type="label" id="311">
 				<description>Heading</description>
-				<posx>270</posx>
-				<posy>202</posy>
-				<width>740</width>
-				<font>FontSize_36</font>
-				<textcolor>white</textcolor>
-				<align>center</align>
+				<posx>110</posx>
+				<posy>70</posy>
+				<width>280</width>
+				<font>ButtonText</font>
+				<textcolor>White</textcolor>
+				<align>left</align>
 				<scroll>true</scroll>
 				<scrollspeed>20</scrollspeed>
 			</control>
 			
-			<control type="label" id="310">
-				<animation effect="fade" start="100" end="0" time="300" condition="Window.IsActive(NumericInput)">Conditional</animation>
-				<description>Edit Text</description>
-				<posx>300</posx>
-				<posy>247</posy>
-				<width>680</width>
-				<font>FontSize_34</font>
-				<textcolor>99white</textcolor>
-				<align>center</align>
+			<control type="label" id="310" description="text entry">
+				<posx>420</posx>
+				<posy>65</posy>
+				<width>9000</width>
+				<font>DialogText</font>
+				<textcolor>DefaultColor</textcolor>
+				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>true</scroll>
 				<scrollspeed>20</scrollspeed>
 			</control>
 
-			<control type="group">
-				<posx>271</posx>
-				<posy>290</posy>
-
+			<control type="group" description="keyboard">
+				<posx>64</posx>
+				<posy>50</posy>
 				<!-- Row 1 -->
 				<control type="button" id="301" description="esc">
-					<posx>21</posx>
-					<posy>24</posy>
-					<width>70</width>
-					<height>70</height>
+					<posx>9</posx>
+					<posy>112</posy>
+					<width>118</width>
+					<height>97</height>
 					<onleft>8</onleft>
 					<onright>49</onright>
 					<onup>307</onup>
 					<ondown>302</ondown>
-					<label>Esc</label>
-					<texturenofocus>keyboard/kbd-nf.png</texturenofocus>
-					<texturefocus>keyboard/kbd-fo.png</texturefocus>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>Keyboard</font>
-					<!-- <textoffsetx>7</textoffsetx>
-					<textoffsety>25</textoffsety> -->
-					<textcolor>TextFocus</textcolor>
-					<focusedcolor>White</focusedcolor>
+					<label>31050</label>
+					<texturenofocus>keyboard/kbd-esc-nf.png</texturenofocus>
+					<texturefocus>keyboard/kbd-esc-fo.png</texturefocus>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>ButtonText</font>
+					<textoffsetx>25</textoffsetx>
+					<textoffsety>25</textoffsety>
+					<textcolor>White</textcolor>
+					<focusedcolor>DefaultColor</focusedcolor>
 					<onclick>Dialog.Close(103)</onclick>
 				</control>
 				
-				<control type="button" id="49">
-					<description>'1' button</description>
+				<control type="button" id="49" description="1">
+					<include>KeyboardButton</include>
 					<posx>110</posx>
-					<posy>24</posy>
-					<width>80</width>
-					<height>80</height>
+					<posy>112</posy>
 					<onleft>301</onleft>
 					<onright>50</onright>
 					<onup>307</onup>
 					<ondown>81</ondown>
-					<texturenofocus>keyboard/kbd-nf.png</texturenofocus>
-					<texturefocus>keyboard/kbd-fo.png</texturefocus>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>ButtonText</font>
-					<textcolor>Text</textcolor>
-					<focusedcolor>White</focusedcolor>
 				</control>
 				
-				<control type="button" id="50">
-					<description>'2' button</description>
-					<posx>131</posx>
-					<posy>24</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="50" description="2">
+					<include>KeyboardButton</include>
+					<posx>210</posx>
+					<posy>112</posy>
 					<onleft>49</onleft>
 					<onright>51</onright>
 					<onup>90</onup>
 					<ondown>87</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>5</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="51">
-					<description>'3' button</description>
-					<posx>186</posx>
-					<posy>24</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="51" description="3">
+					<include>KeyboardButton</include>
+					<posx>310</posx>
+					<posy>112</posy>
 					<onleft>50</onleft>
 					<onright>52</onright>
 					<onup>88</onup>
 					<ondown>69</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>5</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="52">
-					<description>'4' button</description>
-					<posx>241</posx>
-					<posy>24</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="52" description="4">
+					<include>KeyboardButton</include>
+					<posx>410</posx>
+					<posy>112</posy>
 					<onleft>51</onleft>
 					<onright>53</onright>
 					<onup>67</onup>
 					<ondown>82</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>5</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="53">
-					<description>'5' button</description>
-					<posx>296</posx>
-					<posy>24</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="53" description="5">
+					<include>KeyboardButton</include>
+					<posx>510</posx>
+					<posy>112</posy>
 					<onleft>52</onleft>
 					<onright>54</onright>
 					<onup>86</onup>
 					<ondown>84</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>5</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="54">
-					<description>'6' button</description>
-					<posx>351</posx>
-					<posy>24</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="54" description="6">
+					<include>KeyboardButton</include>
+					<posx>610</posx>
+					<posy>112</posy>
 					<onleft>53</onleft>
 					<onright>55</onright>
 					<onup>66</onup>
 					<ondown>89</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>5</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="55">
-					<description>'7' button</description>
-					<posx>406</posx>
-					<posy>24</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="55" description="7">
+					<include>KeyboardButton</include>
+					<posx>710</posx>
+					<posy>112</posy>
 					<onleft>54</onleft>
 					<onright>56</onright>
 					<onup>78</onup>
 					<ondown>85</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>5</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="56">
-					<description>'8' button</description>
-					<posx>461</posx>
-					<posy>24</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="56" description="8">
+					<include>KeyboardButton</include>
+					<posx>810</posx>
+					<posy>112</posy>
 					<onleft>55</onleft>
 					<onright>57</onright>
 					<onup>77</onup>
 					<ondown>73</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>5</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="57">
-					<description>'9' button</description>
-					<posx>516</posx>
-					<posy>24</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="57" description="9">
+					<include>KeyboardButton</include>
+					<posx>910</posx>
+					<posy>112</posy>
 					<onleft>56</onleft>
 					<onright>48</onright>
 					<onup>32</onup>
 					<ondown>79</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>5</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="48">
-					<description>'0' button</description>
-					<posx>571</posx>
-					<posy>24</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="48" description="0">
+					<include>KeyboardButton</include>
+					<posx>1010</posx>
+					<posy>112</posy>
 					<onleft>57</onleft>
 					<onright>8</onright>
 					<onup>32</onup>
 					<ondown>80</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>5</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="8">
-					<description>'Backspace' button</description>
-					<posx>626</posx>
-					<posy>24</posy>
-					<width>91</width>
-					<height>48</height>
+				<control type="button" id="8" description="Backspace">
+					<posx>1088</posx>
+					<posy>112</posy>
+					<width>227</width>
+					<height>97</height>
 					<onleft>48</onleft>
-					<onright>400</onright>
+					<onright>301</onright>
 					<onup>300</onup>
 					<ondown>304</ondown>
-					<texturenofocus border="20,20,20,20">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="20,20,20,20">dialogs/keyboard/button_fo.png</texturefocus>
+					<texturenofocus>keyboard/kbd-backspace-nf.png</texturenofocus>
+					<texturefocus>keyboard/kbd-backspace-fo.png</texturefocus>
 					<align>left</align>
 					<aligny>top</aligny>
-					<font>FontSize_14B</font>
-					<textoffsetx>6</textoffsetx>
+					<font>ButtonText</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>DefaultColor</focusedcolor>
+					<textoffsetx>43</textoffsetx>
 					<textoffsety>25</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 					<label>20181</label>
 				</control>
 				
 				<!-- Row 2 -->
-				<control type="radiobutton" id="302">
-					<description>'Shift' button</description>
-					<posx>21</posx>
-					<posy>76</posy>
-					<width>66</width>
-					<height>48</height>
+				<control type="radiobutton" id="302" description="shift">
+					<posx>10</posx>
+					<posy>212</posy>
+					<width>132</width>
+					<height>97</height>
 					<onleft>304</onleft>
 					<onright>81</onright>
-					<onup>400</onup>
+					<onup>301</onup>
 					<ondown>303</ondown>
-					<texturenofocus border="20,20,20,20">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="20,20,20,20">dialogs/keyboard/button_fo.png</texturefocus>
-					<radioposx>37</radioposx>
-					<radioposy>-2</radioposy>
-					<radiowidth>28</radiowidth>
-					<radioheight>28</radioheight>
-					<textureradioon>dialogs/keyboard/radio-on.png</textureradioon>
-					<textureradiooff>dialogs/keyboard/radio-off.png</textureradiooff>
-					<align>left</align>
+					<texturenofocus>keyboard/kbd-shift-nf.png</texturenofocus>
+					<texturefocus>keyboard/kbd-shift-fo.png</texturefocus>
 					<aligny>top</aligny>
-					<font>FontSize_14B</font>
-					<textoffsetx>7</textoffsetx>
+					<font>ButtonText</font>
+					<textoffsetx>25</textoffsetx>
 					<textoffsety>25</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
+					<textcolor>White</textcolor>
+					<focusedcolor>DefaultColor</focusedcolor>
 					<label>20178</label>
+					<radioposx>1</radioposx>
+					<radioposy>0</radioposy>
+					<radiowidth>132</radiowidth>
+					<radioheight>97</radioheight>
+					<textureradioon>keyboard/kbd-shift-radio-on.png</textureradioon>
+					<textureradiooff>-</textureradiooff>
+					<align>left</align>
 				</control>
 				
-				<control type="button" id="81">
-					<description>'Q' button</description>
-					<posx>94</posx>
-					<posy>76</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="81" description="Q">
+					<include>KeyboardButton</include>
+					<posx>123</posx>
+					<posy>212</posy>
 					<onleft>302</onleft>
 					<onright>87</onright>
 					<onup>49</onup>
 					<ondown>65</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="87">
-					<description>'W' button</description>
-					<posx>149</posx>
-					<posy>76</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="87"  description="w">
+					<include>KeyboardButton</include>
+					<posx>223</posx>
+					<posy>212</posy>
 					<onleft>81</onleft>
 					<onright>69</onright>
 					<onup>50</onup>
 					<ondown>83</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="69">
-					<description>'E' button</description>
-					<posx>204</posx>
-					<posy>76</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="69" description="e">
+					<include>KeyboardButton</include>
+					<posx>323</posx>
+					<posy>212</posy>
 					<onleft>87</onleft>
 					<onright>82</onright>
 					<onup>51</onup>
 					<ondown>68</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="82">
-					<description>'R' button</description>
-					<posx>259</posx>
-					<posy>76</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="82" description="r">
+					<include>KeyboardButton</include>
+					<posx>423</posx>
+					<posy>212</posy>
 					<onleft>69</onleft>
 					<onright>84</onright>
 					<onup>52</onup>
 					<ondown>70</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="84">
-					<description>'T' button</description>
-					<posx>314</posx>
-					<posy>76</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="84" description="t">
+					<include>KeyboardButton</include>
+					<posx>523</posx>
+					<posy>212</posy>
 					<onleft>82</onleft>
 					<onright>89</onright>
 					<onup>53</onup>
 					<ondown>71</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="89">
-					<description>'Y' button</description>
-					<posx>369</posx>
-					<posy>76</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="89" description="y">
+					<include>KeyboardButton</include>
+					<posx>623</posx>
+					<posy>212</posy>
 					<onleft>84</onleft>
 					<onright>85</onright>
 					<onup>54</onup>
 					<ondown>72</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="85">
-					<description>'U' button</description>
-					<posx>424</posx>
-					<posy>76</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="85" description="u">
+					<include>KeyboardButton</include>
+					<posx>723</posx>
+					<posy>212</posy>
 					<onleft>89</onleft>
 					<onright>73</onright>
 					<onup>55</onup>
 					<ondown>74</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="73">
-					<description>'I' button</description>
-					<posx>479</posx>
-					<posy>76</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="73" description="i">
+					<include>KeyboardButton</include>
+					<posx>823</posx>
+					<posy>212</posy>
 					<onleft>85</onleft>
 					<onright>79</onright>
 					<onup>56</onup>
 					<ondown>75</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="79">
-					<description>'O' button</description>
-					<posx>534</posx>
-					<posy>76</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="79" description="o">
+					<include>KeyboardButton</include>
+					<posx>923</posx>
+					<posy>212</posy>
 					<onleft>73</onleft>
 					<onright>80</onright>
 					<onup>57</onup>
 					<ondown>76</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
 					<textoffsetx>11</textoffsetx>
 					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="80">
-					<description>'P' button</description>
-					<posx>589</posx>
-					<posy>76</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="80" description="p">
+					<include>KeyboardButton</include>
+					<posx>1023</posx>
+					<posy>212</posy>
 					<onleft>79</onleft>
 					<onright>304</onright>
 					<onup>48</onup>
 					<ondown>305</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
 					<textoffsetx>11</textoffsetx>
 					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="radiobutton" id="304">
-					<description>'Symbols' button</description>
-					<posx>644</posx>
-					<posy>76</posy>
-					<width>73</width>
-					<height>48</height>
+				<control type="radiobutton" id="304" description="symbols">
+					<posx>1102</posx>
+					<posy>212</posy>
+					<width>213</width>
+					<height>97</height>
 					<onleft>80</onleft>
 					<onright>302</onright>
 					<onup>8</onup>
 					<ondown>306</ondown>
-					<texturenofocus border="20,20,20,20">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="20,20,20,20">dialogs/keyboard/button_fo.png</texturefocus>
-					<radioposx>44</radioposx>
-					<radioposy>-2</radioposy>
-					<radiowidth>28</radiowidth>
-					<radioheight>28</radioheight>
-					<textureradioon>dialogs/keyboard/radio-on.png</textureradioon>
-					<textureradiooff>dialogs/keyboard/radio-off.png</textureradiooff>
+					<texturenofocus>keyboard/kbd-symbols-nf.png</texturenofocus>
+					<texturefocus>keyboard/kbd-symbols-fo.png</texturefocus>
 					<align>left</align>
 					<aligny>top</aligny>
-					<font>FontSize_14B</font>
-					<textoffsetx>6</textoffsetx>
+					<font>ButtonText</font>
+					<textoffsetx>50</textoffsetx>
 					<textoffsety>25</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
+					<textcolor>White</textcolor>
+					<focusedcolor>DefaultColor</focusedcolor>
 					<label>20180</label>
+					<radioposx>-1</radioposx>
+					<radioposy>0</radioposy>
+					<radiowidth>213</radiowidth>
+					<radioheight>97</radioheight>
+					<textureradioon>keyboard/kbd-symbols-radio-on.png</textureradioon>
+					<textureradiooff>-</textureradiooff>
 				</control>
 				
 				<!-- Row 3 -->
-				<control type="radiobutton" id="303">
-					<description>'Caps Lock' button</description>
-					<posx>21</posx>
-					<posy>128</posy>
-					<width>91</width>
-					<height>48</height>
+				<control type="radiobutton" id="303" description="caps lock">
+					<posx>10</posx>
+					<posy>312</posy>
+					<width>228</width>
+					<height>97</height>
 					<onleft>306</onleft>
 					<onright>65</onright>
 					<onup>302</onup>
 					<ondown>307</ondown>
-					<texturenofocus border="20,20,20,20">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="20,20,20,20">dialogs/keyboard/button_fo.png</texturefocus>
-					<radioposx>62</radioposx>
-					<radioposy>-2</radioposy>
-					<radiowidth>28</radiowidth>
-					<radioheight>28</radioheight>
-					<textureradioon>dialogs/keyboard/radio-on.png</textureradioon>
-					<textureradiooff>dialogs/keyboard/radio-off.png</textureradiooff>
+					<texturenofocus>keyboard/kbd-capslock-nf.png</texturenofocus>
+					<texturefocus>keyboard/kbd-capslock-fo.png</texturefocus>
 					<align>left</align>
 					<aligny>top</aligny>
-					<font>FontSize_14B</font>
-					<textoffsetx>7</textoffsetx>
+					<font>ButtonText</font>
+					<textoffsetx>25</textoffsetx>
 					<textoffsety>25</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
+					<textcolor>White</textcolor>
+					<focusedcolor>DefaultColor</focusedcolor>
 					<label>20179</label>
+					<radioposx>1</radioposx>
+					<radioposy>0</radioposy>
+					<radiowidth>228</radiowidth>
+					<radioheight>97</radioheight>
+					<textureradioon>keyboard/kbd-capslock-radio-on.png</textureradioon>
+					<textureradiooff>-</textureradiooff>
 				</control>
 				
-				<control type="button" id="65">
-					<description>'A' button</description>
-					<posx>119</posx>
-					<posy>128</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="65" description="a">
+					<include>KeyboardButton</include>
+					<posx>219</posx>
+					<posy>312</posy>
 					<onleft>303</onleft>
 					<onright>83</onright>
 					<onup>81</onup>
 					<ondown>90</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="83">
-					<description>'S' button</description>
-					<posx>174</posx>
-					<posy>128</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="83" description="s">
+					<include>KeyboardButton</include>
+					<posx>319</posx>
+					<posy>312</posy>
 					<onleft>65</onleft>
 					<onright>68</onright>
 					<onup>87</onup>
 					<ondown>88</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="68">
-					<description>'D' button</description>
-					<posx>229</posx>
-					<posy>128</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="68" description="d">
+					<include>KeyboardButton</include>
+					<posx>419</posx>
+					<posy>312</posy>
 					<onleft>83</onleft>
 					<onright>70</onright>
 					<onup>69</onup>
 					<ondown>67</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="70">
-					<description>'F' button</description>
-					<posx>284</posx>
-					<posy>128</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="70" description="f">
+					<include>KeyboardButton</include>
+					<posx>519</posx>
+					<posy>312</posy>
 					<onleft>68</onleft>
 					<onright>71</onright>
 					<onup>82</onup>
 					<ondown>86</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="71">
-					<description>'G' button</description>
-					<posx>339</posx>
-					<posy>128</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="71" description="g">
+					<include>KeyboardButton</include>
+					<posx>619</posx>
+					<posy>312</posy>
 					<onleft>70</onleft>
 					<onright>72</onright>
 					<onup>84</onup>
 					<ondown>66</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="72">
-					<description>'H' button</description>
-					<posx>394</posx>
-					<posy>128</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="72" description="h">
+					<include>KeyboardButton</include>
+					<posx>719</posx>
+					<posy>312</posy>
 					<onleft>71</onleft>
 					<onright>74</onright>
 					<onup>89</onup>
 					<ondown>78</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="74">
-					<description>'J' button</description>
-					<posx>449</posx>
-					<posy>128</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="74" description="j">
+					<include>KeyboardButton</include>
+					<posx>819</posx>
+					<posy>312</posy>
 					<onleft>72</onleft>
 					<onright>75</onright>
 					<onup>85</onup>
 					<ondown>77</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="75">
-					<description>'K' button</description>
-					<posx>504</posx>
-					<posy>128</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="75" description="k">
+					<include>KeyboardButton</include>
+					<posx>919</posx>
+					<posy>312</posy>
 					<onleft>74</onleft>
 					<onright>76</onright>
 					<onup>73</onup>
 					<ondown>32</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="76">
-					<description>'L' button</description>
-					<posx>559</posx>
-					<posy>128</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="76" description="l">
+					<include>KeyboardButton</include>
+					<posx>1019</posx>
+					<posy>312</posy>
 					<onleft>75</onleft>
 					<onright>305</onright>
 					<onup>79</onup>
 					<ondown>32</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="305">
-					<description>'Previous' button</description>
-					<posx>614</posx>
-					<posy>128</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="305" description="arrowleft">
+					<texturenofocus>keyboard/kbd-left-nf.png</texturenofocus>
+					<texturefocus>keyboard/kbd-left-fo.png</texturefocus>
+					<include>KeyboardButton</include>
+					<posx>1119</posx>
+					<posy>312</posy>
 					<onleft>76</onleft>
 					<onright>306</onright>
 					<onup>80</onup>
 					<ondown>300</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_left_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_left_fo.png</texturefocus>
 				</control>
 				
-				<control type="button" id="306">
-					<description>'Next' button</description>
-					<posx>669</posx>
-					<posy>128</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="306" description="arrowright">
+					<texturenofocus>keyboard/kbd-right-nf.png</texturenofocus>
+					<texturefocus>keyboard/kbd-right-fo.png</texturefocus>
+					<include>KeyboardButton</include>
+					<posx>1219</posx>
+					<posy>312</posy>
 					<onleft>305</onleft>
 					<onright>303</onright>
 					<onup>304</onup>
 					<ondown>300</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_right_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_right_fo.png</texturefocus>
 				</control>
 				
 				<!-- Row 4 -->
-				<control type="button" id="307">
-					<description>'IP Address' button</description>
-					<posx>21</posx>
-					<posy>180</posy>
-					<width>102</width>
-					<height>48</height>
+				<control type="button" id="307" description="IP">
+					<posx>10</posx>
+					<posy>412</posy>
+					<width>228</width>
+					<height>97</height>
 					<onleft>300</onleft>
 					<onright>90</onright>
 					<onup>303</onup>
-					<ondown>400</ondown>
-					<texturenofocus border="20,20,20,20">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="20,20,20,20">dialogs/keyboard/button_fo.png</texturefocus>
+					<ondown>301</ondown>
+					<texturenofocus>keyboard/kbd-ip-nf.png</texturenofocus>
+					<texturefocus>keyboard/kbd-ip-fo.png</texturefocus>
 					<align>left</align>
 					<aligny>top</aligny>
-					<font>FontSize_14B</font>
-					<textoffsetx>7</textoffsetx>
-					<textoffsety>25</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<label>31039</label>
+					<font>ButtonText</font>
+					<textoffsetx>25</textoffsetx>
+					<textoffsety>28</textoffsety>
+					<textcolor>White</textcolor>
+					<focusedcolor>DefaultColor</focusedcolor>
+					<label>31052</label>
 				</control>
 				
-				<control type="button" id="90">
-					<description>'Z' button</description>
-					<posx>130</posx>
-					<posy>180</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="90" description="z">
+					<include>KeyboardButton</include>
+					<posx>223</posx>
+					<posy>412</posy>
 					<onleft>307</onleft>
 					<onright>88</onright>
 					<onup>65</onup>
 					<ondown>50</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="88">
-					<description>'X' button</description>
-					<posx>185</posx>
-					<posy>180</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="88" description="x">
+					<include>KeyboardButton</include>
+					<posx>323</posx>
+					<posy>412</posy>
 					<onleft>90</onleft>
 					<onright>67</onright>
 					<onup>83</onup>
 					<ondown>51</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="67">
-					<description>'C' button</description>
-					<posx>240</posx>
-					<posy>180</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="67" description="c">
+					<include>KeyboardButton</include>
+					<posx>423</posx>
+					<posy>412</posy>
 					<onleft>88</onleft>
 					<onright>86</onright>
 					<onup>68</onup>
 					<ondown>52</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="86">
-					<description>'V' button</description>
-					<posx>295</posx>
-					<posy>180</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="86" description="v">
+					<include>KeyboardButton</include>
+					<posx>523</posx>
+					<posy>412</posy>
 					<onleft>67</onleft>
 					<onright>66</onright>
 					<onup>70</onup>
 					<ondown>53</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="66">
-					<description>'B' button</description>
-					<posx>350</posx>
-					<posy>180</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="66"  description="b">
+					<include>KeyboardButton</include>
+					<posx>623</posx>
+					<posy>412</posy>
 					<onleft>86</onleft>
 					<onright>78</onright>
 					<onup>71</onup>
 					<ondown>54</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="78">
-					<description>'N' button</description>
-					<posx>405</posx>
-					<posy>180</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="78" description="n">
+					<include>KeyboardButton</include>
+					<posx>723</posx>
+					<posy>412</posy>
 					<onleft>66</onleft>
 					<onright>77</onright>
 					<onup>72</onup>
 					<ondown>55</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 				
-				<control type="button" id="77">
-					<description>'M' button</description>
-					<posx>460</posx>
-					<posy>180</posy>
-					<width>48</width>
-					<height>48</height>
+				<control type="button" id="77"  description="m">
+					<include>KeyboardButton</include>
+					<posx>823</posx>
+					<posy>412</posy>
 					<onleft>78</onleft>
 					<onright>32</onright>
 					<onup>74</onup>
 					<ondown>56</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
-					<align>left</align>
-					<aligny>top</aligny>
-					<font>FontSize_16B</font>
-					<textoffsetx>11</textoffsetx>
-					<textoffsety>4</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
 				</control>
 
-				<control type="button" id="32">
-					<description>'Space' button</description>
-					<posx>515</posx>
-					<posy>180</posy>
-					<width>122</width>
-					<height>48</height>
+				<control type="button" id="32" description="space">
+					<posx>923</posx>
+					<posy>412</posy>
+					<width>197</width>
+					<height>97</height>
 					<onleft>77</onleft>
 					<onright>300</onright>
 					<onup>75</onup>
 					<ondown>57</ondown>
-					<texturenofocus border="20,20,20,20">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="20,20,20,20">dialogs/keyboard/button_fo.png</texturefocus>
+					<texturenofocus>keyboard/kbd-space-nf.png</texturenofocus>
+					<texturefocus>keyboard/kbd-space-fo.png</texturefocus>
 					<align>left</align>
 					<aligny>top</aligny>
-					<font>FontSize_14B</font>
-					<textoffsetx>7</textoffsetx>
-					<textoffsety>25</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>		
+					<font>ButtonText</font>
+					<textoffsetx>55</textoffsetx>
+					<textoffsety>28</textoffsety>
+					<textcolor>White</textcolor>
+					<focusedcolor>DefaultColor</focusedcolor>		
 					<label>20182</label>
 				</control>
 				
-				<control type="button" id="300">
-					<description>'Done' button</description>
-					<posx>644</posx>
-					<posy>180</posy>
-					<width>73</width>
-					<height>48</height>
+				<control type="button" id="300" description="done">
+					<posx>1102</posx>
+					<posy>412</posy>
+					<width>213</width>
+					<height>97</height>
 					<onleft>32</onleft>
 					<onright>307</onright>
 					<onup>306</onup>
 					<ondown>8</ondown>
-					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_nf.png</texturenofocus>
-					<texturefocus border="6,8,6,8">dialogs/keyboard/button_fo.png</texturefocus>
+					<texturenofocus>keyboard/kbd-done-nf.png</texturenofocus>
+					<texturefocus>keyboard/kbd-done-fo.png</texturefocus>
 					<align>left</align>
 					<aligny>top</aligny>
-					<font>FontSize_14B</font>
-					<textoffsetx>7</textoffsetx>
-					<textoffsety>25</textoffsety>
-					<textcolor>99grey</textcolor>
-					<focusedcolor>white</focusedcolor>
+					<font>ButtonText</font>
+					<textoffsetx>65</textoffsetx>
+					<textoffsety>28</textoffsety>
+					<textcolor>White</textcolor>
+					<focusedcolor>DefaultColor</focusedcolor>
 					<label>20177</label>
 				</control>
 			</control>
 		</control>
-
-
 	</controls>
 </window>

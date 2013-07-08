@@ -112,7 +112,7 @@
 		<label>-</label>
 		<textoffsetx>25</textoffsetx>
 		<textcolor>Black</textcolor>
-		<focusedcolor>White</focusedcolor>
+		<focusedcolor>Black</focusedcolor>
 		<disabledcolor>Text</disabledcolor>
 		<texturenofocus>-</texturenofocus>
 		<texturefocus border="25">controls/buttonbg2.png</texturefocus>
@@ -170,8 +170,8 @@
 	</default>
 
 	<default type="progress">
-		<posx>960</posx>
-		<posy>540</posy>
+		<posx>-</posx>
+		<posy>-</posy>
 		<texturebg>controls/progressbg.png</texturebg>
 		<lefttexture>-</lefttexture>
 		<midtexture>controls/progressmid.png</midtexture>

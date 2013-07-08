@@ -174,15 +174,14 @@
 				<colordiffuse>DefaultColor</colordiffuse>
 			</control>
 	</include>
-		<include name="TopRingTransp">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1920</width>
-				<height>200</height>
-				<texture flipy="true" border="5">masktop.png</texture>
-				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<colordiffuse>DefaultColor</colordiffuse>
-
+	<include name="TopRingTransp">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1920</width>
+		<height>200</height>
+		<texture flipy="true" border="5">masktop.png</texture>
+		<aspectratio scalediffuse="false">stretch</aspectratio>
+		<colordiffuse>DefaultColor</colordiffuse>
 	</include>
 	<include name="LeftRing">
 			<control type="image">
@@ -648,6 +647,19 @@
 			<height>333</height>
 			<texture>circleshadowborder.png</texture>
 		</control>
+	</include>
+	<include name="KeyboardButton">
+		<width>97</width>
+		<height>97</height>
+		<texturenofocus>keyboard/kbd-nf.png</texturenofocus>
+		<texturefocus>keyboard/kbd-fo.png</texturefocus>
+		<align>left</align>
+		<aligny>top</aligny>
+		<font>ButtonText</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>DefaultColor</focusedcolor>
+		<textoffsetx>34</textoffsetx>
+		<textoffsety>25</textoffsety>
 	</include>
 	<include name="Dimensions_Fullscreen">
 		<posx>0</posx>

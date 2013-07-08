@@ -5,7 +5,6 @@
 	<controls>
 
 	<control type="group">
-		
 		<include>ContentFade</include>
 		<posx>647</posx>
 		<posy>514</posy>
@@ -26,7 +25,7 @@
 			<label>$LOCALIZE[31053]</label>
 		</control>
 
-		<control type="label" id="4" description="text entry">
+		<control type="label" id="4" description="text entry field">
 			<posx>165</posx>
 			<posy>50</posy>
 			<width>400</width>
@@ -241,9 +240,7 @@
 				<onclick>Dialog.Close(109)</onclick>
 			</control>
 		</control>
-	
 	</control>
-	
 	</controls>
 
 </window>
