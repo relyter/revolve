@@ -5,7 +5,7 @@
 
 	<controls>
 
-		<include>WhiteFade</include>
+		<include>GlobalOverlay</include>
 		
 		<control type="image" description="backdrop">
 			<include>Backdrop</include>

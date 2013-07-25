@@ -135,7 +135,6 @@
 				<focusedlayout height="69">
 				
 					<control type="image">
-						<posy>20</posy>
 						<texture>controls/mark.png</texture>
 						<colordiffuse>DefaultColor</colordiffuse>
 						<visible>Control.HasFocus(10)</visible>
