@@ -3,20 +3,30 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<coordinates>
-		<origin x="0" y="300" />
+		<origin x="0" y="0" />
 	</coordinates>
 
 	<controls>
 		
 		<control type="group">
 			<posx>0</posx>
-			<posy>-300</posy>
-			<include>GlobalOverlay</include>
+			<posy>0</posy>
+			<include>WhiteFade</include>
 		</control>
-
+		
+		<control type="image" description="backdrop">
+			<include>Backdrop</include>
+			<texture backgroud="true">$INFO[ListItem.Art(fanart)]</texture>
+		</control>
+		
+		<control type="label" description="top right label">
+			<include>TopRightLabel</include>
+			<label>$INFO[Listitem.Label]</label>
+		</control>
+		
 		<control type="group">
 			<posx>0</posx>
-			<posy>-300</posy>
+			<posy>0</posy>
 			<animation effect="slide" tween="quadratic" easing="out" start="-700,0" end="0,0" time="200" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="quadratic" easing="out" start="0,0" end="-700,0" time="200" reversible="false">WindowClose</animation>
 			<include>LeftRing</include>
@@ -25,7 +35,7 @@
 		<control type="grouplist" id="996">
 			<description>grouplist for context buttons</description>
 			<posx>25</posx>
-			<posy>0</posy>
+			<posy>300</posy>
 			<width>650</width>
 			<height max="909">auto</height>
 			<itemgap>0</itemgap>
@@ -46,11 +56,3 @@
 	</controls>
 
 </window>
-
-<control type="button" id="1">
-      
-      
-      
-      <pulseonselect></pulseonselect>
-      
-</control>

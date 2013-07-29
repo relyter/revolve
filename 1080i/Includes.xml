@@ -161,17 +161,17 @@
 				<posy>0</posy>
 				<width>1920</width>
 				<height>200</height>
-				<texture flipy="true">ringsbottom.png</texture>
-				<aspectratio scalediffuse="true">stretch</aspectratio>
+				<texture>masktop.png</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<colordiffuse>DefaultColor</colordiffuse>
 			</control>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1920</width>
 				<height>200</height>
-				<texture flipy="true">maskbottom.png</texture>
-				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<colordiffuse>DefaultColor</colordiffuse>
+				<texture>ringstop.png</texture>
+				<aspectratio scalediffuse="true">stretch</aspectratio>
 			</control>
 	</include>
 	<include name="TopRingTransp">
@@ -179,7 +179,7 @@
 		<posy>0</posy>
 		<width>1920</width>
 		<height>200</height>
-		<texture flipy="true" border="5">masktop.png</texture>
+		<texture flipy="true" border="5">masktop1.png</texture>
 		<aspectratio scalediffuse="false">stretch</aspectratio>
 		<colordiffuse>DefaultColor</colordiffuse>
 	</include>

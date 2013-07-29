@@ -161,7 +161,7 @@
 				<posy>0</posy>
 				<width>1920</width>
 				<height>200</height>
-				<texture flipy="true">ringsbottom.png</texture>
+				<texture>ringstop.png</texture>
 				<aspectratio scalediffuse="true">stretch</aspectratio>
 			</control>
 			<control type="image">
@@ -169,7 +169,7 @@
 				<posy>0</posy>
 				<width>1920</width>
 				<height>200</height>
-				<texture flipy="true">maskbottom.png</texture>
+				<texture>masktop.png</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<colordiffuse>DefaultColor</colordiffuse>
 			</control>
@@ -179,7 +179,7 @@
 		<posy>0</posy>
 		<width>1920</width>
 		<height>200</height>
-		<texture flipy="true" border="5">masktop.png</texture>
+		<texture flipy="true" border="5">masktop1.png</texture>
 		<aspectratio scalediffuse="false">stretch</aspectratio>
 		<colordiffuse>DefaultColor</colordiffuse>
 	</include>
@@ -653,12 +653,12 @@
 		<height>97</height>
 		<texturenofocus>keyboard/kbd-nf.png</texturenofocus>
 		<texturefocus>keyboard/kbd-fo.png</texturefocus>
-		<align>left</align>
+		<align>center</align>
 		<aligny>top</aligny>
 		<font>ButtonText</font>
 		<textcolor>White</textcolor>
 		<focusedcolor>DefaultColor</focusedcolor>
-		<textoffsetx>34</textoffsetx>
+		<!-- <textoffsetx>34</textoffsetx> -->
 		<textoffsety>25</textoffsety>
 	</include>
 	<include name="Dimensions_Fullscreen">
